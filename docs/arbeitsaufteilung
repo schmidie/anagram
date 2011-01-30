@@ -1,0 +1,29 @@
+##############################################################
+# aufgaben  (in klammer der geschaetzte aufwand in prozent)
+#
+#
+##############################################################
+
+- oberflaeche erstellen (25%)
+  - architektur der oberflaeche
+  - IBOutlets / IBAction erstellen
+  - ...
+- logik implementieren (50%)
+  - architektur der anwendung
+  - implementieren
+  
+- testen (5%)
+  - oberflaechen tests
+  
+- dokumentation schreiben (20%)
+
+
+vorschlag fuer einen ablauf (Schritt 2 und 3 könnten parallel laufen):
+
+  1. gesammt architektur erstellen  (ALLE)
+    1.1. oberflaechen architektur
+    1.2. anwendungs architektur
+  2. oberlaeche erstellen   (1 Person)
+  3. implementieren der logik   (2 Personen)
+  4. testen   (1 Person)
+  5. dokumentieren  (1 Person)
