@@ -7,13 +7,14 @@
 //
 
 #import "GameViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 @implementation GameViewController
 
 @synthesize destinationLetters;
 
-NSString *letters = @"test";
+NSString *letters = @"apple";
 
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -32,14 +33,29 @@ NSString *letters = @"test";
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	//destinationLetter
 	
 	
 	for (int i= 0; i< [letters length] ; i++) {
 		
+		//destination Labels
+		UILabel *destLab = [[UILabel alloc] initWithFrame:CGRectMake(i*50, 170, 40, 60)];
+		destLab.layer.cornerRadius = 8;
+		destLab.layer.borderColor = [[UIColor blackColor] CGColor];
+		destLab.layer.borderWidth = 1;
+		
+		[self.view addSubview:destLab];
+		
+		
 		// create a label
-		UILabel *draglabel = [[UILabel alloc] initWithFrame:CGRectMake(i*50, 10, 30, 30)];
+		UILabel *draglabel = [[UILabel alloc] initWithFrame:CGRectMake(i*50, 10, 40, 40)];
 		draglabel.text = [letters substringWithRange:NSMakeRange(i, 1)];
-		draglabel.backgroundColor = [UIColor lightGrayColor];
+		draglabel.backgroundColor = [UIColor cyanColor];
+		draglabel.adjustsFontSizeToFitWidth;
+		draglabel.textAlignment = UITextAlignmentCenter;
+		draglabel.layer.cornerRadius = 8;
+		draglabel.layer.borderColor = [[UIColor blackColor] CGColor];
+		draglabel.layer.borderWidth = 1;
 
 		// enable touch delivery
 		draglabel.userInteractionEnabled = YES;
@@ -53,7 +69,7 @@ NSString *letters = @"test";
 		[self.view addSubview:draglabel];	
 		
 	}
-	[letters release];
+	//[letters release];
 }
 
 
@@ -62,12 +78,36 @@ NSString *letters = @"test";
 	UILabel *label = (UILabel *)gesture.view;
 	CGPoint translation = [gesture translationInView:label];
 	
+	NSLog(@"Position x:%d y:%d",label.center.x+translation.x,label.center.y+translation.y);
+	
 	NSInteger elementSize = self.view.bounds.size.width/[letters length];
 	
-	// move label
-	label.center = CGPointMake(label.center.x + translation.x, 
-							   label.center.y + translation.y);
-	//float rounded = round(label.center.x + translation.x / elementSize);
+	if(label.center.y + translation.y < 200){
+		// if we are in the dogging region but not dogged!
+		if(label.center.y + translation.y > 120
+		   && label.center.y < 170){
+		
+			CGPoint point = CGPointMake(label.center.x + translation.x, 
+					label.center.y + translation.y);
+		
+			long int position = lround((double)(point.x/elementSize));
+			//NSLog(@"Position pos:%d",position);
+			label.center = CGPointMake(position*elementSize , 200);
+		
+		}
+		// we do not move if we have little translation
+		else if (translation.x > 5 || translation.y > 5 ||
+				 translation.x < -5 || translation.y <-5){
+		
+		// move label
+		label.center = CGPointMake(label.center.x + translation.x, 
+								   label.center.y + translation.y);
+		
+		}
+	}
+
+	//float rounded = round(label.center.x + translation.x / elementSize*10);
+	
 	//label.center = CGPointMake(rounded, 200);
 	
 	// reset translation
