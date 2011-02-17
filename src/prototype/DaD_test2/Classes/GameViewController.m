@@ -13,6 +13,8 @@
 
 @synthesize destinationLetters;
 
+NSString *letters = @"test";
+
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -29,15 +31,16 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	NSString *letters = @"test";
+	
+	
 	
 	for (int i= 0; i< [letters length] ; i++) {
 		
 		// create a label
-		UILabel *draglabel = [[[UILabel alloc] initWithFrame:CGRectMake(i*50, 10, 30, 30)] 
-							  autorelease];
-		draglabel.text = [letters substringFromIndex:i];
-		
+		UILabel *draglabel = [[UILabel alloc] initWithFrame:CGRectMake(i*50, 10, 30, 30)];
+		draglabel.text = [letters substringWithRange:NSMakeRange(i, 1)];
+		draglabel.backgroundColor = [UIColor lightGrayColor];
+
 		// enable touch delivery
 		draglabel.userInteractionEnabled = YES;
 		
@@ -50,6 +53,7 @@
 		[self.view addSubview:draglabel];	
 		
 	}
+	[letters release];
 }
 
 
@@ -58,13 +62,26 @@
 	UILabel *label = (UILabel *)gesture.view;
 	CGPoint translation = [gesture translationInView:label];
 	
+	NSInteger elementSize = self.view.bounds.size.width/[letters length];
+	
 	// move label
 	label.center = CGPointMake(label.center.x + translation.x, 
 							   label.center.y + translation.y);
+	//float rounded = round(label.center.x + translation.x / elementSize);
+	//label.center = CGPointMake(rounded, 200);
 	
 	// reset translation
 	[gesture setTranslation:CGPointZero inView:label];
+	
+	//if(label.center.x > 200)
+		//[self labelDog:gesture];
 }
+
+- (void)check:(UIPanGestureRecognizer *)gesture
+{
+	
+}
+
 
 
 /*
