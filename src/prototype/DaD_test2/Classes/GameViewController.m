@@ -14,7 +14,7 @@
 
 @synthesize destinationLetters;
 
-NSString *letters = @"apple";
+NSString *letters;
 
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -33,6 +33,8 @@ NSString *letters = @"apple";
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	//NSLog(@"length %d",[[self shake: @"apple"] length]);
+	letters = [[NSString alloc] initWithFormat:@"%@",[self shake: @"apple"]];
 	//destinationLetter
 	
 	
@@ -94,7 +96,7 @@ NSString *letters = @"apple";
 			//NSLog(@"Position pos:%d",position);
 		//	label.center = CGPointMake(position*elementSize , 200);
 		
-		//}
+		//}-
 		// we do not move if we have little translation
 		//else if (translation.x > 5 || translation.y > 5 ||
 		//		 translation.x < -5 || translation.y <-5){
@@ -119,6 +121,25 @@ NSString *letters = @"apple";
 - (void)check:(UIPanGestureRecognizer *)gesture
 {
 	
+}
+
+- (NSString *)shake:(NSMutableString *)text
+{
+	NSMutableString * randamString = [NSMutableString stringWithCapacity:[text length]];
+	//NSMutableString * tmp = [NSMutableString stringWithCapacity:[text length]];
+	int leng = [text length];
+	
+	for(int i = 0; i < leng; i++){
+	
+		char *c = [text characterAtIndex:rand()%[text length]];
+		[randamString appendFormat:@"%c" , c];
+		
+		//[text replaceOccurrencesOfString:@"p" 
+		//					  withString:@"" options:NSCaseInsensitiveSearch 
+		//						   range:(NSMakeRange(0, [text length]))];
+		
+	}
+	return randamString;
 }
 
 

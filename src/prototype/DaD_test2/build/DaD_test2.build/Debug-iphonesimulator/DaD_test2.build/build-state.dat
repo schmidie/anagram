@@ -1,7 +1,7 @@
 TDaD_test2
 v7
 r0
-t319731660.698337
+t319741647.044639
 cCheck dependencies
 cProcessInfoPlistFile /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/Info.plist DaD_test2-Info.plist
 cCompileXIB /Volumes/anagram/prototype/DaD_test2/MainWindow.xib
@@ -352,9 +352,9 @@ s333
 i<UIKit/UIKit.h>
 
 N/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m
-c000000004D5E7C730000000000001001
-t1298037875
-s4097
+c000000004D5EA76F00000000000012AC
+t1298048879
+s4780
 i"GameViewController.h"
 i<QuartzCore/QuartzCore.h>
 
@@ -376,9 +376,9 @@ s1446
 i"HelpViewController.h"
 
 N/Volumes/anagram/prototype/DaD_test2/Classes/HelpViewController.xib
-c000000004D5E802B00000000000045FA
-t1298038827
-s17914
+c000000004D5E80930000000000004647
+t1298038931
+s17991
 
 N/Volumes/anagram/prototype/DaD_test2/Classes/RootViewController.h
 c000000004D5E7A4100000000000002C0
@@ -458,8 +458,8 @@ t1298037330
 s52708
 
 N/Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameViewController.o
-t1298037878
-s47076
+t1298048888
+s48808
 
 N/Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/HelpViewController.o
 t1298037333
@@ -482,24 +482,24 @@ t1297947724
 s6300
 
 N/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app
-t1298038860
+t1298048847
 s16384
 
 N/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app.dSYM
-t1298037995
+t1298048846
 s16384
 
 N/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2
-t1298037879
-s33148
+t1298048889
+s33448
 
 N/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/GameViewController.nib
 t1297966906
 s944
 
 N/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/HelpViewController.nib
-t1298038860
-s1705
+t1298043662
+s1718
 
 N/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/Info.plist
 t1297871563
@@ -550,7 +550,7 @@ s909
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies319731657#319731657#0(0"0(0#1#0"548800#0"0#
+lSLF07#2@18"Check dependencies319741644#319741644#0(0"0(0#1#0"548800#0"0#
 
 CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2AppDelegate.o /Users/apfel/Objective-C/DaD_test2/Classes/DaD_test2AppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s319594911.642960
@@ -634,8 +634,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@73"Compile /Volumes/SHARE/Objective-C/DaD_test2/Classes/GameViewController.m319575965#319575966#0(0"0(0#0#65"/Volumes/SHARE/Objective-C/DaD_test2/Classes/GameViewController.m548800#1968"    cd /Volumes/SHARE/Objective-C/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Volumes/SHARE/Objective-C/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Volumes/SHARE/Objective-C/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Volumes/SHARE/Objective-C/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Volumes/SHARE/Objective-C/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Volumes/SHARE/Objective-C/DaD_test2/build/Debug-iphonesimulator -I/Volumes/SHARE/Objective-C/DaD_test2/build/Debug-iphonesimulator/include -I/Volumes/SHARE/Objective-C/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Volumes/SHARE/Objective-C/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DerivedSources -include /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-azbxfraczfyucbhgwxhuvxtocxhh/DaD_test2_Prefix.pch -c /Volumes/SHARE/Objective-C/DaD_test2/Classes/GameViewController.m -o /Volumes/SHARE/Objective-C/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameViewController.o0#
 
 CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameViewController.o /Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s319730634.962312
-e319730636.440223
+s319741644.803712
+e319741646.104757
 r1
 xCompileC
 xbuild/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameViewController.o
@@ -644,7 +644,14 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@73"Compile /Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m319730634#319730636#0(0"0(0#0#65"/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m548800#1968"    cd /Volumes/anagram/prototype/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator -I/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/include -I/Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DerivedSources -include /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-fawpjvatktpvccdivmfzfsntvuwu/DaD_test2_Prefix.pch -c /Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m -o /Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameViewController.o0#
+o/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m: In function '-[GameViewController viewDidLoad]':
+o/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m:37: warning: 'GameViewController' may not respond to '-shake:'
+o/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m:37: warning: (Messages without a matching method signature
+o/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m:37: warning: will be assumed to return 'id' and accept
+o/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m:37: warning: '...' as arguments.)
+o/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m: In function '-[GameViewController shake:]':
+o/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m:134: warning: initialization makes pointer from integer without a cast
+lSLF07#2@73"Compile /Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m319741644#319741646#0(839"/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m: In function '-[GameViewController viewDidLoad]':/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m:37: warning: 'GameViewController' may not respond to '-shake:'/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m:37: warning: (Messages without a matching method signature/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m:37: warning: will be assumed to return 'id' and accept/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m:37: warning: '...' as arguments.)/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m: In function '-[GameViewController shake:]':/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m:134: warning: initialization makes pointer from integer without a cast3(22@49"'GameViewController' may not respond to '-shake:'319741645#116#129#0(6@65"/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m319741679#37#0#37#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)319741645#245#125#0(6@65"/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m319741679#37#0#37#0#0"0(22@56"Initialization makes pointer from integer without a cast319741645#702#137#0(6@65"/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m319741679#134#0#134#0#0"0(0#0#65"/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m548800#1968"    cd /Volumes/anagram/prototype/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator -I/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/include -I/Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DerivedSources -include /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-fawpjvatktpvccdivmfzfsntvuwu/DaD_test2_Prefix.pch -c /Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.m -o /Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameViewController.o0#
 
 CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/HelpViewController.o /Volumes/anagram/prototype/DaD_test2/Classes/HelpViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s319730090.694821
@@ -810,12 +817,12 @@ x/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.xib
 lSLF07#2@41"CompileXIB Classes/GameViewController.xib319659699#319659706#0(0"0(0#0#67"/Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.xib548800#590"    cd /Volumes/anagram/prototype/DaD_test2    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/GameViewController.nib /Volumes/anagram/prototype/DaD_test2/Classes/GameViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
 
 CCompileXIB /Volumes/anagram/prototype/DaD_test2/Classes/HelpViewController.xib
-s319731657.721652
-e319731660.653044
+s319736459.847260
+e319736463.111467
 r1
 xCompileXIB
 x/Volumes/anagram/prototype/DaD_test2/Classes/HelpViewController.xib
-lSLF07#2@41"CompileXIB Classes/HelpViewController.xib319731657#319731660#0(0"0(0#0#67"/Volumes/anagram/prototype/DaD_test2/Classes/HelpViewController.xib548800#590"    cd /Volumes/anagram/prototype/DaD_test2    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/HelpViewController.nib /Volumes/anagram/prototype/DaD_test2/Classes/HelpViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+lSLF07#2@41"CompileXIB Classes/HelpViewController.xib319736459#319736463#0(0"0(0#0#67"/Volumes/anagram/prototype/DaD_test2/Classes/HelpViewController.xib548800#590"    cd /Volumes/anagram/prototype/DaD_test2    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/HelpViewController.nib /Volumes/anagram/prototype/DaD_test2/Classes/HelpViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
 
 CCompileXIB /Volumes/anagram/prototype/DaD_test2/Classes/ScoreViewController.xib
 s319730082.536142
@@ -858,13 +865,13 @@ x/Volumes/SHARE/Objective-C/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/
 lSLF07#2@115"GenerateDSYMFile build/Debug-iphonesimulator/DaD_test2.app.dSYM build/Debug-iphonesimulator/DaD_test2.app/DaD_test2319576011#319576011#0(0"0(0#0#88"/Volumes/SHARE/Objective-C/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2548800#383"    cd /Volumes/SHARE/Objective-C/DaD_test2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Volumes/SHARE/Objective-C/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2 -o /Volumes/SHARE/Objective-C/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app.dSYM0#
 
 CGenerateDSYMFile /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app.dSYM /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2
-s319730794.582520
-e319730795.452795
+s319741646.483490
+e319741647.007770
 r1
 xGenerateDSYMFile
 x/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app.dSYM
 x/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2
-lSLF07#2@115"GenerateDSYMFile build/Debug-iphonesimulator/DaD_test2.app.dSYM build/Debug-iphonesimulator/DaD_test2.app/DaD_test2319730794#319730795#0(0"0(0#0#88"/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2548800#383"    cd /Volumes/anagram/prototype/DaD_test2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2 -o /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app.dSYM0#
+lSLF07#2@115"GenerateDSYMFile build/Debug-iphonesimulator/DaD_test2.app.dSYM build/Debug-iphonesimulator/DaD_test2.app/DaD_test2319741646#319741647#0(0"0(0#0#88"/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2548800#383"    cd /Volumes/anagram/prototype/DaD_test2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2 -o /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app.dSYM0#
 
 CLd /Users/apfel/Objective-C/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2 normal i386
 s319640174.047090
@@ -887,14 +894,14 @@ xi386
 lSLF07#2@93"Link /Volumes/SHARE/Objective-C/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2319575966#319575966#0(0"0(0#0#0"548800#900"    cd /Volumes/SHARE/Objective-C/DaD_test2    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Volumes/SHARE/Objective-C/DaD_test2/build/Debug-iphonesimulator -F/Volumes/SHARE/Objective-C/DaD_test2/build/Debug-iphonesimulator -filelist /Volumes/SHARE/Objective-C/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Volumes/SHARE/Objective-C/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test20#
 
 CLd /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2 normal i386
-s319730636.440712
-e319730636.754917
+s319741646.105169
+e319741646.482767
 r1
 xLd
 x/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2
 xnormal
 xi386
-lSLF07#2@93"Link /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2319730636#319730636#0(0"0(0#0#0"548800#900"    cd /Volumes/anagram/prototype/DaD_test2    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator -F/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator -filelist /Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test20#
+lSLF07#2@93"Link /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2319741646#319741646#0(0"0(0#0#0"548800#900"    cd /Volumes/anagram/prototype/DaD_test2    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator -F/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator -filelist /Volumes/anagram/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test20#
 
 CProcessInfoPlistFile /Users/apfel/Objective-C/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/Info.plist DaD_test2-Info.plist
 r0
@@ -957,10 +964,10 @@ x/Volumes/SHARE/Objective-C/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app
 lSLF07#2@84"Touch /Volumes/SHARE/Objective-C/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app319576011#319576011#0(0"0(0#0#0"548800#276"    cd /Volumes/SHARE/Objective-C/DaD_test2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Volumes/SHARE/Objective-C/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app0#
 
 CTouch /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app
-s319731660.654488
-e319731660.698267
+s319741647.007950
+e319741647.044563
 r1
 xTouch
 x/Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app
-lSLF07#2@84"Touch /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app319731660#319731660#0(0"0(0#0#0"548800#276"    cd /Volumes/anagram/prototype/DaD_test2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app0#
+lSLF07#2@84"Touch /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app319741647#319741647#0(0"0(0#0#0"548800#276"    cd /Volumes/anagram/prototype/DaD_test2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Volumes/anagram/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app0#
 
