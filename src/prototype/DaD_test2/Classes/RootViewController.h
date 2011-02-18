@@ -8,14 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "GameViewController.h"
-#import "DraggableLabel.h"
+#import "SettingViewController.h"
+#import "ScoreViewController.h"
+#import "HelpViewController.h"
+
 
 @interface RootViewController : UITableViewController {
 	GameViewController * game;
+	SettingViewController * setting;
+	ScoreViewController * score;
+	HelpViewController * help;
 }
 
 
 @property(nonatomic,retain)GameViewController * game;
-
+@property(nonatomic,retain)SettingViewController * setting;
+@property(nonatomic,retain)ScoreViewController * score;
+@property(nonatomic,retain)HelpViewController * help;
 
 @end

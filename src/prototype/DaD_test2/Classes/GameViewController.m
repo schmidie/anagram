@@ -39,12 +39,12 @@ NSString *letters = @"apple";
 	for (int i= 0; i< [letters length] ; i++) {
 		
 		//destination Labels
-		UILabel *destLab = [[UILabel alloc] initWithFrame:CGRectMake(i*50, 170, 40, 60)];
-		destLab.layer.cornerRadius = 8;
-		destLab.layer.borderColor = [[UIColor blackColor] CGColor];
-		destLab.layer.borderWidth = 1;
+		//UILabel *destLab = [[UILabel alloc] initWithFrame:CGRectMake(i*50, 170, 40, 60)];
+		//destLab.layer.cornerRadius = 8;
+		//destLab.layer.borderColor = [[UIColor blackColor] CGColor];
+		//destLab.layer.borderWidth = 1;
 		
-		[self.view addSubview:destLab];
+		//[self.view addSubview:destLab];
 		
 		
 		// create a label
@@ -80,31 +80,30 @@ NSString *letters = @"apple";
 	
 	NSLog(@"Position x:%d y:%d",label.center.x+translation.x,label.center.y+translation.y);
 	
-	NSInteger elementSize = self.view.bounds.size.width/[letters length];
+	//NSInteger elementSize = self.view.bounds.size.width/[letters length];
 	
-	if(label.center.y + translation.y < 200){
+	//if(label.center.y + translation.y < 200){
 		// if we are in the dogging region but not dogged!
-		if(label.center.y + translation.y > 120
-		   && label.center.y < 170){
+		//if(label.center.y + translation.y > 120
+		  // && label.center.y < 170){
 		
-			CGPoint point = CGPointMake(label.center.x + translation.x, 
-					label.center.y + translation.y);
+		//	CGPoint point = CGPointMake(label.center.x + translation.x, 
+		//			label.center.y + translation.y);
 		
-			long int position = lround((double)(point.x/elementSize));
+		//	long int position = lround((double)(point.x/elementSize));
 			//NSLog(@"Position pos:%d",position);
-			label.center = CGPointMake(position*elementSize , 200);
+		//	label.center = CGPointMake(position*elementSize , 200);
 		
-		}
+		//}
 		// we do not move if we have little translation
-		else if (translation.x > 5 || translation.y > 5 ||
-				 translation.x < -5 || translation.y <-5){
+		//else if (translation.x > 5 || translation.y > 5 ||
+		//		 translation.x < -5 || translation.y <-5){
 		
 		// move label
-		label.center = CGPointMake(label.center.x + translation.x, 
-								   label.center.y + translation.y);
+		label.center = CGPointMake(label.center.x + translation.x, label.center.y + translation.y);
 		
-		}
-	}
+		//}
+	//}
 
 	//float rounded = round(label.center.x + translation.x / elementSize*10);
 	

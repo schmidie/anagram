@@ -12,6 +12,11 @@
 @implementation RootViewController
 
 @synthesize game;
+@synthesize setting;
+@synthesize score;
+@synthesize help;
+
+NSArray *menuItems;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -21,6 +26,7 @@
     [super viewDidLoad];
 	self.title= @"Menu";
 
+	menuItems = [[NSArray alloc] initWithObjects:@"Game",@"Setting",@"Highscore",@"Help",nil];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -67,7 +73,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [menuItems count];
 }
 
 
@@ -82,7 +88,7 @@
     }
     
 	// Configure the cell.
-	cell.textLabel.text = @"Game";
+	cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -140,33 +146,50 @@
 	 [detailViewController release];
 	 */
 	
-	if(self.game == nil){    
-        GameViewController *viewController = 
-		[[GameViewController alloc] initWithNibName:@"GameViewController" bundle:[NSBundle mainBundle]];
-        self.game = viewController;
-        [viewController release];        
-    }
-    
-    [self.navigationController pushViewController:self.game animated:YES];
-    self.game.title = @"GAME";  
-	
-	//CGRect labelRect = CGRectMake(0.0f, 0.0f, 200.0f,100.0f);
-	
-	//DraggableLabel dragLab = [[DraggableLabel alloc] initWithFrame:labelRect];
-	//[dragLab 
-	
-	//UILabel* label = [[UILabel alloc] initWithFrame:labelRect];
-	//label.backgroundColor = [UIColor blueColor];
-	//label.text = @"test1";
-	
-	//UIView* view1 = [[UIView alloc] init];
-	//view1.backgroundColor = [UIColor yellowColor];
-	
-	//[self.game.label1 removeFromSuperview]; 
-	
-	//[self.game.view addSubview: label];
-	
-	//[label release];
+	switch (indexPath.row) {
+		case 0:
+			if(self.game == nil){    
+				GameViewController *viewController = 
+				[[GameViewController alloc] initWithNibName:@"GameViewController" bundle:[NSBundle mainBundle]];
+				self.game = viewController;
+				[viewController release];        
+			}
+			[self.navigationController pushViewController:self.game animated:YES];
+			self.game.title = @"GAME"; 
+			break;
+		case 1:
+			if(self.setting == nil){    
+				SettingViewController *viewController = 
+				[[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:[NSBundle mainBundle]];
+				self.setting = viewController;
+				[viewController release];        
+			}
+			[self.navigationController pushViewController:self.setting animated:YES];
+			self.setting.title = @"Settings"; 
+			break;
+		case 2:
+			if(self.score == nil){    
+				ScoreViewController *viewController = 
+				[[ScoreViewController alloc] initWithNibName:@"ScoreViewController" bundle:[NSBundle mainBundle]];
+				self.score = viewController;
+				[viewController release];        
+			}
+			[self.navigationController pushViewController:self.score animated:YES];
+			self.score.title = @"Highscore"; 
+			break;
+		case 3:
+			if(self.help == nil){    
+				HelpViewController *viewController = 
+				[[HelpViewController alloc] initWithNibName:@"HelpViewController" bundle:[NSBundle mainBundle]];
+				self.help = viewController;
+				[viewController release];        
+			}
+			[self.navigationController pushViewController:self.help animated:YES];
+			self.help.title = @"Help"; 
+			break;
+		default:
+			break;
+	} 
 }
 
 
