@@ -23,6 +23,9 @@
 		4777FDC2130EB12A00D3941F /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4777FDC0130EB12A00D3941F /* ScoreViewController.xib */; };
 		4777FDC6130EB13800D3941F /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4777FDC4130EB13800D3941F /* HelpViewController.m */; };
 		4777FDC7130EB13800D3941F /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4777FDC5130EB13800D3941F /* HelpViewController.xib */; };
+		7874CEBE130FDB500070BCD3 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7874CEBD130FDB500070BCD3 /* GameController.m */; };
+		7874CEC3130FDF180070BCD3 /* GameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7874CEC2130FDF180070BCD3 /* GameModel.m */; };
+		7874CEF3130FE5350070BCD3 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 7874CEF2130FE5350070BCD3 /* Status.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,12 @@
 		4777FDC3130EB13800D3941F /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		4777FDC4130EB13800D3941F /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		4777FDC5130EB13800D3941F /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
+		7874CEBC130FDB500070BCD3 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		7874CEBD130FDB500070BCD3 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		7874CEC1130FDF180070BCD3 /* GameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameModel.h; sourceTree = "<group>"; };
+		7874CEC2130FDF180070BCD3 /* GameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameModel.m; sourceTree = "<group>"; };
+		7874CEF1130FE5350070BCD3 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		7874CEF2130FE5350070BCD3 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* DaD_test2-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DaD_test2-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +95,12 @@
 				4777FDC3130EB13800D3941F /* HelpViewController.h */,
 				4777FDC4130EB13800D3941F /* HelpViewController.m */,
 				4777FDC5130EB13800D3941F /* HelpViewController.xib */,
+				7874CEBC130FDB500070BCD3 /* GameController.h */,
+				7874CEBD130FDB500070BCD3 /* GameController.m */,
+				7874CEC1130FDF180070BCD3 /* GameModel.h */,
+				7874CEC2130FDF180070BCD3 /* GameModel.m */,
+				7874CEF1130FE5350070BCD3 /* Status.h */,
+				7874CEF2130FE5350070BCD3 /* Status.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -212,6 +227,9 @@
 				4777FDBC130EB11900D3941F /* SettingViewController.m in Sources */,
 				4777FDC1130EB12A00D3941F /* ScoreViewController.m in Sources */,
 				4777FDC6130EB13800D3941F /* HelpViewController.m in Sources */,
+				7874CEBE130FDB500070BCD3 /* GameController.m in Sources */,
+				7874CEC3130FDF180070BCD3 /* GameModel.m in Sources */,
+				7874CEF3130FE5350070BCD3 /* Status.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
