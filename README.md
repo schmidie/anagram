@@ -1,2 +1,2 @@
-# IANAGRAM
-... is a free anagram game for the IPhone
+# iDictAttack
+... is a free anagram game for the iPhone
