@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "GameController.h"
 #import <QuartzCore/QuartzCore.h>
 
 
@@ -32,6 +33,7 @@ NSString *letters;
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
 	
 	//NSLog(@"length %d",[[self shake: @"apple"] length]);
 	letters = [[NSString alloc] initWithFormat:@"%@",[self shake: @"apple"]];

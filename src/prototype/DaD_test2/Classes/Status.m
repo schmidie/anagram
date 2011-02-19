@@ -11,4 +11,9 @@
 
 @implementation Status
 
+@synthesize lifesRemaining;
+@synthesize timeRemaining;
+@synthesize solvedWords;
+@synthesize currentGameMode;
+
 @end

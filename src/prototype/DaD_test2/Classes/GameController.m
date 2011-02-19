@@ -11,4 +11,32 @@
 
 @implementation GameController
 
+-(id) initWithGameModel:(GameModel*)model{
+	gameModel = model;
+	
+	return self;
+}
+-(void) startNewGame{
+	
+}
+
+-(NSString*) getCurrentWord{
+	return @"friedrichshafen";
+}
+
+-(Status*) getStatus{
+	Status *myStatus = [[Status alloc] init];
+	//[myStatus setSolvedWords:[model get...]]
+	//[myStatus setSolvedWords:5];
+	//[myStatus setTimeRemaining:89];
+	//[myStatus setLifesRemaining:3];
+	//[myStatus setCurrentGameMode:1];
+	
+	return myStatus;
+}
+
+-(Boolean) checkSolution{
+	return false;
+}
+
 @end

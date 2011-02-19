@@ -10,6 +10,7 @@
 #import "RootViewController.h"
 
 
+
 @implementation DaD_test2AppDelegate
 
 @synthesize window;
@@ -22,7 +23,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
-    
+	releasePool = [[NSAutoreleasePool alloc]init];
+	
+	gameModel = [[GameModel alloc]init];
+	gameController = [[GameController alloc]initWithGameModel:gameModel];
+	
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
@@ -66,6 +71,7 @@
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.
      */
+	[releasePool release];
 }
 
 
@@ -76,6 +82,7 @@
     /*
      Free up as much memory as possible by purging cached data objects that can be recreated (or reloaded from disk) later.
      */
+	[releasePool release];
 }
 
 

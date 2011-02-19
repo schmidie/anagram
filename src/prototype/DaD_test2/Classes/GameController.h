@@ -12,8 +12,10 @@
 
 
 @interface GameController : NSObject {
-		
+	GameModel * gameModel;
 }
+
+//@property (nonatomic, retain) GameModel gameModel;
 
 -(id) initWithGameModel:(GameModel*)model;
 -(void) startNewGame;
