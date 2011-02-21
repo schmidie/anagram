@@ -1,591 +1,0 @@
-TDaD_test2
-v7
-r0
-t319826427.052972
-cCheck dependencies
-cProcessInfoPlistFile /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/Info.plist DaD_test2-Info.plist
-cCompileXIB /Users/apfel/anagram/src/prototype/DaD_test2/MainWindow.xib
-cCompileXIB /Users/apfel/anagram/src/prototype/DaD_test2/RootViewController.xib
-cCompileXIB /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib
-cCompileXIB /Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib
-cCompileXIB /Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib
-cCompileXIB /Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.xib
-cProcessPCH /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch.gch DaD_test2_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/main.o /Users/apfel/anagram/src/prototype/DaD_test2/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2AppDelegate.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/DaD_test2AppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/RootViewController.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameViewController.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/SettingViewController.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/ScoreViewController.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/HelpViewController.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameController.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameModel.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/Status.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/DaD_test2 normal i386
-cGenerateDSYMFile /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app.dSYM /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/DaD_test2
-cTouch /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
-c000000004CC128950000000000000110
-t1287727253
-s272
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004CC12246000000000029B310
-t1287725638
-s2732816
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004CC1226D000000000029D5D0
-t1287725677
-s2741712
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004CC1225F0000000000001466
-t1287725663
-s5222
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
-c000000004CC1233C00000000000000C4
-t1287725884
-s196
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004CC1281F0000000000000AA1
-t1287727135
-s2721
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004CC12883000000000074D7B0
-t1287727235
-s7657392
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/Availability.h
-c000000004CB3FA080000000000001ADD
-t1286863368
-s6877
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/DaD_test2AppDelegate.h
-c000000004D5FC2FB00000000000001D1
-t1298121467
-s465
-i<UIKit/UIKit.h>
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/DaD_test2AppDelegate.m
-c000000004D5FC2FB0000000000000AA7
-t1298121467
-s2727
-i"DaD_test2AppDelegate.h"
-i"RootViewController.h"
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.h
-c000000004D5FC2FB00000000000001A0
-t1298121467
-s416
-i<Foundation/Foundation.h>
-i"GameModel.h"
-i"Status.h"
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m
-c000000004D5FC2FB00000000000000D0
-t1298121467
-s208
-i"GameController.h"
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.h
-c000000004D5FC2FB000000000000028B
-t1298121467
-s651
-i<Foundation/Foundation.h>
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m
-c000000004D5FC2FB00000000000000C1
-t1298121467
-s193
-i"GameModel.h"
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.h
-c000000004D5FC2FB000000000000014D
-t1298121467
-s333
-i<UIKit/UIKit.h>
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m
-c000000004D5FC2FB00000000000012AC
-t1298121467
-s4780
-i"GameViewController.h"
-i<QuartzCore/QuartzCore.h>
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib
-c000000004D5FC2FB0000000000004303
-t1298121467
-s17155
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.h
-c000000004D5FC2FB00000000000000E2
-t1298121467
-s226
-i<UIKit/UIKit.h>
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.m
-c000000004D5FC2FB00000000000005A6
-t1298121467
-s1446
-i"HelpViewController.h"
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.xib
-c000000004D5FC2FB0000000000004647
-t1298121467
-s17991
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/RootViewController.h
-c000000004D5FC2FB00000000000002C0
-t1298121467
-s704
-i<UIKit/UIKit.h>
-i"GameViewController.h"
-i"SettingViewController.h"
-i"ScoreViewController.h"
-i"HelpViewController.h"
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/RootViewController.m
-c000000004D5FC2FB000000000000185D
-t1298121467
-s6237
-i"RootViewController.h"
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.h
-c000000004D5FC2FB00000000000000E4
-t1298121467
-s228
-i<UIKit/UIKit.h>
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.m
-c000000004D5FC2FB00000000000005A9
-t1298121467
-s1449
-i"ScoreViewController.h"
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib
-c000000004D5FC2FB0000000000001874
-t1298121467
-s6260
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.h
-c000000004D5FC2FB00000000000000E8
-t1298121467
-s232
-i<UIKit/UIKit.h>
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.m
-c000000004D5FC2FB00000000000005AF
-t1298121467
-s1455
-i"SettingViewController.h"
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib
-c000000004D5FC2FB000000000000187A
-t1298121467
-s6266
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.h
-c000000004D5FC2FB0000000000000204
-t1298121467
-s516
-i<Foundation/Foundation.h>
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m
-c000000004D5FC2FB00000000000000B8
-t1298121467
-s184
-i"Status.h"
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/DaD_test2_Prefix.pch
-c000000004D5FC2FB0000000000000144
-t1298121467
-s324
-i<Availability.h>
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/MainWindow.xib
-c000000004D5FC2FB0000000000005FFC
-t1298121467
-s24572
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/RootViewController.xib
-c000000004D5FC2FB0000000000004454
-t1298121467
-s17492
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2.LinkFileList
-c000000004D5FF0BC00000000000005A7
-t1298133180
-s1447
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2AppDelegate.o
-t1298133338
-s52324
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameController.o
-t1298133569
-s5108
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameModel.o
-t1298133593
-s6108
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameViewController.o
-t1298133491
-s47120
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/HelpViewController.o
-t1298133557
-s37512
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/RootViewController.o
-t1298133404
-s51056
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/ScoreViewController.o
-t1298133541
-s37536
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/SettingViewController.o
-t1298133520
-s37576
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/Status.o
-t1298133616
-s5756
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/main.o
-t1298133313
-s6300
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app
-t1298133626
-s308
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app.dSYM
-t1298133621
-s16
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/DaD_test2
-t1298133619
-s31504
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/GameViewController.nib
-t1298133205
-s944
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/HelpViewController.nib
-t1298133236
-s1718
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/Info.plist
-t1298133180
-s599
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/MainWindow.nib
-t1298133182
-s1511
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/PkgInfo
-t1298133180
-s8
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/RootViewController.nib
-t1298133200
-s979
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/ScoreViewController.nib
-t1298133228
-s764
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/SettingViewController.nib
-t1298133212
-s764
-
-N/Users/apfel/anagram/src/prototype/DaD_test2/main.m
-c000000004D5FC2FB0000000000000163
-t1298121467
-s355
-i<UIKit/UIKit.h>
-
-N/var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch.gch
-t1298133291
-s10155736
-
-NDaD_test2-Info.plist
-c000000004D5FC2FB000000000000038D
-t1298121467
-s909
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies319825976#319825980#0(0"0(0#1#0"24624968#0"0#
-
-CCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2AppDelegate.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/DaD_test2AppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s319826114.370141
-e319826139.156005
-r1
-xCompileC
-xbuild/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2AppDelegate.o
-x/Users/apfel/anagram/src/prototype/DaD_test2/Classes/DaD_test2AppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@83"Compile /Users/apfel/anagram/src/prototype/DaD_test2/Classes/DaD_test2AppDelegate.m319826114#319826150#0(0"0(0#0#75"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/DaD_test2AppDelegate.m548800#2119"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator -I/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/include -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch -c /Users/apfel/anagram/src/prototype/DaD_test2/Classes/DaD_test2AppDelegate.m -o /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2AppDelegate.o0#
-
-CCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameController.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s319826357.760931
-e319826370.359439
-r1
-xCompileC
-xbuild/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameController.o
-x/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m:14: warning: incomplete implementation of class 'GameController'
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m:14: warning: method definition for '-checkSolution' not found
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m:14: warning: method definition for '-getStatus' not found
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m:14: warning: method definition for '-getCurrentWord' not found
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m:14: warning: method definition for '-startNewGame' not found
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m:14: warning: method definition for '-initWithGameModel:' not found
-lSLF07#2@77"Compile /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m319826357#319826370#0(796"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m:14: warning: incomplete implementation of class 'GameController'/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m:14: warning: method definition for '-checkSolution' not found/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m:14: warning: method definition for '-getStatus' not found/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m:14: warning: method definition for '-getCurrentWord' not found/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m:14: warning: method definition for '-startNewGame' not found/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m:14: warning: method definition for '-initWithGameModel:' not found6(22@51"Incomplete implementation of class 'GameController'319826363#0#135#0(6@69"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m319814267#14#0#14#0#38"incomplete implementation of class '*'0(22@48"Method definition for '-checkSolution' not found319826363#135#132#0(6@69"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m319814267#14#0#14#0#35"method definition for '*' not found0(22@44"Method definition for '-getStatus' not found319826363#267#128#0(6@69"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m319814267#14#0#14#0#35"method definition for '*' not found0(22@49"Method definition for '-getCurrentWord' not found319826363#395#133#0(6@69"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m319814267#14#0#14#0#35"method definition for '*' not found0(22@47"Method definition for '-startNewGame' not found319826363#528#131#0(6@69"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m319814267#14#0#14#0#35"method definition for '*' not found0(22@53"Method definition for '-initWithGameModel:' not found319826363#659#137#0(6@69"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m319814267#14#0#14#0#35"method definition for '*' not found0(0#0#69"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m548800#2107"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator -I/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/include -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch -c /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameController.m -o /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameController.o0#
-
-CCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameModel.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s319826370.367698
-e319826394.231568
-r1
-xCompileC
-xbuild/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameModel.o
-x/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'currentWord' requires method '-currentWord' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'currentWord' requires the method 'setCurrentWord:' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'lifesRemaining' requires method '-lifesRemaining' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'lifesRemaining' requires the method 'setLifesRemaining:' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'timeRemaining' requires method '-timeRemaining' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'timeRemaining' requires the method 'setTimeRemaining:' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'solvedWords' requires method '-solvedWords' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'solvedWords' requires the method 'setSolvedWords:' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'currentGameMode' requires method '-currentGameMode' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'currentGameMode' requires the method 'setCurrentGameMode:' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'inGame' requires method '-inGame' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'inGame' requires the method 'setInGame:' to be defined - use @synthesize, @dynamic or provide a method implementation
-lSLF07#2@72"Compile /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m319826370#319826394#0(2566"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'currentWord' requires method '-currentWord' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'currentWord' requires the method 'setCurrentWord:' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'lifesRemaining' requires method '-lifesRemaining' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'lifesRemaining' requires the method 'setLifesRemaining:' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'timeRemaining' requires method '-timeRemaining' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'timeRemaining' requires the method 'setTimeRemaining:' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'solvedWords' requires method '-solvedWords' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'solvedWords' requires the method 'setSolvedWords:' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'currentGameMode' requires method '-currentGameMode' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'currentGameMode' requires the method 'setCurrentGameMode:' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'inGame' requires method '-inGame' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m:14: warning: property 'inGame' requires the method 'setInGame:' to be defined - use @synthesize, @dynamic or provide a method implementation12(22@130"Property 'currentWord' requires method '-currentWord' to be defined - use @synthesize, @dynamic or provide a method implementation319826385#0#209#0(6@64"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m319814267#14#0#14#0#0"0(22@137"Property 'currentWord' requires the method 'setCurrentWord:' to be defined - use @synthesize, @dynamic or provide a method implementation319826385#209#216#0(6@64"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m319814267#14#0#14#0#0"0(22@136"Property 'lifesRemaining' requires method '-lifesRemaining' to be defined - use @synthesize, @dynamic or provide a method implementation319826385#425#215#0(6@64"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m319814267#14#0#14#0#0"0(22@143"Property 'lifesRemaining' requires the method 'setLifesRemaining:' to be defined - use @synthesize, @dynamic or provide a method implementation319826385#640#222#0(6@64"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m319814267#14#0#14#0#0"0(22@134"Property 'timeRemaining' requires method '-timeRemaining' to be defined - use @synthesize, @dynamic or provide a method implementation319826385#862#213#0(6@64"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m319814267#14#0#14#0#0"0(22@141"Property 'timeRemaining' requires the method 'setTimeRemaining:' to be defined - use @synthesize, @dynamic or provide a method implementation319826385#1075#220#0(6@64"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m319814267#14#0#14#0#0"0(22@130"Property 'solvedWords' requires method '-solvedWords' to be defined - use @synthesize, @dynamic or provide a method implementation319826385#1295#209#0(6@64"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m319814267#14#0#14#0#0"0(22@137"Property 'solvedWords' requires the method 'setSolvedWords:' to be defined - use @synthesize, @dynamic or provide a method implementation319826385#1504#216#0(6@64"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m319814267#14#0#14#0#0"0(22@138"Property 'currentGameMode' requires method '-currentGameMode' to be defined - use @synthesize, @dynamic or provide a method implementation319826385#1720#217#0(6@64"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m319814267#14#0#14#0#0"0(22@145"Property 'currentGameMode' requires the method 'setCurrentGameMode:' to be defined - use @synthesize, @dynamic or provide a method implementation319826385#1937#224#0(6@64"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m319814267#14#0#14#0#0"0(22@120"Property 'inGame' requires method '-inGame' to be defined - use @synthesize, @dynamic or provide a method implementation319826385#2161#199#0(6@64"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m319814267#14#0#14#0#0"0(22@127"Property 'inGame' requires the method 'setInGame:' to be defined - use @synthesize, @dynamic or provide a method implementation319826385#2360#206#0(6@64"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m319814267#14#0#14#0#0"0(0#0#64"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m548800#2097"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator -I/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/include -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch -c /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameModel.m -o /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameModel.o0#
-
-CCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameViewController.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s319826205.042035
-e319826291.929693
-r1
-xCompileC
-xbuild/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameViewController.o
-x/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m: In function '-[GameViewController viewDidLoad]':
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m:37: warning: 'GameViewController' may not respond to '-shake:'
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m:37: warning: (Messages without a matching method signature
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m:37: warning: will be assumed to return 'id' and accept
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m:37: warning: '...' as arguments.)
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m: In function '-[GameViewController shake:]':
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m:134: warning: initialization makes pointer from integer without a cast
-lSLF07#2@81"Compile /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m319826205#319826291#0(895"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m: In function '-[GameViewController viewDidLoad]':/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m:37: warning: 'GameViewController' may not respond to '-shake:'/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m:37: warning: (Messages without a matching method signature/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m:37: warning: will be assumed to return 'id' and accept/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m:37: warning: '...' as arguments.)/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m: In function '-[GameViewController shake:]':/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m:134: warning: initialization makes pointer from integer without a cast3(22@49"'GameViewController' may not respond to '-shake:'319826248#124#137#0(6@73"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m319814267#37#0#37#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)319826248#261#133#0(6@73"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m319814267#37#0#37#0#0"0(22@56"Initialization makes pointer from integer without a cast319826250#750#145#0(6@73"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m319814267#134#0#134#0#0"0(0#0#73"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m548800#2115"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator -I/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/include -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch -c /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.m -o /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameViewController.o0#
-
-CCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/HelpViewController.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s319826342.208861
-e319826357.758314
-r1
-xCompileC
-xbuild/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/HelpViewController.o
-x/Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.m319826342#319826357#0(0"0(0#0#73"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.m548800#2115"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator -I/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/include -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch -c /Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.m -o /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/HelpViewController.o0#
-
-CCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/RootViewController.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s319826139.247683
-e319826205.034179
-r1
-xCompileC
-xbuild/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/RootViewController.o
-x/Users/apfel/anagram/src/prototype/DaD_test2/Classes/RootViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/apfel/anagram/src/prototype/DaD_test2/Classes/RootViewController.m319826139#319826205#0(0"0(0#0#73"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/RootViewController.m548800#2115"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator -I/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/include -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch -c /Users/apfel/anagram/src/prototype/DaD_test2/Classes/RootViewController.m -o /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/RootViewController.o0#
-
-CCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/ScoreViewController.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s319826320.431471
-e319826342.200220
-r1
-xCompileC
-xbuild/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/ScoreViewController.o
-x/Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.m319826320#319826342#0(0"0(0#0#74"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.m548800#2117"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator -I/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/include -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch -c /Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.m -o /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/ScoreViewController.o0#
-
-CCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/SettingViewController.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s319826291.932695
-e319826320.421814
-r1
-xCompileC
-xbuild/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/SettingViewController.o
-x/Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@84"Compile /Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.m319826291#319826320#0(0"0(0#0#76"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.m548800#2121"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator -I/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/include -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch -c /Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.m -o /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/SettingViewController.o0#
-
-CCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/Status.o /Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s319826394.239113
-e319826416.920326
-r1
-xCompileC
-xbuild/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/Status.o
-x/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'lifesRemaining' requires method '-lifesRemaining' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'lifesRemaining' requires the method 'setLifesRemaining:' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'timeRemaining' requires method '-timeRemaining' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'timeRemaining' requires the method 'setTimeRemaining:' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'solvedWords' requires method '-solvedWords' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'solvedWords' requires the method 'setSolvedWords:' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'currentGameMode' requires method '-currentGameMode' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'currentGameMode' requires the method 'setCurrentGameMode:' to be defined - use @synthesize, @dynamic or provide a method implementation
-lSLF07#2@69"Compile /Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m319826394#319826417#0(1712"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'lifesRemaining' requires method '-lifesRemaining' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'lifesRemaining' requires the method 'setLifesRemaining:' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'timeRemaining' requires method '-timeRemaining' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'timeRemaining' requires the method 'setTimeRemaining:' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'solvedWords' requires method '-solvedWords' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'solvedWords' requires the method 'setSolvedWords:' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'currentGameMode' requires method '-currentGameMode' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m:14: warning: property 'currentGameMode' requires the method 'setCurrentGameMode:' to be defined - use @synthesize, @dynamic or provide a method implementation8(22@136"Property 'lifesRemaining' requires method '-lifesRemaining' to be defined - use @synthesize, @dynamic or provide a method implementation319826401#0#212#0(6@61"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m319814267#14#0#14#0#0"0(22@143"Property 'lifesRemaining' requires the method 'setLifesRemaining:' to be defined - use @synthesize, @dynamic or provide a method implementation319826401#212#219#0(6@61"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m319814267#14#0#14#0#0"0(22@134"Property 'timeRemaining' requires method '-timeRemaining' to be defined - use @synthesize, @dynamic or provide a method implementation319826401#431#210#0(6@61"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m319814267#14#0#14#0#0"0(22@141"Property 'timeRemaining' requires the method 'setTimeRemaining:' to be defined - use @synthesize, @dynamic or provide a method implementation319826401#641#217#0(6@61"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m319814267#14#0#14#0#0"0(22@130"Property 'solvedWords' requires method '-solvedWords' to be defined - use @synthesize, @dynamic or provide a method implementation319826401#858#206#0(6@61"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m319814267#14#0#14#0#0"0(22@137"Property 'solvedWords' requires the method 'setSolvedWords:' to be defined - use @synthesize, @dynamic or provide a method implementation319826401#1064#213#0(6@61"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m319814267#14#0#14#0#0"0(22@138"Property 'currentGameMode' requires method '-currentGameMode' to be defined - use @synthesize, @dynamic or provide a method implementation319826401#1277#214#0(6@61"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m319814267#14#0#14#0#0"0(22@145"Property 'currentGameMode' requires the method 'setCurrentGameMode:' to be defined - use @synthesize, @dynamic or provide a method implementation319826401#1491#221#0(6@61"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m319814267#14#0#14#0#0"0(0#0#61"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m548800#2091"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator -I/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/include -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch -c /Users/apfel/anagram/src/prototype/DaD_test2/Classes/Status.m -o /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/Status.o0#
-
-CCompileC build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/main.o /Users/apfel/anagram/src/prototype/DaD_test2/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s319826092.455262
-e319826114.368189
-r1
-xCompileC
-xbuild/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/main.o
-x/Users/apfel/anagram/src/prototype/DaD_test2/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@59"Compile /Users/apfel/anagram/src/prototype/DaD_test2/main.m319826092#319826118#0(0"0(0#0#51"/Users/apfel/anagram/src/prototype/DaD_test2/main.m24624968#2079"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator -I/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/include -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch -c /Users/apfel/anagram/src/prototype/DaD_test2/main.m -o /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib
-s319826000.646188
-e319826007.319305
-r1
-xCompileXIB
-x/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib
-lSLF07#2@41"CompileXIB Classes/GameViewController.xib319826000#319826007#0(0"0(0#0#75"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib548800#616"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/GameViewController.nib /Users/apfel/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
-
-CCompileXIB /Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.xib
-s319826029.615367
-e319826038.566774
-r1
-xCompileXIB
-x/Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.xib
-oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
-oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
-lSLF07#2@41"CompileXIB Classes/HelpViewController.xib319826029#319826038#0(168"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#75"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.xib548800#616"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/HelpViewController.nib /Users/apfel/anagram/src/prototype/DaD_test2/Classes/HelpViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
-
-CCompileXIB /Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib
-s319826012.689427
-e319826029.615081
-r1
-xCompileXIB
-x/Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib
-lSLF07#2@42"CompileXIB Classes/ScoreViewController.xib319826012#319826029#0(0"0(0#0#76"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib548800#618"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/ScoreViewController.nib /Users/apfel/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
-
-CCompileXIB /Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib
-s319826007.341990
-e319826012.688844
-r1
-xCompileXIB
-x/Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib
-lSLF07#2@44"CompileXIB Classes/SettingViewController.xib319826007#319826012#0(0"0(0#0#78"/Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib548800#622"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/SettingViewController.nib /Users/apfel/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
-
-CCompileXIB /Users/apfel/anagram/src/prototype/DaD_test2/MainWindow.xib
-s319825980.972865
-e319825983.700439
-r1
-xCompileXIB
-x/Users/apfel/anagram/src/prototype/DaD_test2/MainWindow.xib
-lSLF07#2@25"CompileXIB MainWindow.xib319825980#319825983#0(0"0(0#0#59"/Users/apfel/anagram/src/prototype/DaD_test2/MainWindow.xib25111696#592"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/MainWindow.nib /Users/apfel/anagram/src/prototype/DaD_test2/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
-
-CCompileXIB /Users/apfel/anagram/src/prototype/DaD_test2/RootViewController.xib
-s319825983.724738
-e319826000.645804
-r1
-xCompileXIB
-x/Users/apfel/anagram/src/prototype/DaD_test2/RootViewController.xib
-lSLF07#2@33"CompileXIB RootViewController.xib319825983#319826000#0(0"0(0#0#67"/Users/apfel/anagram/src/prototype/DaD_test2/RootViewController.xib548800#608"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/RootViewController.nib /Users/apfel/anagram/src/prototype/DaD_test2/RootViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
-
-CGenerateDSYMFile /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app.dSYM /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/DaD_test2
-s319826419.962590
-e319826425.250236
-r1
-xGenerateDSYMFile
-x/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app.dSYM
-x/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/DaD_test2
-lSLF07#2@119"GenerateDSYMFile build/Release-iphonesimulator/DaD_test2.app.dSYM build/Release-iphonesimulator/DaD_test2.app/DaD_test2319826419#319826436#0(0"0(0#0#98"/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/DaD_test2548800#411"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/DaD_test2 -o /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app.dSYM0#
-
-CLd /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/DaD_test2 normal i386
-s319826416.922079
-e319826419.962181
-r1
-xLd
-x/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/DaD_test2
-xnormal
-xi386
-lSLF07#2@103"Link /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/DaD_test2319826416#319826419#0(0"0(0#0#0"548800#948"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator -F/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator -filelist /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/DaD_test20#
-
-CProcessInfoPlistFile /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/Info.plist DaD_test2-Info.plist
-s319825980.730258
-e319825980.972679
-r1
-xProcessInfoPlistFile
-x/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/Info.plist
-xDaD_test2-Info.plist
-lSLF07#2@28"Process DaD_test2-Info.plist319825980#319825980#0(0"0(0#0#65"/Users/apfel/anagram/src/prototype/DaD_test2/DaD_test2-Info.plist24624968#507"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility DaD_test2-Info.plist -genpkginfo /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app/Info.plist0#
-
-CProcessPCH /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch.gch DaD_test2_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s319826038.568680
-e319826092.443067
-r1
-xProcessPCH
-x/var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch.gch
-xDaD_test2_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@31"Precompile DaD_test2_Prefix.pch319826038#319826092#0(0"0(0#0#65"/Users/apfel/anagram/src/prototype/DaD_test2/DaD_test2_Prefix.pch24624968#1961"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap -iquote /Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap -F/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator -I/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/include -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources/i386 -I/Users/apfel/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Release-iphonesimulator/DaD_test2.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/apfel/anagram/src/prototype/DaD_test2/DaD_test2_Prefix.pch -o /var/folders/0a/0akDwHzpHLCv18Af8KV54k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-bpdeyctslsvuqrekokkbiwxlnhkl/DaD_test2_Prefix.pch.gch0#
-
-CTouch /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app
-s319826425.258173
-e319826427.051409
-r1
-xTouch
-x/Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app
-lSLF07#2@94"Touch /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app319826425#319826436#0(0"0(0#0#0"548800#294"    cd /Users/apfel/anagram/src/prototype/DaD_test2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/apfel/anagram/src/prototype/DaD_test2/build/Release-iphonesimulator/DaD_test2.app0#
-

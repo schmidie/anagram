@@ -73,10 +73,12 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 319995925;
-			PBXWorkspaceStateSaveDate = 319995925;
+			PBXPerProjectTemplateStateSaveDate = 320005135;
+			PBXWorkspaceStateSaveDate = 320005135;
 		};
 		perUserProjectItems = {
+			473334E01312E478005A82DA /* PBXTextBookmark */ = 473334E01312E478005A82DA /* PBXTextBookmark */;
+			473334E31312E478005A82DA /* PBXTextBookmark */ = 473334E31312E478005A82DA /* PBXTextBookmark */;
 			4777FDE8130ECBD000D3941F /* PBXTextBookmark */ = 4777FDE8130ECBD000D3941F /* PBXTextBookmark */;
 			4777FDE9130ECBD000D3941F /* PBXTextBookmark */ = 4777FDE9130ECBD000D3941F /* PBXTextBookmark */;
 			479B9A741312CCE300B32CC2 /* PBXTextBookmark */ = 479B9A741312CCE300B32CC2 /* PBXTextBookmark */;
@@ -87,7 +89,6 @@
 			479B9AD21312DD6200B32CC2 /* PBXTextBookmark */ = 479B9AD21312DD6200B32CC2 /* PBXTextBookmark */;
 			479B9ADA1312DE7300B32CC2 /* PBXTextBookmark */ = 479B9ADA1312DE7300B32CC2 /* PBXTextBookmark */;
 			479B9ADB1312DE7300B32CC2 /* PBXTextBookmark */ = 479B9ADB1312DE7300B32CC2 /* PBXTextBookmark */;
-			479B9ADC1312DE7300B32CC2 /* PBXTextBookmark */ = 479B9ADC1312DE7300B32CC2 /* PBXTextBookmark */;
 			479B9AE01312DE9F00B32CC2 /* PBXTextBookmark */ = 479B9AE01312DE9F00B32CC2 /* PBXTextBookmark */;
 			479B9AE11312DE9F00B32CC2 /* PBXTextBookmark */ = 479B9AE11312DE9F00B32CC2 /* PBXTextBookmark */;
 			479DE2C21312B37400250CF2 /* PBXTextBookmark */ = 479DE2C21312B37400250CF2 /* PBXTextBookmark */;
@@ -95,7 +96,6 @@
 			479DE2E01312BB7400250CF2 /* PBXTextBookmark */ = 479DE2E01312BB7400250CF2 /* PBXTextBookmark */;
 			479DE2E21312BB7400250CF2 /* PBXTextBookmark */ = 479DE2E21312BB7400250CF2 /* PBXTextBookmark */;
 			479DE2E41312BB7400250CF2 /* PBXTextBookmark */ = 479DE2E41312BB7400250CF2 /* PBXTextBookmark */;
-			479DE3101312BEDF00250CF2 /* PBXTextBookmark */ = 479DE3101312BEDF00250CF2 /* PBXTextBookmark */;
 			47A0EC4D13104BF700E6E2C8 /* PBXTextBookmark */ = 47A0EC4D13104BF700E6E2C8 /* PBXTextBookmark */;
 			47A0EC5F131050C800E6E2C8 /* PBXTextBookmark */ = 47A0EC5F131050C800E6E2C8 /* PBXTextBookmark */;
 			47A0EC62131050C800E6E2C8 /* PBXTextBookmark */ = 47A0EC62131050C800E6E2C8 /* PBXTextBookmark */;
@@ -113,6 +113,26 @@
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 355}";
 		};
+	};
+	473334E01312E478005A82DA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 479DE2CD1312B4BE00250CF2 /* HelpViewController.m */;
+		name = "HelpViewController.m: 58";
+		rLen = 0;
+		rLoc = 1084;
+		rType = 0;
+		vrLen = 1129;
+		vrLoc = 0;
+	};
+	473334E31312E478005A82DA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7874CEC2130FDF180070BCD3 /* GameModel.m */;
+		name = "GameModel.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 213;
+		vrLoc = 0;
 	};
 	474945BC130C278300DF683A /* DaD_test2 */ = {
 		isa = PBXExecutable;
@@ -195,11 +215,6 @@
 		name = HelpViewController.h;
 		path = /Volumes/anagram/prototype/DaD_test2/Classes/HelpViewController.h;
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {866, 808}}";
-			sepNavSelRange = "{476, 0}";
-			sepNavVisRange = "{0, 534}";
-		};
 	};
 	4777FDE8130ECBD000D3941F /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -322,16 +337,6 @@
 		vrLen = 534;
 		vrLoc = 0;
 	};
-	479B9ADC1312DE7300B32CC2 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 479DE2CD1312B4BE00250CF2 /* HelpViewController.m */;
-		name = "HelpViewController.m: 15";
-		rLen = 0;
-		rLoc = 231;
-		rType = 0;
-		vrLen = 1133;
-		vrLoc = 0;
-	};
 	479B9AE01312DE9F00B32CC2 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 479DE2CD1312B4BE00250CF2 /* HelpViewController.m */;
@@ -373,8 +378,8 @@
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{3934, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3985, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4035, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 5530}\";\n    s = 0;\n}";
 			sepNavIntBoundsRect = "{{0, 0}, {866, 2873}}";
-			sepNavSelRange = "{246, 0}";
-			sepNavVisRange = "{0, 1211}";
+			sepNavSelRange = "{1084, 0}";
+			sepNavVisRange = "{0, 1129}";
 		};
 	};
 	479DE2D11312B53F00250CF2 /* HelpTextViewController.h */ = {
@@ -430,16 +435,6 @@
 		rType = 0;
 		vrLen = 1040;
 		vrLoc = 5417;
-	};
-	479DE3101312BEDF00250CF2 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 7874CEC2130FDF180070BCD3 /* GameModel.m */;
-		name = "GameModel.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 213;
-		vrLoc = 0;
 	};
 	47A0EC4D13104BF700E6E2C8 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -524,7 +519,7 @@
 	};
 	7874CEC2130FDF180070BCD3 /* GameModel.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {691, 430}}";
+			sepNavIntBoundsRect = "{{0, 0}, {691, 407}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 213}";
 			sepNavWindowFrame = "{{15, 439}, {750, 558}}";
