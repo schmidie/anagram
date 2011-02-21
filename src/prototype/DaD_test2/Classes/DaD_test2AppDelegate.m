@@ -22,11 +22,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
+	//create NavigationController
+	//navigationController = [[UINavigationController alloc] init];
+	
     // Override point for customization after application launch.
 	releasePool = [[NSAutoreleasePool alloc]init];
 	
 	gameModel = [[GameModel alloc]init];
 	gameController = [[GameController alloc]initWithGameModel:gameModel];
+	
+	//push first ViewController
+	//[navigationController pushViewController: RootViewController animated:NO];
 	
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:navigationController.view];
