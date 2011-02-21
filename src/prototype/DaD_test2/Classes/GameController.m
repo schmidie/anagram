@@ -17,11 +17,29 @@
 	return self;
 }
 -(void) startNewGame{
+	NSLog(@"start game!");
 	
 }
 
 -(NSString*) getCurrentWord{
-	return @"friedrichshafen";
+	/*
+	NSMutableString * randamString = [NSMutableString stringWithCapacity:[text length]];
+	//NSMutableString * tmp = [NSMutableString stringWithCapacity:[text length]];
+	int leng = [text length];
+	
+	for(int i = 0; i < leng; i++){
+		
+		char *c = [text characterAtIndex:rand()%[text length]];
+		[randamString appendFormat:@"%c" , c];
+		
+		//[text replaceOccurrencesOfString:@"p" 
+		//					  withString:@"" options:NSCaseInsensitiveSearch 
+		//						   range:(NSMakeRange(0, [text length]))];
+		
+	}
+	 */
+	
+	return @"padre";
 }
 
 -(Status*) getStatus{
@@ -35,8 +53,12 @@
 	return myStatus;
 }
 
--(Boolean) checkSolution{
-	return false;
+-(Boolean) checkSolution: (NSString *) text{
+	
+	NSLog(text);
+	NSLog([gameModel currentWord]);
+	
+	return [text isEqualToString:[gameModel currentWord]];
 }
 
 @end

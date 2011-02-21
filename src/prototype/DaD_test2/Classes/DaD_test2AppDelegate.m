@@ -15,7 +15,8 @@
 
 @synthesize window;
 @synthesize navigationController;
-
+@synthesize gameController;
+@synthesize gameModel;
 
 #pragma mark -
 #pragma mark Application lifecycle

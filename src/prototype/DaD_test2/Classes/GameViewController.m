@@ -15,8 +15,7 @@
 
 @synthesize destinationLetters;
 
-NSString *letters;
-
+const int labelSize = 40;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -33,34 +32,32 @@ NSString *letters;
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+	//get the current word from the controller - it is already shaked !
+	NSString *word = [[[[UIApplication sharedApplication] delegate] gameController] getCurrentWord];
+	[self showWord:word];
+	[word release];
+}
+
+-(void)showWord:(NSString*) word{
 	
+	labels = [[NSMutableArray alloc] initWithCapacity:[word length]];
+	//originalPos = [[NSMutableArray alloc] initWithCapacity:[word length]];
 	
-	//NSLog(@"length %d",[[self shake: @"apple"] length]);
-	letters = [[NSString alloc] initWithFormat:@"%@",[self shake: @"apple"]];
-	//destinationLetter
-	
-	
-	for (int i= 0; i< [letters length] ; i++) {
-		
-		//destination Labels
-		//UILabel *destLab = [[UILabel alloc] initWithFrame:CGRectMake(i*50, 170, 40, 60)];
-		//destLab.layer.cornerRadius = 8;
-		//destLab.layer.borderColor = [[UIColor blackColor] CGColor];
-		//destLab.layer.borderWidth = 1;
-		
-		//[self.view addSubview:destLab];
-		
+	for (int i= 0; i< [word length] ; i++) {
 		
 		// create a label
-		UILabel *draglabel = [[UILabel alloc] initWithFrame:CGRectMake(i*50, 10, 40, 40)];
-		draglabel.text = [letters substringWithRange:NSMakeRange(i, 1)];
+		
+		UILabel *draglabel = [[UILabel alloc] initWithFrame:CGRectMake(i*50, 10, labelSize,labelSize)];
+		draglabel.tag = i;
+		draglabel.text = [word substringWithRange:NSMakeRange(i, 1)];
 		draglabel.backgroundColor = [UIColor cyanColor];
 		draglabel.adjustsFontSizeToFitWidth;
 		draglabel.textAlignment = UITextAlignmentCenter;
 		draglabel.layer.cornerRadius = 8;
 		draglabel.layer.borderColor = [[UIColor blackColor] CGColor];
 		draglabel.layer.borderWidth = 1;
-
+		
 		// enable touch delivery
 		draglabel.userInteractionEnabled = YES;
 		
@@ -71,79 +68,119 @@ NSString *letters;
 		
 		// add it
 		[self.view addSubview:draglabel];	
-		
+		[labels addObject:draglabel];
+		//[originalPos addObject:rec];
+		[draglabel release];
 	}
-	//[letters release];
 }
-
 
 - (void)labelDragged:(UIPanGestureRecognizer *)gesture
 {
 	UILabel *label = (UILabel *)gesture.view;
 	CGPoint translation = [gesture translationInView:label];
-	
-	NSLog(@"Position x:%d y:%d",label.center.x+translation.x,label.center.y+translation.y);
-	
-	//NSInteger elementSize = self.view.bounds.size.width/[letters length];
-	
-	//if(label.center.y + translation.y < 200){
-		// if we are in the dogging region but not dogged!
-		//if(label.center.y + translation.y > 120
-		  // && label.center.y < 170){
-		
-		//	CGPoint point = CGPointMake(label.center.x + translation.x, 
-		//			label.center.y + translation.y);
-		
-		//	long int position = lround((double)(point.x/elementSize));
-			//NSLog(@"Position pos:%d",position);
-		//	label.center = CGPointMake(position*elementSize , 200);
-		
-		//}-
-		// we do not move if we have little translation
-		//else if (translation.x > 5 || translation.y > 5 ||
-		//		 translation.x < -5 || translation.y <-5){
-		
-		// move label
-		label.center = CGPointMake(label.center.x + translation.x, label.center.y + translation.y);
-		
-		//}
+	CGPoint newPos = CGPointMake(label.center.x + translation.x, label.center.y + translation.y);
+	//if(![self isCollision:newPos]){
+	// move label
+	//label.center = newPos;
 	//}
-
-	//float rounded = round(label.center.x + translation.x / elementSize*10);
-	
-	//label.center = CGPointMake(rounded, 200);
-	
 	// reset translation
-	[gesture setTranslation:CGPointZero inView:label];
+	//[gesture setTranslation:CGPointZero inView:label];
 	
-	//if(label.center.x > 200)
-		//[self labelDog:gesture];
-}
-
-- (void)check:(UIPanGestureRecognizer *)gesture
-{
-	
-}
-
-- (NSString *)shake:(NSMutableString *)text
-{
-	NSMutableString * randamString = [NSMutableString stringWithCapacity:[text length]];
-	//NSMutableString * tmp = [NSMutableString stringWithCapacity:[text length]];
-	int leng = [text length];
-	
-	for(int i = 0; i < leng; i++){
-	
-		char *c = [text characterAtIndex:rand()%[text length]];
-		[randamString appendFormat:@"%c" , c];
-		
-		//[text replaceOccurrencesOfString:@"p" 
-		//					  withString:@"" options:NSCaseInsensitiveSearch 
-		//						   range:(NSMakeRange(0, [text length]))];
-		
+	switch ([gesture state]) {
+		case UIGestureRecognizerStateChanged:			
+			label.center = newPos;
+			[gesture setTranslation:CGPointZero inView:label];
+			break;
+		case UIGestureRecognizerStateEnded:
+			if([self isCollision:newPos]){
+				NSLog(@"Collision");
+				[self moveAway:gesture];
+				//if(![self moveAway:gesture]){
+					//label.center = CGPointMake(label.center.x - translation.x, label.center.y - translation.y);
+					//[gesture setTranslation:CGPointZero inView:label];
+				//}
+			// move label
+			//label.center = newPos;
+			}
+			// reset translation
+			//[gesture setTranslation:CGPointZero inView:label];
+			break;
+		default:
+			break;
 	}
-	return randamString;
+	
+	
 }
 
+-(void)moveAway:(UIPanGestureRecognizer *)gesture{
+
+	UILabel *label = (UILabel *)gesture.view;
+	
+	/* ***********************************
+	 *	pytagoras:
+	 *
+	 *	distance = sqrt((labelSize^2)/2)
+	 *	-> distance = ((labelSize^2/2)^(1/2))
+	 * 
+	 **************************************/
+	int distance = (int)pow((pow(labelSize,2)/2),(0.5));
+	
+	//move away
+	label.center = CGPointMake(label.center.x + (distance/2), label.center.y +(distance/2));
+	
+	//if we have still collision move away untilt we do not!
+	while ([self isCollision:label.center]) {
+		label.center = CGPointMake(label.center.x + (distance/2), label.center.y +(distance/2));
+	}
+}
+
+-(Boolean)isCollision:(CGPoint)pos
+{
+	//check for all labels if we have a collision
+	for (UILabel *label in labels) {
+		// not for self TODO -> not correct !!!!!
+		if (pos.x != label.center.x && pos.y != label.center.y) {
+			/* ***********************************
+			*	check with pytagoras:
+			*
+			*	distance = sqrt((labelSize^2)/2)
+			*	-> distance = ((labelSize^2/2)^(1/2))
+			* 
+			**************************************/
+			int distance = (int)pow((pow(labelSize,2)/2),(0.5));
+			//int tmp = (int)pow(labelSize,2)/2;
+			//int distance = (int) pow(tmp, (0.5) ); 
+			/*
+			*	we need the diagonal of the rectangle from the two center-points!
+			*	this diagonal should not be longer than 2 * distance
+			*	
+			*	rectangle sides :	a = rec2_x - rec1_x	(or opposite)
+			*						b = rec1_y - rec2_y	(or opposite)
+			*	-> pytagoras: (like first step)
+			*	
+			*	diagonal = ((a^2+b^2)^(1/2))
+			*/
+			double side_a;
+			double side_b;
+			
+			if(pos.x > label.center.x)
+				side_a = pos.x - label.center.x;
+			else 
+				side_a = label.center.x - pos.x;
+			
+			if(pos.y > label.center.y)
+				side_b = pos.y - label.center.y;
+			else 
+				side_b = label.center.y - pos.y;
+				
+			int diagonal = (int)pow(pow(side_a,2)+pow(side_b,2),(0.5));
+			// we have a collision
+			if(diagonal < 2*distance)
+				return YES;
+		}
+	}
+	return NO;
+}
 
 
 /*
@@ -165,11 +202,13 @@ NSString *letters;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	[labels release];
 }
 
 
 - (void)dealloc {
     [super dealloc];
+	[labels release];
 }
 
 

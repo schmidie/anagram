@@ -13,9 +13,12 @@
 
 
 	IBOutlet UIView *destinationLetters;
+	NSMutableArray *labels;
+	//NSMutableArray *originalPos;
 	
 }
 
 @property(nonatomic,retain) IBOutlet UIView *destinationLetters;
+@property(nonatomic,retain) NSMutableArray *labels;
 
 @end

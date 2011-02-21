@@ -21,7 +21,7 @@
 -(void) startNewGame;
 -(NSString*) getCurrentWord;
 -(Status*) getStatus;
--(Boolean) checkSolution;
+-(Boolean) checkSolution:(NSString*) text;
 
 
 

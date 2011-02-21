@@ -11,7 +11,12 @@
 
 @implementation GameModel
 
-
+@synthesize currentWord;
+@synthesize lifesRemaining;
+@synthesize timeRemaining;
+@synthesize solvedWords;
+@synthesize currentGameMode;
+@synthesize inGame; 
 
 
 @end

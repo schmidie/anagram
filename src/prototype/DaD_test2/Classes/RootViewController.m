@@ -158,6 +158,8 @@ NSArray *menuItems;
 			}
 			[self.navigationController pushViewController:self.game animated:YES];
 			self.game.title = @"GAME"; 
+			[[[[UIApplication sharedApplication] delegate] gameController] startNewGame];
+			
 			break;
 		case 1:
 			if(self.setting == nil){    
