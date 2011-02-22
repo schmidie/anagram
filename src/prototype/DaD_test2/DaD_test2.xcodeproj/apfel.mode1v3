@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>47A013D413144CA000290F23</string>
+						<string>47A013DC13144EF200290F23</string>
 						<key>history</key>
 						<array>
 							<string>47B7B3CB13143F4C005211CA</string>
@@ -313,7 +313,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
+									<integer>16</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -356,7 +356,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GameViewController.m</string>
+								<string>GameController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -364,11 +364,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GameViewController.m</string>
+										<string>GameController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>47A013D313144CA000290F23</string>
+										<string>47A013DB13144EF200290F23</string>
 										<key>history</key>
 										<array>
 											<string>4777FDE9130ECBD000D3941F</string>
@@ -392,8 +392,8 @@
 											<string>472BB9C8131406C100397007</string>
 											<string>472BB9C9131406C100397007</string>
 											<string>47B7B38B13142F61005211CA</string>
-											<string>47A013D113144CA000290F23</string>
-											<string>47A013D213144CA000290F23</string>
+											<string>47A013D913144EF200290F23</string>
+											<string>47A013DA13144EF200290F23</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -591,7 +591,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>47A013D513144CA000290F23</string>
+		<string>47A013DD13144EF200290F23</string>
 		<string>47A013D613144CA000290F23</string>
 		<string>47A013C813144B6300290F23</string>
 		<string>1CD10A99069EF8BA00B06720</string>

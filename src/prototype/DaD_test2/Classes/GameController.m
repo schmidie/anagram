@@ -25,7 +25,9 @@
 -(NSMutableString*) getCurrentWord{
 	//load word 
 	//TODO
-	NSString * originalWord = @"padre";
+	NSArray * wordsMock = [[NSArray alloc] initWithObjects:@"padre",@"madre",@"fratello",@"figlio",
+						   @"sorella",@"zia",@"nonna",@"nipote",nil];
+	NSString * originalWord = [wordsMock objectAtIndex:(rand()%([wordsMock count]-1))];
 	
 	NSMutableString * randomString = [NSMutableString stringWithCapacity:[originalWord length]];
 	NSMutableString * word = [NSMutableString stringWithString:originalWord];

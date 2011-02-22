@@ -106,12 +106,12 @@ const int labelSize = 40;
 			break;
 		case UIGestureRecognizerStateEnded:
 			if([self isCollision:newPos fromLabel:label]){
-				NSLog(@"Collision");
+				//NSLog(@"Collision");
 				[self moveAway:gesture];
 			}
 			if([[[[UIApplication sharedApplication] delegate] gameController] checkSolution:[self detectWord]]){
-				[self showWord:@"new"];
-				NSLog(@"solved !!");
+				[self showWord:[[[[UIApplication sharedApplication] delegate] gameController]getCurrentWord]];
+				//NSLog(@"solved !!");
 			}
 			//NSLog([self detectWord]);
 			break;
