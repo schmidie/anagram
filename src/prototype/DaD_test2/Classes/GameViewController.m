@@ -92,18 +92,10 @@ const int labelSize = 40;
 			[gesture setTranslation:CGPointZero inView:label];
 			break;
 		case UIGestureRecognizerStateEnded:
-			if([self isCollision:newPos]){
+			if([self isCollision:newPos fromLabel:label]){
 				NSLog(@"Collision");
 				[self moveAway:gesture];
-				//if(![self moveAway:gesture]){
-					//label.center = CGPointMake(label.center.x - translation.x, label.center.y - translation.y);
-					//[gesture setTranslation:CGPointZero inView:label];
-				//}
-			// move label
-			//label.center = newPos;
 			}
-			// reset translation
-			//[gesture setTranslation:CGPointZero inView:label];
 			break;
 		default:
 			break;
@@ -129,17 +121,19 @@ const int labelSize = 40;
 	label.center = CGPointMake(label.center.x + (distance/2), label.center.y +(distance/2));
 	
 	//if we have still collision move away untilt we do not!
-	while ([self isCollision:label.center]) {
-		label.center = CGPointMake(label.center.x + (distance/2), label.center.y +(distance/2));
+	while ([self isCollision:label.center fromLabel:label]) {
+		label.center = CGPointMake(label.center.x + (5), label.center.y +(5));
 	}
 }
 
--(Boolean)isCollision:(CGPoint)pos
+-(Boolean)isCollision:(CGPoint)pos fromLabel:(UILabel *)_label
 {
 	//check for all labels if we have a collision
 	for (UILabel *label in labels) {
+		//NSLog(@"pos x:%f y:%f", pos.x,pos.y);
+		//NSLog(@"Label x:%f y:%f",label.center.x,label.center.y);
 		// not for self TODO -> not correct !!!!!
-		if (pos.x != label.center.x && pos.y != label.center.y) {
+		if (![label isEqual:_label]) {
 			/* ***********************************
 			*	check with pytagoras:
 			*
