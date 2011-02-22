@@ -13,7 +13,7 @@
 
 @implementation GameViewController
 
-@synthesize destinationLetters;
+@synthesize statusView;
 
 const int labelSize = 40;
 
@@ -35,21 +35,34 @@ const int labelSize = 40;
 
 	//get the current word from the controller - it is already shaked !
 	NSString *word = [[[[UIApplication sharedApplication] delegate] gameController] getCurrentWord];
+	//get status from controller
+	Status* stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	
 	[self showWord:word];
-	[word release];
+	//[word release];
+	//[stat release];
 }
 
--(void)showWord:(NSString*) word{
-	
+-(void)showWord:(NSString*) word
+{
+	//remove old labels from the view
+	for (id v in self.view.subviews) {
+		if([v isKindOfClass: [UILabel class]])
+		{
+			[v removeFromSuperview];
+			//[v release];
+		}
+	}
+	//create new label array
+	[labels release];
 	labels = [[NSMutableArray alloc] initWithCapacity:[word length]];
 	//originalPos = [[NSMutableArray alloc] initWithCapacity:[word length]];
 	
 	for (int i= 0; i< [word length] ; i++) {
 		
 		// create a label
-		
 		UILabel *draglabel = [[UILabel alloc] initWithFrame:CGRectMake(i*50, 10, labelSize,labelSize)];
-		draglabel.tag = i;
+		//draglabel.tag = i;
 		draglabel.text = [word substringWithRange:NSMakeRange(i, 1)];
 		draglabel.backgroundColor = [UIColor cyanColor];
 		draglabel.adjustsFontSizeToFitWidth;
@@ -96,7 +109,11 @@ const int labelSize = 40;
 				NSLog(@"Collision");
 				[self moveAway:gesture];
 			}
-			NSLog([self detectWord]);
+			if([[[[UIApplication sharedApplication] delegate] gameController] checkSolution:[self detectWord]]){
+				[self showWord:@"new"];
+				NSLog(@"solved !!");
+			}
+			//NSLog([self detectWord]);
 			break;
 		default:
 			break;

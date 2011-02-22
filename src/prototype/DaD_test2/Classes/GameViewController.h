@@ -12,13 +12,13 @@
 @interface GameViewController : UIViewController {
 
 
-	IBOutlet UIView *destinationLetters;
+	IBOutlet UIView *statusView;
 	NSMutableArray *labels;
 	//NSMutableArray *originalPos;
 	
 }
 
-@property(nonatomic,retain) IBOutlet UIView *destinationLetters;
+@property(nonatomic,retain) IBOutlet UIView *statusView;
 @property(nonatomic,retain) NSMutableArray *labels;
 
 @end

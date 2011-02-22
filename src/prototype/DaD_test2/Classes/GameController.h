@@ -19,7 +19,7 @@
 
 -(id) initWithGameModel:(GameModel*)model;
 -(void) startNewGame;
--(NSString*) getCurrentWord;
+-(NSMutableString*) getCurrentWord;
 -(Status*) getStatus;
 -(Boolean) checkSolution:(NSString*) text;
 

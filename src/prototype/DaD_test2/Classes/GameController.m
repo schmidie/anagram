@@ -18,37 +18,45 @@
 }
 -(void) startNewGame{
 	NSLog(@"start game!");
+	//[gameModel setInGame:Yes];
 	
 }
 
--(NSString*) getCurrentWord{
-	/*
-	NSMutableString * randamString = [NSMutableString stringWithCapacity:[text length]];
-	//NSMutableString * tmp = [NSMutableString stringWithCapacity:[text length]];
-	int leng = [text length];
+-(NSMutableString*) getCurrentWord{
+	//load word 
+	//TODO
+	NSString * originalWord = @"padre";
 	
-	for(int i = 0; i < leng; i++){
+	NSMutableString * randomString = [NSMutableString stringWithCapacity:[originalWord length]];
+	NSMutableString * word = [NSMutableString stringWithString:originalWord];
+	
+	for(int i = 0; i < [originalWord length]; i++){
 		
-		char *c = [text characterAtIndex:rand()%[text length]];
-		[randamString appendFormat:@"%c" , c];
+		NSLog(word);
+		NSLog(randomString);
+		int randPos = 0;
+		if(([word length]-1) > 0)
+			randPos = (rand()%([word length]-1));
+		char *c = [word characterAtIndex:randPos];
+		[randomString appendFormat:@"%c",c];
 		
-		//[text replaceOccurrencesOfString:@"p" 
-		//					  withString:@"" options:NSCaseInsensitiveSearch 
-		//						   range:(NSMakeRange(0, [text length]))];
-		
+		//delete the charecter in the word
+		[word deleteCharactersInRange:NSMakeRange(randPos,1)];
 	}
-	 */
-	
-	return @"padre";
+	NSLog(word);
+	NSLog(randomString);
+	[gameModel setCurrentWord:[NSString stringWithString:originalWord]];
+	return [NSString stringWithString:randomString];
 }
 
 -(Status*) getStatus{
 	Status *myStatus = [[Status alloc] init];
 	//[myStatus setSolvedWords:[model get...]]
-	//[myStatus setSolvedWords:5];
-	//[myStatus setTimeRemaining:89];
-	//[myStatus setLifesRemaining:3];
-	//[myStatus setCurrentGameMode:1];
+	[myStatus setSolvedWords:1];
+	[myStatus setSolvedWords:5];
+	[myStatus setTimeRemaining:89];
+	[myStatus setLifesRemaining:3];
+	[myStatus setCurrentGameMode:1];
 	
 	return myStatus;
 }
