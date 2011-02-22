@@ -14,11 +14,20 @@
 
 	IBOutlet UIView *statusView;
 	NSMutableArray *labels;
-	//NSMutableArray *originalPos;
+	
+	IBOutlet UILabel *timeRemaining;
+	IBOutlet UILabel *livesRemaining;
+	IBOutlet UILabel *solvedWords;
+	IBOutlet UILabel *currentGameMode;
 	
 }
 
 @property(nonatomic,retain) IBOutlet UIView *statusView;
 @property(nonatomic,retain) NSMutableArray *labels;
+
+@property(nonatomic,retain) IBOutlet UILabel *timeRemaining;
+@property(nonatomic,retain) IBOutlet UILabel *livesRemaining;
+@property(nonatomic,retain) IBOutlet UILabel *solvedWords;
+@property(nonatomic,retain) IBOutlet UILabel *currentGameMode;
 
 @end

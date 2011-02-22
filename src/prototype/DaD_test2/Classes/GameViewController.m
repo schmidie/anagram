@@ -14,6 +14,10 @@
 @implementation GameViewController
 
 @synthesize statusView;
+@synthesize timeRemaining;
+@synthesize livesRemaining;
+@synthesize solvedWords;
+@synthesize currentGameMode;
 
 const int labelSize = 40;
 
@@ -36,11 +40,21 @@ const int labelSize = 40;
 	//get the current word from the controller - it is already shaked !
 	NSString *word = [[[[UIApplication sharedApplication] delegate] gameController] getCurrentWord];
 	//get status from controller
-	Status* stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	Status *stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
 	
 	[self showWord:word];
+	[self setStatus:stat];
 	//[word release];
 	//[stat release];
+}
+
+-(void)setStatus:(Status *)stat{
+	//[NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]
+	//NSLog([NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]);
+	[[self timeRemaining] setText: [NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]];
+	[[self livesRemaining] setText: [NSString stringWithFormat:@"LIFES: %d",[stat lifesRemaining]]];
+	[[self solvedWords] setText: [NSString stringWithFormat:@"SOLVED: %d",[stat solvedWords]]];
+	[[self currentGameMode] setText: [NSString stringWithFormat:@"MODE: %d",[stat currentGameMode]]];
 }
 
 -(void)showWord:(NSString*) word

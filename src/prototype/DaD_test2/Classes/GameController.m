@@ -34,19 +34,19 @@
 	
 	for(int i = 0; i < [originalWord length]; i++){
 		
-		NSLog(word);
-		NSLog(randomString);
+		//NSLog(word);
+		//NSLog(randomString);
 		int randPos = 0;
 		if(([word length]-1) > 0)
 			randPos = (rand()%([word length]-1));
-		char *c = [word characterAtIndex:randPos];
+		char *c = [word characterAtIndex:(int)randPos];
 		[randomString appendFormat:@"%c",c];
 		
 		//delete the charecter in the word
 		[word deleteCharactersInRange:NSMakeRange(randPos,1)];
 	}
-	NSLog(word);
-	NSLog(randomString);
+	//NSLog(word);
+	//NSLog(randomString);
 	[gameModel setCurrentWord:[NSString stringWithString:originalWord]];
 	return [NSString stringWithString:randomString];
 }
