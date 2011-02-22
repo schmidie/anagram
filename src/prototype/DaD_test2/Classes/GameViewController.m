@@ -96,6 +96,7 @@ const int labelSize = 40;
 				NSLog(@"Collision");
 				[self moveAway:gesture];
 			}
+			NSLog([self detectWord]);
 			break;
 		default:
 			break;
@@ -132,7 +133,7 @@ const int labelSize = 40;
 	for (UILabel *label in labels) {
 		//NSLog(@"pos x:%f y:%f", pos.x,pos.y);
 		//NSLog(@"Label x:%f y:%f",label.center.x,label.center.y);
-		// not for self TODO -> not correct !!!!!
+		// not for self
 		if (![label isEqual:_label]) {
 			/* ***********************************
 			*	check with pytagoras:
@@ -175,6 +176,25 @@ const int labelSize = 40;
 	}
 	return NO;
 }
+
+NSComparisonResult labelSort(UILabel * l1, UILabel * l2, void *context){
+	
+	return[[NSNumber numberWithDouble:l1.center.x] compare:[NSNumber numberWithDouble:l2.center.x]];
+}
+
+-(NSString *)detectWord{
+	
+	NSArray * sorted =[labels sortedArrayUsingFunction:labelSort context:nil];
+	NSString *word = [[NSString alloc] init];
+	
+	for (UILabel *label in sorted) {
+		//NSLog(@"x:%f",label.center.x);
+		word = [word stringByAppendingString:label.text];
+	}
+	//[sorted release];
+	return word;
+}
+
 
 
 /*
