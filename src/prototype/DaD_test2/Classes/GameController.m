@@ -7,13 +7,13 @@
 //
 
 #import "GameController.h"
+#import "DataHandler.h"
 
 
 @implementation GameController
 
 -(id) initWithGameModel:(GameModel*)model{
 	gameModel = model;
-	
 	return self;
 }
 -(void) startNewGame{
@@ -23,11 +23,18 @@
 }
 
 -(NSMutableString*) getCurrentWord{
+	
 	//load word 
+	//get a new DataHandler
+	DataHandler* datahandler = [[DataHandler alloc] init];
+
+	NSString * originalWord = datahandler.getWordFromFile;
+	NSLog(originalWord);
+
 	//TODO
-	NSArray * wordsMock = [[NSArray alloc] initWithObjects:@"padre",@"madre",@"fratello",@"figlio",
-						   @"sorella",@"zia",@"nonna",@"nipote",nil];
-	NSString * originalWord = [wordsMock objectAtIndex:(rand()%([wordsMock count]-1))];
+	//NSArray * wordsMock = [[NSArray alloc] initWithObjects:@"padre",@"madre",@"fratello",@"figlio",
+	//					   @"sorella",@"zia",@"nonna",@"nipote",nil];
+	//NSString * originalWord = [wordsMock objectAtIndex:(rand()%([wordsMock count]-1))];
 	
 	NSMutableString * randomString = [NSMutableString stringWithCapacity:[originalWord length]];
 	NSMutableString * word = [NSMutableString stringWithString:originalWord];

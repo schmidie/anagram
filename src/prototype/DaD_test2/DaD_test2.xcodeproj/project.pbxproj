@@ -28,6 +28,9 @@
 		479DE2D01312B4BE00250CF2 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479DE2CE1312B4BE00250CF2 /* HelpViewController.xib */; };
 		479DE2D41312B53F00250CF2 /* HelpTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479DE2D21312B53F00250CF2 /* HelpTextViewController.m */; };
 		479DE2D51312B53F00250CF2 /* HelpTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479DE2D31312B53F00250CF2 /* HelpTextViewController.xib */; };
+		786B4AF213143A37007D6792 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B4AF113143A37007D6792 /* DataHandler.m */; };
+		786B4AF413143CCD007D6792 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 786B4AF313143CCD007D6792 /* Words.txt */; };
+		786B4AF613143CE2007D6792 /* LastGameStatus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 786B4AF513143CE2007D6792 /* LastGameStatus.txt */; };
 		7874CEBE130FDB500070BCD3 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7874CEBD130FDB500070BCD3 /* GameController.m */; };
 		7874CEC3130FDF180070BCD3 /* GameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7874CEC2130FDF180070BCD3 /* GameModel.m */; };
 		7874CEF3130FE5350070BCD3 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 7874CEF2130FE5350070BCD3 /* Status.m */; };
@@ -64,6 +67,10 @@
 		479DE2D11312B53F00250CF2 /* HelpTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpTextViewController.h; sourceTree = "<group>"; };
 		479DE2D21312B53F00250CF2 /* HelpTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpTextViewController.m; sourceTree = "<group>"; };
 		479DE2D31312B53F00250CF2 /* HelpTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpTextViewController.xib; sourceTree = "<group>"; };
+		786B4AF013143A37007D6792 /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
+		786B4AF113143A37007D6792 /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
+		786B4AF313143CCD007D6792 /* Words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Words.txt; sourceTree = "<group>"; };
+		786B4AF513143CE2007D6792 /* LastGameStatus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LastGameStatus.txt; sourceTree = "<group>"; };
 		7874CEBC130FDB500070BCD3 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		7874CEBD130FDB500070BCD3 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		7874CEC1130FDF180070BCD3 /* GameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameModel.h; sourceTree = "<group>"; };
@@ -115,6 +122,8 @@
 				479DE2D11312B53F00250CF2 /* HelpTextViewController.h */,
 				479DE2D21312B53F00250CF2 /* HelpTextViewController.m */,
 				479DE2D31312B53F00250CF2 /* HelpTextViewController.xib */,
+				786B4AF013143A37007D6792 /* DataHandler.h */,
+				786B4AF113143A37007D6792 /* DataHandler.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -157,6 +166,8 @@
 				479B9AC41312DA1F00B32CC2 /* name.html */,
 				479B9ACC1312DAAE00B32CC2 /* play.html */,
 				479B9ACE1312DAD200B32CC2 /* difficulty.html */,
+				786B4AF313143CCD007D6792 /* Words.txt */,
+				786B4AF513143CE2007D6792 /* LastGameStatus.txt */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -231,6 +242,8 @@
 				479B9AC51312DA1F00B32CC2 /* name.html in Resources */,
 				479B9ACD1312DAAE00B32CC2 /* play.html in Resources */,
 				479B9ACF1312DAD200B32CC2 /* difficulty.html in Resources */,
+				786B4AF413143CCD007D6792 /* Words.txt in Resources */,
+				786B4AF613143CE2007D6792 /* LastGameStatus.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +265,7 @@
 				7874CEF3130FE5350070BCD3 /* Status.m in Sources */,
 				479DE2CF1312B4BE00250CF2 /* HelpViewController.m in Sources */,
 				479DE2D41312B53F00250CF2 /* HelpTextViewController.m in Sources */,
+				786B4AF213143A37007D6792 /* DataHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

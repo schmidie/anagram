@@ -228,13 +228,14 @@ NSComparisonResult labelSort(UILabel * l1, UILabel * l2, void *context){
 
 
 
-/*
+
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return YES;
 }
-*/
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

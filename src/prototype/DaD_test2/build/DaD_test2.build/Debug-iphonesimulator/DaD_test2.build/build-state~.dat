@@ -1,0 +1,508 @@
+TDaD_test2
+v7
+r0
+t320091176.183877
+cCheck dependencies
+cProcessInfoPlistFile "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/Info.plist" DaD_test2-Info.plist
+cCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/MainWindow.xib"
+cCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/RootViewController.xib"
+cCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib"
+cCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib"
+cCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib"
+cCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpViewController.xib"
+cCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpTextViewController.xib"
+cCpResource build/Debug-iphonesimulator/DaD_test2.app/name.html name.html
+cCpResource build/Debug-iphonesimulator/DaD_test2.app/play.html play.html
+cCpResource build/Debug-iphonesimulator/DaD_test2.app/difficulty.html difficulty.html
+cProcessPCH /var/folders/4M/4MPUDSL5HR8yocicBEdF2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-akgxllpefxexmtescorpwrlvijeq/DaD_test2_Prefix.pch.gch DaD_test2_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004CC1233C00000000000000C4
+t1287725884
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/DaD_test2AppDelegate.h
+c000000004D63FC8000000000000002D0
+t1298398336
+s720
+i<UIKit/UIKit.h>
+i"GameController.h"
+i"GameModel.h"
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/DaD_test2AppDelegate.m
+c000000004D63FC800000000000000C75
+t1298398336
+s3189
+i"DaD_test2AppDelegate.h"
+i"RootViewController.h"
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameController.h
+c000000004D63FC8000000000000001FC
+t1298398336
+s508
+i<Foundation/Foundation.h>
+i"GameModel.h"
+i"Status.h"
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameController.m
+c000000004D63FC800000000000000526
+t1298398336
+s1318
+i"GameController.h"
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameModel.h
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameModel.m
+c000000004D63FC80000000000000015E
+t1298398336
+s350
+i"GameModel.h"
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.h
+c000000004D63FC8000000000000001BA
+t1298398336
+s442
+i<UIKit/UIKit.h>
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.m
+c000000004D63FC800000000000001871
+t1298398336
+s6257
+i"GameViewController.h"
+i"GameController.h"
+i<QuartzCore/QuartzCore.h>
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpTextViewController.h
+c000000004D63FC80000000000000013B
+t1298398336
+s315
+i<UIKit/UIKit.h>
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpTextViewController.m
+c000000004D63FC8000000000000005C5
+t1298398336
+s1477
+i"HelpTextViewController.h"
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpTextViewController.xib
+c000000004D63FC8000000000000043D4
+t1298398336
+s17364
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpViewController.h
+c000000004D63FC800000000000000216
+t1298398336
+s534
+i<UIKit/UIKit.h>
+i"HelpTextViewController.h"
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpViewController.m
+c000000004D63FC80000000000000159A
+t1298398336
+s5530
+i"HelpViewController.h"
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpViewController.xib
+c000000004D63FC800000000000001C81
+t1298398336
+s7297
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/RootViewController.h
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/RootViewController.m
+c000000004D63FC8000000000000018B2
+t1298398336
+s6322
+i"RootViewController.h"
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/Status.h
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/Status.m
+c000000004D63FC800000000000000126
+t1298398336
+s294
+i"Status.h"
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/DaD_test2_Prefix.pch
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/MainWindow.xib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/RootViewController.xib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2.LinkFileList
+c000000004D63FCA20000000000000941
+t1298398370
+s2369
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2AppDelegate.o
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameController.o
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameModel.o
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameViewController.o
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/HelpTextViewController.o
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/HelpViewController.o
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/RootViewController.o
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/ScoreViewController.o
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/SettingViewController.o
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/Status.o
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app.dSYM
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/GameViewController.nib
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/HelpTextViewController.nib
+t1298398376
+s977
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/HelpViewController.nib
+t1298398375
+s979
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/Info.plist
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/MainWindow.nib
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/PkgInfo
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/RootViewController.nib
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/ScoreViewController.nib
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/SettingViewController.nib
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/difficulty.html
+t1298398375
+s88
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/name.html
+t1298398375
+s67
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/play.html
+t1298398375
+s71
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/difficulty.html
+c000000004D63FC800000000000000058
+t1298398336
+s88
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/main.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/name.html
+c000000004D63FC800000000000000043
+t1298398336
+s67
+
+N/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/play.html
+c000000004D63FC800000000000000047
+t1298398336
+s71
+
+N/var/folders/4M/4MPUDSL5HR8yocicBEdF2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-akgxllpefxexmtescorpwrlvijeq/DaD_test2_Prefix.pch.gch
+t2
+s0
+
+NDaD_test2-Info.plist
+c00000000000000000000000000000000
+t2
+s0
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies320091170#320091170#0(0"0(0#1#0"3343187568374212096#0"0#
+
+CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/DaD_test2AppDelegate.o "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/DaD_test2AppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameController.o "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameModel.o "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameModel.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/GameViewController.o "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/HelpTextViewController.o "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpTextViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/HelpViewController.o "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/RootViewController.o "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/RootViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/ScoreViewController.o "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/SettingViewController.o "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/Status.o "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/Status.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/Objects-normal/i386/main.o "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib"
+s320091170.977267
+e320091171.148014
+r0
+xCompileXIB
+x/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib
+o/* com.apple.ibtool.errors */
+o/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib: error: File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib'
+lSLF07#2@41"CompileXIB Classes/GameViewController.xib320091170#320091171#0(382"/* com.apple.ibtool.errors *//Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib: error: File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib'1(4@195"File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib'320091171#18446744073709551615#0#0(6@147"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib320091171#0#0#0#0#0"0(0#0#147"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib8601403744#898"    cd "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/GameViewController.nib" "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/GameViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk1#
+
+CCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpTextViewController.xib"
+s320091171.335184
+e320091176.109582
+r1
+xCompileXIB
+x/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpTextViewController.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@45"CompileXIB Classes/HelpTextViewController.xib320091171#320091176#0(168"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#151"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpTextViewController.xib3415259559377204224#906"    cd "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/HelpTextViewController.nib" "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpTextViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpViewController.xib"
+s320091171.148100
+e320091175.644113
+r1
+xCompileXIB
+x/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpViewController.xib
+lSLF07#2@41"CompileXIB Classes/HelpViewController.xib320091171#320091175#0(0"0(0#0#147"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpViewController.xib8602582368#898"    cd "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/HelpViewController.nib" "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/HelpViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib"
+s320091171.133687
+e320091171.335056
+r0
+xCompileXIB
+x/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib
+o/* com.apple.ibtool.errors */
+o/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib: error: File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib'
+lSLF07#2@42"CompileXIB Classes/ScoreViewController.xib320091171#320091171#0(384"/* com.apple.ibtool.errors *//Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib: error: File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib'1(4@196"File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib'320091171#18446744073709551615#0#0(6@148"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib320091171#0#0#0#0#0"0(0#0#148"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib8602997120#900"    cd "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/ScoreViewController.nib" "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/ScoreViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk1#
+
+CCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib"
+s320091170.985641
+e320091171.133595
+r0
+xCompileXIB
+x/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib
+o/* com.apple.ibtool.errors */
+o/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib: error: File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib'
+lSLF07#2@44"CompileXIB Classes/SettingViewController.xib320091170#320091171#0(388"/* com.apple.ibtool.errors *//Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib: error: File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib'1(4@198"File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib'320091171#18446744073709551615#0#0(6@150"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib320091171#0#0#0#0#0"0(0#0#150"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib8600758336#904"    cd "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/SettingViewController.nib" "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/Classes/SettingViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk1#
+
+CCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/MainWindow.xib"
+s320091170.227958
+e320091170.985554
+r0
+xCompileXIB
+x/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/MainWindow.xib
+o/* com.apple.ibtool.errors */
+o/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/MainWindow.xib: error: File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/MainWindow.xib'
+lSLF07#2@25"CompileXIB MainWindow.xib320091170#320091170#0(350"/* com.apple.ibtool.errors *//Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/MainWindow.xib: error: File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/MainWindow.xib'1(4@179"File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/MainWindow.xib'320091170#18446744073709551615#0#0(6@131"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/MainWindow.xib320091170#0#0#0#0#0"0(0#0#131"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/MainWindow.xib8603077408#874"    cd "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/MainWindow.nib" "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/MainWindow.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk1#
+
+CCompileXIB "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/RootViewController.xib"
+s320091170.252952
+e320091170.977187
+r0
+xCompileXIB
+x/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/RootViewController.xib
+o/* com.apple.ibtool.errors */
+o/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/RootViewController.xib: error: File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/RootViewController.xib'
+lSLF07#2@33"CompileXIB RootViewController.xib320091170#320091170#0(366"/* com.apple.ibtool.errors *//Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/RootViewController.xib: error: File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/RootViewController.xib'1(4@187"File does not exist at path 'file://localhost/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective%20C/git_repo/anagram/src/prototype/DaD_test2/RootViewController.xib'320091170#18446744073709551615#0#0(6@139"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/RootViewController.xib320091170#0#0#0#0#0"0(0#0#139"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/RootViewController.xib8603185792#890"    cd "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/RootViewController.nib" "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/RootViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk1#
+
+CCpResource build/Debug-iphonesimulator/DaD_test2.app/difficulty.html difficulty.html
+s320091175.645861
+e320091175.711675
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/DaD_test2.app/difficulty.html
+xdifficulty.html
+lSLF07#2@20"Copy difficulty.html320091175#320091175#0(0"0(0#0#132"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/difficulty.html8600942080#777"    cd "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/difficulty.html" "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app"0#
+
+CCpResource build/Debug-iphonesimulator/DaD_test2.app/name.html name.html
+s320091175.644273
+e320091175.711496
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/DaD_test2.app/name.html
+xname.html
+lSLF07#2@14"Copy name.html320091175#320091175#0(0"0(0#0#126"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/name.html8601460224#771"    cd "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/name.html" "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app"0#
+
+CCpResource build/Debug-iphonesimulator/DaD_test2.app/play.html play.html
+s320091175.645127
+e320091175.711859
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/DaD_test2.app/play.html
+xplay.html
+lSLF07#2@14"Copy play.html320091175#320091175#0(0"0(0#0#126"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/play.html8600461344#771"    cd "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/play.html" "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app"0#
+
+CGenerateDSYMFile "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app.dSYM" "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2"
+r0
+
+CLd "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/DaD_test2" normal i386
+r0
+
+CProcessInfoPlistFile "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/Info.plist" DaD_test2-Info.plist
+s320091170.198837
+e320091170.227858
+r0
+xProcessInfoPlistFile
+x/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/Info.plist
+xDaD_test2-Info.plist
+lSLF07#2@28"Process DaD_test2-Info.plist320091170#320091170#0(261"error: could not read data from '/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/DaD_test2-Info.plist': The file “DaD_test2-Info.plist” couldn’t be opened because there is no such file.1(4@253"could not read data from '/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/DaD_test2-Info.plist': The file “DaD_test2-Info.plist” couldn’t be opened because there is no such file.320091170#18446744073709551615#0#0(6@0"320091170#0#0#0#0#0"0(0#0#137"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/DaD_test2-Info.plist7310572842423431168#787"    cd "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    builtin-infoPlistUtility DaD_test2-Info.plist -genpkginfo "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app/Info.plist"1#
+
+CProcessPCH /var/folders/4M/4MPUDSL5HR8yocicBEdF2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-akgxllpefxexmtescorpwrlvijeq/DaD_test2_Prefix.pch.gch DaD_test2_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s320091176.109874
+e320091176.183767
+r0
+xProcessPCH
+x/var/folders/4M/4MPUDSL5HR8yocicBEdF2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-akgxllpefxexmtescorpwrlvijeq/DaD_test2_Prefix.pch.gch
+xDaD_test2_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: /Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/DaD_test2_Prefix.pch: No such file or directory
+oi686-apple-darwin10-gcc-4.2.1: warning: '-x objective-c-header' after last input file has no effect
+oi686-apple-darwin10-gcc-4.2.1: no input files
+lSLF07#2@31"Precompile DaD_test2_Prefix.pch320091176#320091176#0(446"i686-apple-darwin10-gcc-4.2.1: /Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/DaD_test2_Prefix.pch: No such file or directoryi686-apple-darwin10-gcc-4.2.1: warning: '-x objective-c-header' after last input file has no effecti686-apple-darwin10-gcc-4.2.1: no input filesCommand /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 failed with exit code 11(4@103"Command /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 failed with exit code 1320091176#18446744073709551615#0#0(1@0"0(0#0#137"/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/DaD_test2_Prefix.pch8603154208#2706"    cd "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-generated-files.hmap" "-I/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-own-target-headers.hmap" "-I/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-all-target-headers.hmap" -iquote "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DaD_test2-project-headers.hmap" "-F/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator" "-I/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/include" "-I/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DerivedSources/i386" "-I/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/DaD_test2.build/Debug-iphonesimulator/DaD_test2.build/DerivedSources" -c "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/DaD_test2_Prefix.pch" -o /var/folders/4M/4MPUDSL5HR8yocicBEdF2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/DaD_test2_Prefix-akgxllpefxexmtescorpwrlvijeq/DaD_test2_Prefix.pch.gch1#
+
+CTouch "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/git_repo/anagram/src/prototype/DaD_test2/build/Debug-iphonesimulator/DaD_test2.app"
+r0
+
