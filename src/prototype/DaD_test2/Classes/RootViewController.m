@@ -26,7 +26,7 @@ NSArray *menuItems;
     [super viewDidLoad];
 	self.title= @"Menu";
 
-	menuItems = [[NSArray alloc] initWithObjects:@"Game",@"Setting",@"Highscore",@"Help",nil];
+	menuItems = [[NSArray alloc] initWithObjects:@"Spielen",@"Bestenliste",@"Optionen",@"Hilfe",nil];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -157,29 +157,29 @@ NSArray *menuItems;
 				[viewController release];        
 			}
 			[self.navigationController pushViewController:self.game animated:YES];
-			self.game.title = @"GAME"; 
+			self.game.title = @"iDictAttack"; 
 			[[[[UIApplication sharedApplication] delegate] gameController] startNewGame];
 			
 			break;
 		case 1:
 			if(self.setting == nil){    
 				SettingViewController *viewController = 
-				[[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:[NSBundle mainBundle]];
+				[[SettingViewController alloc] initWithNibName:@"ScoreViewController" bundle:[NSBundle mainBundle]];
 				self.setting = viewController;
 				[viewController release];        
 			}
 			[self.navigationController pushViewController:self.setting animated:YES];
-			self.setting.title = @"Settings"; 
+			self.setting.title = @"Bestenliste"; 
 			break;
 		case 2:
 			if(self.score == nil){    
 				ScoreViewController *viewController = 
-				[[ScoreViewController alloc] initWithNibName:@"ScoreViewController" bundle:[NSBundle mainBundle]];
+				[[ScoreViewController alloc] initWithNibName:@"SettingViewController" bundle:[NSBundle mainBundle]];
 				self.score = viewController;
 				[viewController release];        
 			}
 			[self.navigationController pushViewController:self.score animated:YES];
-			self.score.title = @"Highscore"; 
+			self.score.title = @"Optionen"; 
 			break;
 		case 3:
 			if(self.help == nil){    
@@ -189,7 +189,7 @@ NSArray *menuItems;
 				[viewController release];        
 			}
 			[self.navigationController pushViewController:self.help animated:YES];
-			self.help.title = @"Help"; 
+			self.help.title = @"Hilfe"; 
 			break;
 		default:
 			break;
