@@ -22,15 +22,21 @@
 const int labelSize = 40;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization.
+		//TODO call the right method on click
+		self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Aufgeben" 
+																				  style:UIBarButtonItemStylePlain 
+																				  target:self 
+																				  action:@selector(nilSymbol)] 
+												  autorelease];
+		
     }
     return self;
 }
-*/
+
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -41,7 +47,7 @@ const int labelSize = 40;
 	NSString *word = [[[[UIApplication sharedApplication] delegate] gameController] getCurrentWord];
 	//get status from controller
 	Status *stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
-	
+		
 	[self showWord:word];
 	[self setStatus:stat];
 	//[word release];

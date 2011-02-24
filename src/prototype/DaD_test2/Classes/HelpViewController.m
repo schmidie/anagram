@@ -23,9 +23,9 @@
 	self.title= @"Help";
 	
 	menuItems = [[NSArray alloc] initWithObjects:
-		@"Why IDictAttack?" ,
-		@"How to play?" ,
-		@"How to choose the difficulty?" ,
+		@"Was ist iDictAttack?" ,
+		@"Spielablauf" ,
+		@"Schwierigkeitsgrade" ,
 		nil];
 	
 	helpFileName = [[NSArray alloc] initWithObjects:
