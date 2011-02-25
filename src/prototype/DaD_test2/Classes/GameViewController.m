@@ -19,6 +19,8 @@
 @synthesize solvedWords;
 @synthesize currentGameMode;
 
+//@synthesize gameTimer;
+
 const int labelSize = 40;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -31,13 +33,19 @@ const int labelSize = 40;
 																				  style:UIBarButtonItemStylePlain 
 																				  target:self 
 																				  action:@selector(nilSymbol)] 
-												  autorelease];
-		
+																					autorelease];
     }
     return self;
 }
 
 
+-(void)tick:(NSTimer *)theTimer
+{
+	Status *stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	[self setStatus:stat];
+	//[stat autorelease];
+	
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -50,9 +58,16 @@ const int labelSize = 40;
 		
 	[self showWord:word];
 	[self setStatus:stat];
-	//[word release];
-	//[stat release];
+	[gameTimer invalidate];
+	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
+											  selector:@selector(tick:) 
+											   userInfo:nil 
+												repeats:YES];
+	[gameTimer fire];
+	//[word autorelease];
+	//[stat autorelease];
 }
+
 
 -(void)setStatus:(Status *)stat{
 	//[NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]

@@ -12,15 +12,32 @@
 
 @implementation GameController
 
+
 -(id) initWithGameModel:(GameModel*)model{
 	gameModel = model;
 	return self;
 }
+
+
+-(void) tick:(NSTimer*) theTimer{
+	
+	[gameModel setTimeRemaining:([gameModel timeRemaining]-1)];
+}
+
 -(void) startNewGame{
 	NSLog(@"start game!");
+	
+	//set-up our gameTimer 
+	[gameTimer invalidate];
+	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
+											   selector:@selector(tick:) 
+											   userInfo:nil repeats:YES];
+	[gameTimer fire];
+	
 	//[gameModel setInGame:Yes];
 	
 }
+
 
 -(NSMutableString*) getCurrentWord{
 	
@@ -63,7 +80,8 @@
 	//[myStatus setSolvedWords:[model get...]]
 	[myStatus setSolvedWords:1];
 	[myStatus setSolvedWords:5];
-	[myStatus setTimeRemaining:89];
+	[myStatus setTimeRemaining:[gameModel timeRemaining]];
+	//[myStatus setTimeRemaining:60];
 	[myStatus setLifesRemaining:3];
 	[myStatus setCurrentGameMode:1];
 	

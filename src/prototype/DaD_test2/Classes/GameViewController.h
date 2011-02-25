@@ -20,6 +20,8 @@
 	IBOutlet UILabel *solvedWords;
 	IBOutlet UILabel *currentGameMode;
 	
+	NSTimer *gameTimer;
+	
 }
 
 @property(nonatomic,retain) IBOutlet UIView *statusView;
