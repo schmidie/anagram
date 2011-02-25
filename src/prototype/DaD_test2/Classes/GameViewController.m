@@ -7,8 +7,6 @@
 //
 
 #import "GameViewController.h"
-#import "GameController.h"
-#import <QuartzCore/QuartzCore.h>
 
 
 @implementation GameViewController
@@ -41,8 +39,8 @@ const int labelSize = 40;
 
 -(void)tick:(NSTimer *)theTimer
 {
-	Status *stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
-	[self setStatus:stat];
+	stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	[self setStatus];
 	//[stat autorelease];
 	
 }
@@ -54,10 +52,10 @@ const int labelSize = 40;
 	//get the current word from the controller - it is already shaked !
 	NSString *word = [[[[UIApplication sharedApplication] delegate] gameController] getCurrentWord];
 	//get status from controller
-	Status *stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
 		
 	[self showWord:word];
-	[self setStatus:stat];
+	[self setStatus];
 	[gameTimer invalidate];
 	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
 											  selector:@selector(tick:) 
@@ -69,7 +67,7 @@ const int labelSize = 40;
 }
 
 
--(void)setStatus:(Status *)stat{
+-(void)setStatus{
 	//[NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]
 	//NSLog([NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]);
 	[[self timeRemaining] setText: [NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]];
@@ -124,36 +122,37 @@ const int labelSize = 40;
 
 - (void)labelDragged:(UIPanGestureRecognizer *)gesture
 {
-	UILabel *label = (UILabel *)gesture.view;
-	CGPoint translation = [gesture translationInView:label];
-	CGPoint newPos = CGPointMake(label.center.x + translation.x, label.center.y + translation.y);
-	//if(![self isCollision:newPos]){
-	// move label
-	//label.center = newPos;
-	//}
-	// reset translation
-	//[gesture setTranslation:CGPointZero inView:label];
-	
-	switch ([gesture state]) {
-		case UIGestureRecognizerStateChanged:			
-			label.center = newPos;
-			[gesture setTranslation:CGPointZero inView:label];
-			break;
-		case UIGestureRecognizerStateEnded:
-			if([self isCollision:newPos fromLabel:label]){
-				//NSLog(@"Collision");
-				[self moveAway:gesture];
-			}
-			if([[[[UIApplication sharedApplication] delegate] gameController] checkSolution:[self detectWord]]){
-				[self showWord:[[[[UIApplication sharedApplication] delegate] gameController]getCurrentWord]];
-				//NSLog(@"solved !!");
-			}
-			//NSLog([self detectWord]);
-			break;
-		default:
-			break;
+	if([stat lifesRemaining] > 0 || [stat timeRemaining] > 0){
+		UILabel *label = (UILabel *)gesture.view;
+		CGPoint translation = [gesture translationInView:label];
+		CGPoint newPos = CGPointMake(label.center.x + translation.x, label.center.y + translation.y);
+		//if(![self isCollision:newPos]){
+		// move label
+		//label.center = newPos;
+		//}
+		// reset translation
+		//[gesture setTranslation:CGPointZero inView:label];
+		
+		switch ([gesture state]) {
+			case UIGestureRecognizerStateChanged:			
+				label.center = newPos;
+				[gesture setTranslation:CGPointZero inView:label];
+				break;
+			case UIGestureRecognizerStateEnded:
+				if([self isCollision:newPos fromLabel:label]){
+					//NSLog(@"Collision");
+					[self moveAway:gesture];
+				}
+				if([[[[UIApplication sharedApplication] delegate] gameController] checkSolution:[self detectWord]]){
+					[self showWord:[[[[UIApplication sharedApplication] delegate] gameController]getCurrentWord]];
+					//NSLog(@"solved !!");
+				}
+				//NSLog([self detectWord]);
+				break;
+			default:
+				break;
+		}
 	}
-	
 	
 }
 

@@ -21,7 +21,23 @@
 
 -(void) tick:(NSTimer*) theTimer{
 	
-	[gameModel setTimeRemaining:([gameModel timeRemaining]-1)];
+	if([gameModel timeRemaining]>0){
+		int i = [gameModel timeRemaining];
+		[gameModel setTimeRemaining:(i-1)];
+	}
+	if([gameModel timeRemaining]==0 && [gameModel lifesRemaining] > 0){
+		// loosing a life ! -> reset the time for the new life
+		int i = [gameModel lifesRemaining];
+		[gameModel setLifesRemaining:(i-1)];
+		// TODO define global variable for time ...
+		[gameModel setTimeRemaining:60];
+	}
+	else {
+		//no time and no lifes ->gameover !
+		NSLog(@"GameOver!!");
+	}
+
+
 }
 
 -(void) startNewGame{
@@ -37,7 +53,6 @@
 	//[gameModel setInGame:Yes];
 	
 }
-
 
 -(NSMutableString*) getCurrentWord{
 	
@@ -78,11 +93,11 @@
 -(Status*) getStatus{
 	Status *myStatus = [[Status alloc] init];
 	//[myStatus setSolvedWords:[model get...]]
-	[myStatus setSolvedWords:1];
+	//[myStatus setSolvedWords:1];
 	[myStatus setSolvedWords:5];
 	[myStatus setTimeRemaining:[gameModel timeRemaining]];
 	//[myStatus setTimeRemaining:60];
-	[myStatus setLifesRemaining:3];
+	[myStatus setLifesRemaining:[gameModel lifesRemaining]];
 	[myStatus setCurrentGameMode:1];
 	
 	return myStatus;

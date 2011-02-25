@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GameController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface GameViewController : UIViewController {
 
@@ -21,6 +22,7 @@
 	IBOutlet UILabel *currentGameMode;
 	
 	NSTimer *gameTimer;
+	Status *stat;
 	
 }
 
