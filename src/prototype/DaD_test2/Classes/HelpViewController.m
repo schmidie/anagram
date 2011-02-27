@@ -26,12 +26,14 @@
 		@"Was ist iDictAttack?" ,
 		@"Spielablauf" ,
 		@"Schwierigkeitsgrade" ,
+		@"Über" ,		
 		nil];
 	
 	helpFileName = [[NSArray alloc] initWithObjects:
 					@"name",
 					@"play",
 					@"difficulty",
+					@"about" ,
 					nil];
 	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
