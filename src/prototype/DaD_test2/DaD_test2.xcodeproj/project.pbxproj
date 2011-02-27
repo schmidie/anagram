@@ -28,6 +28,8 @@
 		479DE2D01312B4BE00250CF2 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479DE2CE1312B4BE00250CF2 /* HelpViewController.xib */; };
 		479DE2D41312B53F00250CF2 /* HelpTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479DE2D21312B53F00250CF2 /* HelpTextViewController.m */; };
 		479DE2D51312B53F00250CF2 /* HelpTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479DE2D31312B53F00250CF2 /* HelpTextViewController.xib */; };
+		479F499F131AB900004BD20F /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F499D131AB900004BD20F /* GameOverViewController.m */; };
+		479F49A0131AB900004BD20F /* GameOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479F499E131AB900004BD20F /* GameOverViewController.xib */; };
 		786B4AF213143A37007D6792 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B4AF113143A37007D6792 /* DataHandler.m */; };
 		786B4AF413143CCD007D6792 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 786B4AF313143CCD007D6792 /* Words.txt */; };
 		786B4AF613143CE2007D6792 /* LastGameStatus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 786B4AF513143CE2007D6792 /* LastGameStatus.txt */; };
@@ -67,6 +69,9 @@
 		479DE2D11312B53F00250CF2 /* HelpTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpTextViewController.h; sourceTree = "<group>"; };
 		479DE2D21312B53F00250CF2 /* HelpTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpTextViewController.m; sourceTree = "<group>"; };
 		479DE2D31312B53F00250CF2 /* HelpTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpTextViewController.xib; sourceTree = "<group>"; };
+		479F499C131AB900004BD20F /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
+		479F499D131AB900004BD20F /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
+		479F499E131AB900004BD20F /* GameOverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameOverViewController.xib; sourceTree = "<group>"; };
 		786B4AF013143A37007D6792 /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
 		786B4AF113143A37007D6792 /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
 		786B4AF313143CCD007D6792 /* Words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Words.txt; sourceTree = "<group>"; };
@@ -124,6 +129,9 @@
 				479DE2D31312B53F00250CF2 /* HelpTextViewController.xib */,
 				786B4AF013143A37007D6792 /* DataHandler.h */,
 				786B4AF113143A37007D6792 /* DataHandler.m */,
+				479F499C131AB900004BD20F /* GameOverViewController.h */,
+				479F499D131AB900004BD20F /* GameOverViewController.m */,
+				479F499E131AB900004BD20F /* GameOverViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 				479B9ACF1312DAD200B32CC2 /* difficulty.html in Resources */,
 				786B4AF413143CCD007D6792 /* Words.txt in Resources */,
 				786B4AF613143CE2007D6792 /* LastGameStatus.txt in Resources */,
+				479F49A0131AB900004BD20F /* GameOverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +275,7 @@
 				479DE2CF1312B4BE00250CF2 /* HelpViewController.m in Sources */,
 				479DE2D41312B53F00250CF2 /* HelpTextViewController.m in Sources */,
 				786B4AF213143A37007D6792 /* DataHandler.m in Sources */,
+				479F499F131AB900004BD20F /* GameOverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

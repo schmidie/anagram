@@ -19,7 +19,7 @@
 }
 
 //@property (nonatomic, retain) GameModel gameModel;
-//@property (nonatomic, retain) NSTimer *gameTimer;
+@property (nonatomic, retain) NSTimer *gameTimer;
 
 -(id) initWithGameModel:(GameModel*)model;
 -(void) startNewGame;

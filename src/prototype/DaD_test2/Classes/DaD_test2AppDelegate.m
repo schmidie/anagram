@@ -30,6 +30,7 @@
 	releasePool = [[NSAutoreleasePool alloc]init];
 	
 	gameModel = [[GameModel alloc]init];
+	
 	// TODO: write init method...
 	[gameModel setTimeRemaining:60];
 	[gameModel setLifesRemaining:3];

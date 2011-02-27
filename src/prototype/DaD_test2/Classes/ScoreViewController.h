@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ScoreViewController : UIViewController {
-
+@interface ScoreViewController : UITableViewController {
+	IBOutlet UITabBarItem *training;
+	IBOutlet UITabBarItem *timeattack;
+	IBOutlet UITabBar *tabbar;
+	IBOutlet UITableView *table;
 }
+
+-(IBAction)trainingClicked:(id)sender;
+-(IBAction)timeAttackClicked:(id)sender;
 
 @end
