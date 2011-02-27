@@ -9,9 +9,9 @@
 	};
 	1D3623250D0F684500981E51 /* DaD_test2AppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {835, 1547}}";
+			sepNavIntBoundsRect = "{{0, 0}, {810, 1534}}";
 			sepNavSelRange = "{809, 0}";
-			sepNavVisRange = "{368, 905}";
+			sepNavVisRange = "{555, 457}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* DaD_test2 */ = {
@@ -31,7 +31,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {835, 390}}";
 			sepNavSelRange = "{326, 21}";
-			sepNavVisRange = "{0, 698}";
+			sepNavVisRange = "{0, 644}";
 		};
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
@@ -118,8 +118,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 320526825;
-			PBXWorkspaceStateSaveDate = 320526825;
+			PBXPerProjectTemplateStateSaveDate = 320535462;
+			PBXWorkspaceStateSaveDate = 320535462;
 		};
 		perUserProjectItems = {
 			781F2A20131595D200B163CE /* PlistBookmark */ = 781F2A20131595D200B163CE /* PlistBookmark */;
@@ -132,9 +132,6 @@
 			784D3C35131ADA3200B64A94 /* PBXTextBookmark */ = 784D3C35131ADA3200B64A94 /* PBXTextBookmark */;
 			784D3C36131ADA3200B64A94 /* PBXTextBookmark */ = 784D3C36131ADA3200B64A94 /* PBXTextBookmark */;
 			784D3C37131ADA3200B64A94 /* PBXTextBookmark */ = 784D3C37131ADA3200B64A94 /* PBXTextBookmark */;
-			784D3C38131ADA3200B64A94 /* PBXTextBookmark */ = 784D3C38131ADA3200B64A94 /* PBXTextBookmark */;
-			784D3C39131ADA3200B64A94 /* XCBuildMessageTextBookmark */ = 784D3C39131ADA3200B64A94 /* XCBuildMessageTextBookmark */;
-			784D3C3A131ADA3200B64A94 /* PBXTextBookmark */ = 784D3C3A131ADA3200B64A94 /* PBXTextBookmark */;
 			7865BA3A131A6CA900A8348B /* PBXTextBookmark */ = 7865BA3A131A6CA900A8348B /* PBXTextBookmark */;
 			7865BA3C131A6CA900A8348B /* PBXTextBookmark */ = 7865BA3C131A6CA900A8348B /* PBXTextBookmark */;
 			7865BA3E131A6CA900A8348B /* PBXTextBookmark */ = 7865BA3E131A6CA900A8348B /* PBXTextBookmark */;
@@ -147,6 +144,9 @@
 			78789246131A90CF00B24F73 /* PBXTextBookmark */ = 78789246131A90CF00B24F73 /* PBXTextBookmark */;
 			78789247131A90CF00B24F73 /* PBXTextBookmark */ = 78789247131A90CF00B24F73 /* PBXTextBookmark */;
 			7897C3E5131AD3D800E60936 /* PBXTextBookmark */ = 7897C3E5131AD3D800E60936 /* PBXTextBookmark */;
+			78A63B18131AFBB3002826FE /* PBXTextBookmark */ = 78A63B18131AFBB3002826FE /* PBXTextBookmark */;
+			78A63B19131AFBB3002826FE /* XCBuildMessageTextBookmark */ = 78A63B19131AFBB3002826FE /* XCBuildMessageTextBookmark */;
+			78A63B1E131AFBB3002826FE /* PBXTextBookmark */ = 78A63B1E131AFBB3002826FE /* PBXTextBookmark */;
 			78C12D36131ABF5B00AD98DD /* PBXTextBookmark */ = 78C12D36131ABF5B00AD98DD /* PBXTextBookmark */;
 			78C12D38131ABF5B00AD98DD /* PBXTextBookmark */ = 78C12D38131ABF5B00AD98DD /* PBXTextBookmark */;
 			78C12D44131AC0C200AD98DD /* PBXTextBookmark */ = 78C12D44131AC0C200AD98DD /* PBXTextBookmark */;
@@ -341,35 +341,6 @@
 		rType = 0;
 		vrLen = 962;
 		vrLoc = 4468;
-	};
-	784D3C38131ADA3200B64A94 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
-		name = "RootViewController.h: 16";
-		rLen = 21;
-		rLoc = 326;
-		rType = 0;
-		vrLen = 698;
-		vrLoc = 0;
-	};
-	784D3C39131ADA3200B64A94 /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "Passing argument 1 of 'setTimeRemaining:' makes pointer from integer without a cast";
-		fRef = 1D3623250D0F684500981E51 /* DaD_test2AppDelegate.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 34;
-		rType = 1;
-	};
-	784D3C3A131ADA3200B64A94 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* DaD_test2AppDelegate.m */;
-		name = "DaD_test2AppDelegate.m: 35";
-		rLen = 0;
-		rLoc = 809;
-		rType = 0;
-		vrLen = 905;
-		vrLoc = 368;
 	};
 	7865BA3A131A6CA900A8348B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -607,6 +578,35 @@
 		rType = 0;
 		vrLen = 974;
 		vrLoc = 1569;
+	};
+	78A63B18131AFBB3002826FE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 16";
+		rLen = 21;
+		rLoc = 326;
+		rType = 0;
+		vrLen = 644;
+		vrLoc = 0;
+	};
+	78A63B19131AFBB3002826FE /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Passing argument 1 of 'setTimeRemaining:' makes pointer from integer without a cast";
+		fRef = 1D3623250D0F684500981E51 /* DaD_test2AppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 34;
+		rType = 1;
+	};
+	78A63B1E131AFBB3002826FE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* DaD_test2AppDelegate.m */;
+		name = "DaD_test2AppDelegate.m: 35";
+		rLen = 0;
+		rLoc = 809;
+		rType = 0;
+		vrLen = 870;
+		vrLoc = 403;
 	};
 	78C12D36131ABF5B00AD98DD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
