@@ -17,6 +17,7 @@
 @synthesize livesRemaining;
 @synthesize solvedWords;
 @synthesize currentGameMode;
+@synthesize gameOver;
 
 //@synthesize gameTimer;
 
@@ -27,11 +28,11 @@ const int labelSize = 40;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		//TODO call the right method on click
+		self.navigationItem.hidesBackButton = YES;
 		self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Aufgeben" 
 																				  style:UIBarButtonItemStylePlain 
 																				  target:self 
-																				  action:@selector(nilSymbol)] 
+																				  action:@selector(showGameOver)] 
 																					autorelease];
     }
     return self;
@@ -44,11 +45,23 @@ const int labelSize = 40;
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
+
+	
+	[[[[UIApplication sharedApplication] delegate] gameController] startNewGame];
+	
+	//[gameTimer invalidate];
+	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
+											   selector:@selector(tick:) 
+											   userInfo:nil 
+												repeats:YES];
+	[gameTimer fire];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [self resignFirstResponder];
     [super viewWillDisappear:animated];
+	
+	
 }
 
 
@@ -78,6 +91,25 @@ const int labelSize = 40;
 		
 }
 
+-(void)showGameOver{
+	
+	if(self.gameOver == nil){    
+		GameOverViewController *viewController = 
+		[[GameOverViewController alloc] initWithNibName:@"GameOverViewController" bundle:[NSBundle mainBundle]];
+		self.gameOver = viewController;
+		[viewController release];        
+	}
+	//stop the timer !
+	if(gameTimer != nil){
+		[gameTimer invalidate];
+		[[[[[UIApplication sharedApplication] delegate] gameController] gameTimer] invalidate];
+	}
+	self.gameOver.title = @"Gameover";
+	
+	[self.navigationController pushViewController:self.gameOver animated:YES];
+
+}
+
 
 -(void)tick:(NSTimer *)theTimer
 {
@@ -86,20 +118,9 @@ const int labelSize = 40;
 	
 	if([stat lifesRemaining]==0 && [stat timeRemaining]==0){
 		//gameOver! -> push View controller
-		RootViewController *parent =  (RootViewController*)[self parentViewController];
-		//if([parent setting] == nil){    
-			SettingViewController *viewController = 
-			[[SettingViewController alloc] initWithNibName:@"ScoreViewController" bundle:[NSBundle mainBundle]];
-			//parent.setting = viewController;
-			//[viewController release];        
-		//}
+		[self showGameOver];
 		
-		[self.navigationController pushViewController:viewController animated:YES];
-		viewController.title = @"Bestenliste"; 
-		[gameTimer invalidate];
-
 	}
-	//[stat autorelease];
 	
 }
 
@@ -115,12 +136,8 @@ const int labelSize = 40;
 		
 	[self showWord:word];
 	[self setStatus];
-	[gameTimer invalidate];
-	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
-											  selector:@selector(tick:) 
-											   userInfo:nil 
-												repeats:YES];
-	[gameTimer fire];
+	
+	//[gameTimer fire];
 	//[word autorelease];
 	//[stat autorelease];
 }
@@ -334,11 +351,13 @@ NSComparisonResult labelSort(UILabel * l1, UILabel * l2, void *context){
     // e.g. self.myOutlet = nil;
 	[self resignFirstResponder]; 
 	[labels release];
+	[stat release];
 }
 
 
 - (void)dealloc {
     [super dealloc];
+	[stat release];
 	[labels release];
 }
 

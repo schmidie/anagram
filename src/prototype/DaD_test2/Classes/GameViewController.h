@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GameController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "GameOverViewController.h"
 
 
 @interface GameViewController : UIViewController {
@@ -25,10 +26,14 @@
 	NSTimer *gameTimer;
 	Status *stat;
 	
+	GameOverViewController * gameOver;
+	
 }
 
 @property(nonatomic,retain) IBOutlet UIView *statusView;
 @property(nonatomic,retain) NSMutableArray *labels;
+
+@property(nonatomic,retain)GameOverViewController * gameOver;
 
 @property(nonatomic,retain) IBOutlet UILabel *timeRemaining;
 @property(nonatomic,retain) IBOutlet UILabel *livesRemaining;

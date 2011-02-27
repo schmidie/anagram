@@ -12,6 +12,8 @@
 
 @implementation GameController
 
+@synthesize gameTimer;
+
 
 -(id) initWithGameModel:(GameModel*)model{
 	gameModel = model;
@@ -47,11 +49,15 @@
 	NSLog(@"start game!");
 	
 	//set-up our gameTimer 
-	[gameTimer invalidate];
 	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
 											   selector:@selector(tick:) 
 											   userInfo:nil repeats:YES];
 	[gameTimer fire];
+	
+	
+	[gameModel setTimeRemaining:60];
+	[gameModel setLifesRemaining:3];
+	[gameModel setSolvedWords:0];
 	
 	//[gameModel setInGame:Yes];
 	
