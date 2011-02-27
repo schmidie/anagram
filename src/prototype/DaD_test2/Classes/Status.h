@@ -16,11 +16,15 @@
 	NSInteger * solvedWords;
 	NSInteger * currentGameMode;
 	
+	NSString *currentWord;
+	
 }
 
 @property(nonatomic)NSInteger * lifesRemaining;
 @property(nonatomic)NSInteger * timeRemaining;
 @property(nonatomic)NSInteger * solvedWords;
 @property(nonatomic)NSInteger * currentGameMode;
+
+@property(nonatomic,retain)NSString * currentWord;
 
 @end

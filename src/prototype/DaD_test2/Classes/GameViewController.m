@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "RootViewController.h"
 
 
 @implementation GameViewController
@@ -36,11 +37,68 @@ const int labelSize = 40;
     return self;
 }
 
+-(BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self resignFirstResponder];
+    [super viewWillDisappear:animated];
+}
+
+
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+/*	
+	NSLog(@"motion Began1");
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(shake) name:@"shake" object:nil];
+	
+	if(event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake)
+		NSLog(@"motion Began");
+ */
+}
+
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(shake) name:@"shake" object:nil];
+	if(event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake){
+		//NSLog(@"motion Ended");
+		[[[[UIApplication sharedApplication] delegate] gameController] removeLife];
+		
+		if([stat lifesRemaining]>0){
+			NSString* next = [[[[UIApplication sharedApplication] delegate] gameController] getNextWord];
+			[self showWord:next];
+		}
+	}
+		
+}
+
 
 -(void)tick:(NSTimer *)theTimer
 {
 	stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
 	[self setStatus];
+	
+	if([stat lifesRemaining]==0 && [stat timeRemaining]==0){
+		//gameOver! -> push View controller
+		RootViewController *parent =  (RootViewController*)[self parentViewController];
+		//if([parent setting] == nil){    
+			SettingViewController *viewController = 
+			[[SettingViewController alloc] initWithNibName:@"ScoreViewController" bundle:[NSBundle mainBundle]];
+			//parent.setting = viewController;
+			//[viewController release];        
+		//}
+		
+		[self.navigationController pushViewController:viewController animated:YES];
+		viewController.title = @"Bestenliste"; 
+		[gameTimer invalidate];
+
+	}
 	//[stat autorelease];
 	
 }
@@ -48,9 +106,10 @@ const int labelSize = 40;
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
 
 	//get the current word from the controller - it is already shaked !
-	NSString *word = [[[[UIApplication sharedApplication] delegate] gameController] getCurrentWord];
+	NSString *word = [[[[UIApplication sharedApplication] delegate] gameController] getNextWord];
 	//get status from controller
 	stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
 		
@@ -143,8 +202,11 @@ const int labelSize = 40;
 					//NSLog(@"Collision");
 					[self moveAway:gesture];
 				}
-				if([[[[UIApplication sharedApplication] delegate] gameController] checkSolution:[self detectWord]]){
-					[self showWord:[[[[UIApplication sharedApplication] delegate] gameController]getCurrentWord]];
+				Boolean solved = [[[[UIApplication sharedApplication] delegate] gameController] checkSolution:[self detectWord]];
+				if(solved){
+					
+					NSString* next = [[[[UIApplication sharedApplication] delegate] gameController] getNextWord];
+					[self showWord:next];
 					//NSLog(@"solved !!");
 				}
 				//NSLog([self detectWord]);
@@ -248,13 +310,15 @@ NSComparisonResult labelSort(UILabel * l1, UILabel * l2, void *context){
 
 
 
-
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
     //return (interfaceOrientation == UIInterfaceOrientationPortrait);
 	return YES;
 }
+
+
+
 
 
 - (void)didReceiveMemoryWarning {
@@ -268,6 +332,7 @@ NSComparisonResult labelSort(UILabel * l1, UILabel * l2, void *context){
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	[self resignFirstResponder]; 
 	[labels release];
 }
 

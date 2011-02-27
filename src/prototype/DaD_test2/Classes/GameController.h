@@ -23,7 +23,6 @@
 
 -(id) initWithGameModel:(GameModel*)model;
 -(void) startNewGame;
--(NSMutableString*) getCurrentWord;
 -(Status*) getStatus;
 -(Boolean) checkSolution:(NSString*) text;
 -(void)tick:(NSTimer *)theTimer;

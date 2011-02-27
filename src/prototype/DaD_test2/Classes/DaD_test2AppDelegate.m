@@ -33,6 +33,7 @@
 	// TODO: write init method...
 	[gameModel setTimeRemaining:60];
 	[gameModel setLifesRemaining:3];
+	[gameModel setSolvedWords:0];
 	
 	gameController = [[GameController alloc]initWithGameModel:gameModel];
 	
