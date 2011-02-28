@@ -11,6 +11,14 @@
 
 @interface SettingViewController : UIViewController {
 
+	IBOutlet UILabel *actualModus;
+	IBOutlet UIButton *changeModus;
+	//IBOutlet UITextView *modusInfo	
 }
+-(IBAction)changeModeClicked:(id)sender;
+
+@property(nonatomic,retain) IBOutlet UILabel *actualModus;
+@property(nonatomic,retain) IBOutlet UIButton *changeModus;
+//@property(nonatomic,retain) IBOutlet UITextView *modusInfo
 
 @end

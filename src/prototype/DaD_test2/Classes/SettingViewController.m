@@ -11,6 +11,10 @@
 
 @implementation SettingViewController
 
+@synthesize actualModus;
+@synthesize changeModus;
+//@synthesize modusInfo;
+
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -36,6 +40,11 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+- (IBAction)changeModeClicked:(id)sender
+{
+
+}
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
