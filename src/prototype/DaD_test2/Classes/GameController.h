@@ -19,11 +19,10 @@
 }
 
 //@property (nonatomic, retain) GameModel gameModel;
-//@property (nonatomic, retain) NSTimer *gameTimer;
+@property (nonatomic, retain) NSTimer *gameTimer;
 
 -(id) initWithGameModel:(GameModel*)model;
 -(void) startNewGame;
--(NSMutableString*) getCurrentWord;
 -(Status*) getStatus;
 -(Boolean) checkSolution:(NSString*) text;
 -(void)tick:(NSTimer *)theTimer;

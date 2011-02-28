@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "RootViewController.h"
 
 
 @implementation GameViewController
@@ -16,6 +17,7 @@
 @synthesize livesRemaining;
 @synthesize solvedWords;
 @synthesize currentGameMode;
+@synthesize gameOver;
 
 //@synthesize gameTimer;
 
@@ -26,14 +28,86 @@ const int labelSize = 40;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		//TODO call the right method on click
+		self.navigationItem.hidesBackButton = YES;
 		self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Aufgeben" 
 																				  style:UIBarButtonItemStylePlain 
 																				  target:self 
-																				  action:@selector(nilSymbol)] 
+																				  action:@selector(showGameOver)] 
 																					autorelease];
     }
     return self;
+}
+
+-(BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+
+	
+	[[[[UIApplication sharedApplication] delegate] gameController] startNewGame];
+	
+	//[gameTimer invalidate];
+	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
+											   selector:@selector(tick:) 
+											   userInfo:nil 
+												repeats:YES];
+	[gameTimer fire];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self resignFirstResponder];
+    [super viewWillDisappear:animated];
+	
+	
+}
+
+
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+/*	
+	NSLog(@"motion Began1");
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(shake) name:@"shake" object:nil];
+	
+	if(event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake)
+		NSLog(@"motion Began");
+ */
+}
+
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(shake) name:@"shake" object:nil];
+	if(event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake){
+		//NSLog(@"motion Ended");
+		[[[[UIApplication sharedApplication] delegate] gameController] removeLife];
+		
+		if([stat lifesRemaining]>0){
+			NSString* next = [[[[UIApplication sharedApplication] delegate] gameController] getNextWord];
+			[self showWord:next];
+		}
+	}
+		
+}
+
+-(void)showGameOver{
+	
+	if(self.gameOver == nil){    
+		GameOverViewController *viewController = 
+		[[GameOverViewController alloc] initWithNibName:@"GameOverViewController" bundle:[NSBundle mainBundle]];
+		self.gameOver = viewController;
+		[viewController release];        
+	}
+	//stop the timer !
+	if(gameTimer != nil){
+		[gameTimer invalidate];
+		[[[[[UIApplication sharedApplication] delegate] gameController] gameTimer] invalidate];
+	}
+	self.gameOver.title = @"Gameover";
+	
+	[self.navigationController pushViewController:self.gameOver animated:YES];
+
 }
 
 
@@ -41,27 +115,29 @@ const int labelSize = 40;
 {
 	stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
 	[self setStatus];
-	//[stat autorelease];
+	
+	if([stat lifesRemaining]==0 && [stat timeRemaining]==0){
+		//gameOver! -> push View controller
+		[self showGameOver];
+		
+	}
 	
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
 
 	//get the current word from the controller - it is already shaked !
-	NSString *word = [[[[UIApplication sharedApplication] delegate] gameController] getCurrentWord];
+	NSString *word = [[[[UIApplication sharedApplication] delegate] gameController] getNextWord];
 	//get status from controller
 	stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
 		
 	[self showWord:word];
 	[self setStatus];
-	[gameTimer invalidate];
-	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
-											  selector:@selector(tick:) 
-											   userInfo:nil 
-												repeats:YES];
-	[gameTimer fire];
+	
+	//[gameTimer fire];
 	//[word autorelease];
 	//[stat autorelease];
 }
@@ -143,8 +219,11 @@ const int labelSize = 40;
 					//NSLog(@"Collision");
 					[self moveAway:gesture];
 				}
-				if([[[[UIApplication sharedApplication] delegate] gameController] checkSolution:[self detectWord]]){
-					[self showWord:[[[[UIApplication sharedApplication] delegate] gameController]getCurrentWord]];
+				Boolean solved = [[[[UIApplication sharedApplication] delegate] gameController] checkSolution:[self detectWord]];
+				if(solved){
+					
+					NSString* next = [[[[UIApplication sharedApplication] delegate] gameController] getNextWord];
+					[self showWord:next];
 					//NSLog(@"solved !!");
 				}
 				//NSLog([self detectWord]);
@@ -248,13 +327,15 @@ NSComparisonResult labelSort(UILabel * l1, UILabel * l2, void *context){
 
 
 
-
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
     //return (interfaceOrientation == UIInterfaceOrientationPortrait);
 	return YES;
 }
+
+
+
 
 
 - (void)didReceiveMemoryWarning {
@@ -268,12 +349,15 @@ NSComparisonResult labelSort(UILabel * l1, UILabel * l2, void *context){
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	[self resignFirstResponder]; 
 	[labels release];
+	[stat release];
 }
 
 
 - (void)dealloc {
     [super dealloc];
+	[stat release];
 	[labels release];
 }
 

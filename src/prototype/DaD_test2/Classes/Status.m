@@ -15,5 +15,6 @@
 @synthesize timeRemaining;
 @synthesize solvedWords;
 @synthesize currentGameMode;
+@synthesize currentWord;
 
 @end

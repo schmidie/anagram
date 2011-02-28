@@ -25,6 +25,7 @@ NSArray *menuItems;
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.title= @"Menu";
+	[self becomeFirstResponder];
 
 	menuItems = [[NSArray alloc] initWithObjects:@"Spielen",@"Bestenliste",@"Optionen",@"Hilfe",nil];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -37,6 +38,7 @@ NSArray *menuItems;
     [super viewWillAppear:animated];
 }
 */
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -52,6 +54,8 @@ NSArray *menuItems;
 	[super viewDidDisappear:animated];
 }
 */
+
+
 
 
  // Override to allow orientations other than the default portrait orientation.
@@ -158,7 +162,6 @@ NSArray *menuItems;
 			}
 			[self.navigationController pushViewController:self.game animated:YES];
 			self.game.title = @"iDictAttack"; 
-			[[[[UIApplication sharedApplication] delegate] gameController] startNewGame];
 			
 			break;
 		case 1:
@@ -196,6 +199,7 @@ NSArray *menuItems;
 	} 
 }
 
+	
 
 #pragma mark -
 #pragma mark Memory management

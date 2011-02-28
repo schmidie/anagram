@@ -12,9 +12,14 @@
 
 @implementation GameController
 
+@synthesize gameTimer;
+
 
 -(id) initWithGameModel:(GameModel*)model{
 	gameModel = model;
+	
+	[gameModel setCurrentWord:[self getNextWord]];
+	
 	return self;
 }
 
@@ -25,44 +30,47 @@
 		int i = [gameModel timeRemaining];
 		[gameModel setTimeRemaining:(i-1)];
 	}
-	if([gameModel timeRemaining]==0 && [gameModel lifesRemaining] > 0){
+	else if([gameModel timeRemaining]==0 && [gameModel lifesRemaining] > 0){
 		// loosing a life ! -> reset the time for the new life
 		int i = [gameModel lifesRemaining];
 		[gameModel setLifesRemaining:(i-1)];
 		// TODO define global variable for time ...
 		[gameModel setTimeRemaining:60];
 	}
-	else {
+	else if([gameModel timeRemaining]==0 && [gameModel lifesRemaining] == 0){
 		//no time and no lifes ->gameover !
-		NSLog(@"GameOver!!");
+		NSLog(@"GameOveruuuuuuu!!");
 	}
 
-
 }
+
 
 -(void) startNewGame{
 	NSLog(@"start game!");
 	
 	//set-up our gameTimer 
-	[gameTimer invalidate];
 	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
 											   selector:@selector(tick:) 
 											   userInfo:nil repeats:YES];
 	[gameTimer fire];
 	
+	
+	[gameModel setTimeRemaining:60];
+	[gameModel setLifesRemaining:3];
+	[gameModel setSolvedWords:0];
+	
 	//[gameModel setInGame:Yes];
 	
 }
 
--(NSMutableString*) getCurrentWord{
-	
+-(NSMutableString*) getNextWord {
 	//load word 
 	//get a new DataHandler
 	DataHandler* datahandler = [[DataHandler alloc] init];
-
+	
 	NSString * originalWord = datahandler.getWordFromFile;
 	NSLog(originalWord);
-
+	
 	//TODO
 	//NSArray * wordsMock = [[NSArray alloc] initWithObjects:@"padre",@"madre",@"fratello",@"figlio",
 	//					   @"sorella",@"zia",@"nonna",@"nipote",nil];
@@ -86,17 +94,32 @@
 	}
 	//NSLog(word);
 	//NSLog(randomString);
-	[gameModel setCurrentWord:[NSString stringWithString:originalWord]];
+	[gameModel setCurrentWord:originalWord];
+	[gameModel setTimeRemaining:60];
+
 	return [NSString stringWithString:randomString];
 }
+
+-(void) removeLife{
+	int i = [gameModel lifesRemaining];
+	if(i>0){
+		[gameModel setLifesRemaining:(i-1)];
+		[gameModel setTimeRemaining:60];
+	}
+	else {
+		[gameModel setTimeRemaining:0];
+	}
+
+}
+
 
 -(Status*) getStatus{
 	Status *myStatus = [[Status alloc] init];
 	//[myStatus setSolvedWords:[model get...]]
 	//[myStatus setSolvedWords:1];
-	[myStatus setSolvedWords:5];
+	[myStatus setSolvedWords:[gameModel solvedWords]];
 	[myStatus setTimeRemaining:[gameModel timeRemaining]];
-	//[myStatus setTimeRemaining:60];
+	[myStatus setCurrentWord:[gameModel currentWord]];
 	[myStatus setLifesRemaining:[gameModel lifesRemaining]];
 	[myStatus setCurrentGameMode:1];
 	
@@ -107,8 +130,14 @@
 	
 	NSLog(text);
 	NSLog([gameModel currentWord]);
-	
-	return [text isEqualToString:[gameModel currentWord]];
+	Boolean solved = [text isEqualToString:[gameModel currentWord]];
+	if(solved){
+		int i = [gameModel solvedWords];
+		[gameModel setSolvedWords:(i+1)];
+				//TODO: write to file ....
+		
+	}
+	return solved;
 }
 
 @end
