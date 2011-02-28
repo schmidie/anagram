@@ -11,10 +11,10 @@
 
 @implementation ScoreViewController
 
-//@synthesize training;
-//@synthesize timeattack;
-//@synthesize tabbar;
-//@synthesize table;
+@synthesize training;
+@synthesize timeattack;
+@synthesize tabbar;
+@synthesize table;
 
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -32,17 +32,18 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-//	tabbar.selectedItem;
+	NSLog(@"viewDidLoad-Score");
+	tabbar.selectedItem = training;
 }
 
 
-/*
+
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
-*/
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -59,6 +60,10 @@
 
 
 - (void)dealloc {
+	[training release];
+	[timeattack release];
+	[tabbar release];
+	[table release];
     [super dealloc];
 }
 
