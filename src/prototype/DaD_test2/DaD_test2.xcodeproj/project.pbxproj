@@ -24,6 +24,9 @@
 		479B9AC51312DA1F00B32CC2 /* name.html in Resources */ = {isa = PBXBuildFile; fileRef = 479B9AC41312DA1F00B32CC2 /* name.html */; };
 		479B9ACD1312DAAE00B32CC2 /* play.html in Resources */ = {isa = PBXBuildFile; fileRef = 479B9ACC1312DAAE00B32CC2 /* play.html */; };
 		479B9ACF1312DAD200B32CC2 /* difficulty.html in Resources */ = {isa = PBXBuildFile; fileRef = 479B9ACE1312DAD200B32CC2 /* difficulty.html */; };
+		479CBD49131C29ED00E14945 /* 78-stopwatch.png in Resources */ = {isa = PBXBuildFile; fileRef = 479CBD48131C29ED00E14945 /* 78-stopwatch.png */; };
+		479CBD4C131C2A0100E14945 /* 97-puzzle.png in Resources */ = {isa = PBXBuildFile; fileRef = 479CBD4B131C2A0100E14945 /* 97-puzzle.png */; };
+		479CBD4E131C2A2200E14945 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 479CBD4D131C2A2200E14945 /* about.html */; };
 		479DE2CF1312B4BE00250CF2 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479DE2CD1312B4BE00250CF2 /* HelpViewController.m */; };
 		479DE2D01312B4BE00250CF2 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479DE2CE1312B4BE00250CF2 /* HelpViewController.xib */; };
 		479DE2D41312B53F00250CF2 /* HelpTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479DE2D21312B53F00250CF2 /* HelpTextViewController.m */; };
@@ -63,6 +66,9 @@
 		479B9AC41312DA1F00B32CC2 /* name.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = name.html; sourceTree = "<group>"; };
 		479B9ACC1312DAAE00B32CC2 /* play.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = play.html; sourceTree = "<group>"; };
 		479B9ACE1312DAD200B32CC2 /* difficulty.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = difficulty.html; sourceTree = "<group>"; };
+		479CBD48131C29ED00E14945 /* 78-stopwatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "78-stopwatch.png"; sourceTree = "<group>"; };
+		479CBD4B131C2A0100E14945 /* 97-puzzle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "97-puzzle.png"; sourceTree = "<group>"; };
+		479CBD4D131C2A2200E14945 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 		479DE2CC1312B4BE00250CF2 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		479DE2CD1312B4BE00250CF2 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		479DE2CE1312B4BE00250CF2 /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
@@ -168,6 +174,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				479CBD4D131C2A2200E14945 /* about.html */,
+				479CBD4B131C2A0100E14945 /* 97-puzzle.png */,
+				479CBD48131C29ED00E14945 /* 78-stopwatch.png */,
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* DaD_test2-Info.plist */,
@@ -253,6 +262,9 @@
 				786B4AF413143CCD007D6792 /* Words.txt in Resources */,
 				786B4AF613143CE2007D6792 /* LastGameStatus.txt in Resources */,
 				479F49A0131AB900004BD20F /* GameOverViewController.xib in Resources */,
+				479CBD49131C29ED00E14945 /* 78-stopwatch.png in Resources */,
+				479CBD4C131C2A0100E14945 /* 97-puzzle.png in Resources */,
+				479CBD4E131C2A2200E14945 /* about.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

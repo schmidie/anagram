@@ -10,12 +10,18 @@
 
 
 @interface ScoreViewController : UITableViewController {
+	
 	IBOutlet UITabBarItem *training;
 	IBOutlet UITabBarItem *timeattack;
 	IBOutlet UITabBar *tabbar;
 	IBOutlet UITableView *table;
+	
 }
 
+//@property(nonatomic, retain) IBOutlet UITabBarItem *training;
+//@property(nonatomic, retain) IBOutlet UITabBarItem *timeattack;
+//@property(nonatomic, retain) IBOutlet UITabBar *tabbar;
+//@property(nonatomic, retain) IBOutlet UITableView *table;
 -(IBAction)trainingClicked:(id)sender;
 -(IBAction)timeAttackClicked:(id)sender;
 

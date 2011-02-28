@@ -165,25 +165,26 @@ NSArray *menuItems;
 			
 			break;
 		case 1:
-			if(self.setting == nil){    
-				SettingViewController *viewController = 
-				[[SettingViewController alloc] initWithNibName:@"ScoreViewController" bundle:[NSBundle mainBundle]];
-				self.setting = viewController;
-				[viewController release];        
-			}
-			[self.navigationController pushViewController:self.setting animated:YES];
-			self.setting.title = @"Bestenliste"; 
-			break;
-		case 2:
 			if(self.score == nil){    
 				ScoreViewController *viewController = 
-				[[ScoreViewController alloc] initWithNibName:@"SettingViewController" bundle:[NSBundle mainBundle]];
+				[[ScoreViewController alloc] initWithNibName:@"ScoreViewController" bundle:[NSBundle mainBundle]];
 				self.score = viewController;
 				[viewController release];        
 			}
 			[self.navigationController pushViewController:self.score animated:YES];
-			self.score.title = @"Optionen"; 
+			self.score.title = @"Bestenliste"; 
 			break;
+		case 2:
+			if(self.setting == nil){    
+				SettingViewController *viewController = 
+				[[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:[NSBundle mainBundle]];
+				self.setting = viewController;
+				[viewController release];        
+			}
+			[self.navigationController pushViewController:self.setting animated:YES];
+			self.setting.title = @"Optionen"; 
+			break;
+
 		case 3:
 			if(self.help == nil){    
 				HelpViewController *viewController = 
