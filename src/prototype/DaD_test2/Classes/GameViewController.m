@@ -171,7 +171,15 @@ const int labelSize = 40;
 	for (int i= 0; i< [word length] ; i++) {
 		
 		// create a label
-		UILabel *draglabel = [[UILabel alloc] initWithFrame:CGRectMake(i*50, 10, labelSize,labelSize)];
+		// Alle Buchstaben auf der View sichtbar!
+		int height = 10;
+		int width = i*50;
+		if (i>5){
+			height = height + 60;
+			width = width - 300;
+		}
+		
+		UILabel *draglabel = [[UILabel alloc] initWithFrame:CGRectMake(width, height, labelSize,labelSize)];
 		draglabel.text = [word substringWithRange:NSMakeRange(i, 1)];
 		UIColor* mycolor= [[UIColor alloc]initWithRed:0.7 green:0.8 blue:0.9 alpha:0.7];
 		draglabel.backgroundColor = mycolor;
