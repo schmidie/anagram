@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Status.h"
-
+#import "Score.h"
 @interface DataHandler : NSObject {
 	NSString * statusFilePath;
 	NSString * wordsFilePath;

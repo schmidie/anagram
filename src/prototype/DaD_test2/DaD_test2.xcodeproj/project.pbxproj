@@ -33,6 +33,8 @@
 		479DE2D51312B53F00250CF2 /* HelpTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479DE2D31312B53F00250CF2 /* HelpTextViewController.xib */; };
 		479F499F131AB900004BD20F /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F499D131AB900004BD20F /* GameOverViewController.m */; };
 		479F49A0131AB900004BD20F /* GameOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479F499E131AB900004BD20F /* GameOverViewController.xib */; };
+		47A23876131D7CA000BFB84E /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A23875131D7CA000BFB84E /* Score.m */; };
+		47A2387A131D7CBA00BFB84E /* DraggableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A23878131D7CBA00BFB84E /* DraggableLabel.m */; };
 		780D078F131D19DB00C219AF /* background2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 780D078E131D19DB00C219AF /* background2.jpeg */; };
 		786B4AF213143A37007D6792 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B4AF113143A37007D6792 /* DataHandler.m */; };
 		786B4AF413143CCD007D6792 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 786B4AF313143CCD007D6792 /* Words.txt */; };
@@ -80,6 +82,11 @@
 		479F499C131AB900004BD20F /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
 		479F499D131AB900004BD20F /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
 		479F499E131AB900004BD20F /* GameOverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameOverViewController.xib; sourceTree = "<group>"; };
+		47A23874131D7C8F00BFB84E /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		47A23875131D7CA000BFB84E /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		47A23877131D7CBA00BFB84E /* DraggableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableLabel.h; sourceTree = "<group>"; };
+		47A23878131D7CBA00BFB84E /* DraggableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableLabel.m; sourceTree = "<group>"; };
+		47A23879131D7CBA00BFB84E /* GameModes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameModes.h; sourceTree = "<group>"; };
 		780D078E131D19DB00C219AF /* background2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpeg; sourceTree = "<group>"; };
 		786B4AF013143A37007D6792 /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
 		786B4AF113143A37007D6792 /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
@@ -112,6 +119,11 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				47A23877131D7CBA00BFB84E /* DraggableLabel.h */,
+				47A23878131D7CBA00BFB84E /* DraggableLabel.m */,
+				47A23879131D7CBA00BFB84E /* GameModes.h */,
+				47A23875131D7CA000BFB84E /* Score.m */,
+				47A23874131D7C8F00BFB84E /* Score.h */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* DaD_test2AppDelegate.h */,
@@ -296,6 +308,8 @@
 				479DE2D41312B53F00250CF2 /* HelpTextViewController.m in Sources */,
 				786B4AF213143A37007D6792 /* DataHandler.m in Sources */,
 				479F499F131AB900004BD20F /* GameOverViewController.m in Sources */,
+				47A23876131D7CA000BFB84E /* Score.m in Sources */,
+				47A2387A131D7CBA00BFB84E /* DraggableLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

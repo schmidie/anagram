@@ -7,7 +7,7 @@
 //
 
 #import "DataHandler.h"
-#import "Score.h"
+
 #import "GameModes.h"
 
 @implementation DataHandler
