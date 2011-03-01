@@ -11,19 +11,19 @@
 @interface GameModel : NSObject {
 	
 	NSString * currentWord;
-	NSInteger * lifesRemaining;
-	NSInteger * timeRemaining;
-	NSInteger * solvedWords;
-	NSInteger * currentGameMode;
+	NSInteger lifesRemaining;
+	NSInteger timeRemaining;
+	NSInteger solvedWords;
+	NSInteger currentGameMode;
 	Boolean inGame; 
 
 }
 
 @property(nonatomic,retain)NSString * currentWord;
-@property(nonatomic)NSInteger * lifesRemaining;
-@property(nonatomic)NSInteger * timeRemaining;
-@property(nonatomic)NSInteger * solvedWords;
-@property(nonatomic)NSInteger * currentGameMode;
+@property(nonatomic)NSInteger lifesRemaining;
+@property(nonatomic)NSInteger timeRemaining;
+@property(nonatomic)NSInteger solvedWords;
+@property(nonatomic)NSInteger currentGameMode;
 @property(nonatomic)Boolean inGame; 
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "GameOverViewController.h"
+#import "DaD_test2AppDelegate.h"
 
 
 @implementation GameOverViewController
@@ -14,6 +15,7 @@
 @synthesize points;
 @synthesize solvedWords;
 @synthesize currentGameMode;
+@synthesize player;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
@@ -36,13 +38,18 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+// reload the current scores
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 	
-	Status *stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	Status *stat = [[(DaD_test2AppDelegate *)[[UIApplication sharedApplication] delegate] gameController] getStatus];
 	
 	[currentGameMode setText:[NSString stringWithFormat:@"MODE: %d",[stat currentGameMode]]];
-	[solvedWords setText:[NSString stringWithFormat:@"SOLVED: %d",[stat solvedWords]]];
-	int p = ([stat solvedWords]*100) + ([stat lifesRemaining]*10);
-	[points setText:[NSString stringWithFormat:@"POINTS: %d",p]];
+	[solvedWords setText:[NSString stringWithFormat:@"gelöste Wörter: %d",[stat solvedWords]]];
+	calculatedPoints = ([stat solvedWords]*100) + ([stat lifesRemaining]*10);
+	[points setText:[NSString stringWithFormat:@"Punkte: %d",calculatedPoints]];
 }
 
 
@@ -55,7 +62,11 @@
 */
 
 -(void)showMenu{
-
+    [[(DaD_test2AppDelegate *)[[UIApplication sharedApplication] delegate] gameController] 
+										addNewHighscore:
+												player.text:
+												calculatedPoints
+	];
 	[self.navigationController popToRootViewControllerAnimated:YES];
 	
 }

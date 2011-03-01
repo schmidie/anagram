@@ -17,6 +17,8 @@
 	IBOutlet UILabel *solvedWords;
 	IBOutlet UILabel *currentGameMode;
 	IBOutlet UILabel *points;
+	IBOutlet UITextField *player;
+	NSInteger calculatedPoints;
 	
 }
 
@@ -25,5 +27,5 @@
 @property(nonatomic,retain) IBOutlet UILabel *solvedWords;
 @property(nonatomic,retain) IBOutlet UILabel *currentGameMode;
 @property(nonatomic,retain) IBOutlet UILabel *points;
-
+@property(nonatomic,retain) IBOutlet UITextField *player;
 @end

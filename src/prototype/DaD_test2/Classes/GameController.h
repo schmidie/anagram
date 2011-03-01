@@ -26,7 +26,8 @@
 -(Status*) getStatus;
 -(Boolean) checkSolution:(NSString*) text;
 -(void)tick:(NSTimer *)theTimer;
-
+-(NSArray*) getHighscores:(NSInteger) withMode;
+-(void) addNewHighscore:(NSString *) withName:(NSInteger) andScore;
 
 
 @end

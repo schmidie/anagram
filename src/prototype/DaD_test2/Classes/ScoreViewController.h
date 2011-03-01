@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ScoreViewController : UIViewController {
+@interface ScoreViewController : UIViewController<UITableViewDataSource> {
 	
 	IBOutlet UITabBarItem *training;
 	IBOutlet UITabBarItem *timeattack;
 	IBOutlet UITabBar *tabbar;
 	IBOutlet UITableView *table;
+	NSArray * tableItems;
 	
 }
 
@@ -23,7 +24,7 @@
 @property(nonatomic, retain) IBOutlet UITabBar *tabbar;
 @property(nonatomic, retain) IBOutlet UITableView *table;
 
--(IBAction)trainingClicked:(id)sender;
--(IBAction)timeAttackClicked:(id)sender;
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 
 @end

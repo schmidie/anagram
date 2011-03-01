@@ -7,7 +7,8 @@
 //
 
 #import "DataHandler.h"
-
+#import "Score.h"
+#import "GameModes.h"
 
 @implementation DataHandler
 
@@ -92,4 +93,57 @@
 	return newWord;
 }
 
+//gets all highscores from file
+-(NSMutableArray *) retrieveHighscores{
+	//Pfad Documents/... bauen
+	NSArray *p = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 
+	NSString *filePath = [NSString stringWithFormat:@"%@/%@",[p objectAtIndex:0],@"highscores.dat"];
+	NSArray * retval;
+	
+	// Bestenliste gefunden
+	if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+		retval = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+		
+	}else {
+		retval = [NSArray array];
+	}
+	
+	return [NSMutableArray arrayWithArray: retval];
+}
+
+// filters for specific game mode
+-(NSArray *) getHighscores:(NSInteger) withMode{
+    NSMutableArray* allScores = [self retrieveHighscores];
+	NSMutableArray* specificScores = [NSMutableArray array];
+	for(Score *s in allScores){
+		if(s.gameMode == withMode){
+			[specificScores addObject:s];
+		}
+	}
+	NSSortDescriptor *sortDesc = [NSSortDescriptor sortDescriptorWithKey:@"points" ascending:NO];
+	[specificScores sortUsingDescriptors:[NSArray arrayWithObject:sortDesc]];
+	
+	return specificScores;
+}
+
+// adds a new score
+-(void) addHighscore:(NSString*) withName:(NSInteger) andScore:(NSInteger) andMode{
+	NSArray *p = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 
+	NSString *filePath = [NSString stringWithFormat:@"%@/%@",[p objectAtIndex:0],@"highscores.dat"];
+	NSMutableArray *scores = [self retrieveHighscores];
+	
+	Score * newScore = [[[Score alloc]init]autorelease];
+	[newScore setPlayer:withName];
+	[newScore setPoints:andScore];
+	[newScore setGameMode:andMode];
+	[scores addObject:newScore];
+
+	
+	BOOL status = [NSKeyedArchiver archiveRootObject:scores toFile:filePath];
+	NSLog(@"f");
+}
 @end
+
+
+
+

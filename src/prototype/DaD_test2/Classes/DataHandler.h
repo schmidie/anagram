@@ -14,7 +14,10 @@
 	NSString * wordsFilePath;
 }
 -(NSString*) getWordFromFile;
--(Status*) getLastGameStatus;
--(void) writeGameStatusToFile:(Status*) status;
+//-(Status*) getLastGameStatus;
+//-(void) writeGameStatusToFile:(Status*) status;
+-(NSArray*) getHighscores:(NSInteger) withMode;
+-(void) addHighscore:(NSString*) withName:(NSInteger) andScore:(NSInteger) andMode;
+
 
 @end

@@ -8,6 +8,7 @@
 
 #import "GameController.h"
 #import "DataHandler.h"
+#import "GameModes.h"
 
 
 @implementation GameController
@@ -15,24 +16,15 @@
 @synthesize gameTimer;
 
 
--(id) initWithGameModel:(GameModel*)model{
-	gameModel = model;
-	
-	[gameModel setCurrentWord:[self getNextWord]];
-	
-	return self;
-}
-
-
 -(void) tick:(NSTimer*) theTimer{
 	
 	if([gameModel timeRemaining]>0){
-		int i = [gameModel timeRemaining];
+		int i = (int)[gameModel timeRemaining];
 		[gameModel setTimeRemaining:(i-1)];
 	}
 	else if([gameModel timeRemaining]==0 && [gameModel lifesRemaining] > 0){
 		// loosing a life ! -> reset the time for the new life
-		int i = [gameModel lifesRemaining];
+		NSInteger i = [gameModel lifesRemaining];
 		[gameModel setLifesRemaining:(i-1)];
 		// TODO define global variable for time ...
 		[gameModel setTimeRemaining:60];
@@ -58,6 +50,7 @@
 	[gameModel setTimeRemaining:60];
 	[gameModel setLifesRemaining:3];
 	[gameModel setSolvedWords:0];
+	[gameModel setCurrentGameMode:TRAINING]; // do something better
 	
 	//[gameModel setInGame:Yes];
 	
@@ -67,9 +60,9 @@
 	//load word 
 	//get a new DataHandler
 	DataHandler* datahandler = [[DataHandler alloc] init];
-	
 	NSString * originalWord = datahandler.getWordFromFile;
-	NSLog(originalWord);
+	[datahandler release];
+	NSLog(@"%@", originalWord);
 	
 	//TODO
 	//NSArray * wordsMock = [[NSArray alloc] initWithObjects:@"padre",@"madre",@"fratello",@"figlio",
@@ -86,7 +79,8 @@
 		int randPos = 0;
 		if(([word length]-1) > 0)
 			randPos = (rand()%([word length]-1));
-		char *c = [word characterAtIndex:(int)randPos];
+		NSUInteger nsu = randPos;
+		unichar c = [word characterAtIndex:nsu];
 		[randomString appendFormat:@"%c",c];
 		
 		//delete the charecter in the word
@@ -101,7 +95,7 @@
 }
 
 -(void) removeLife{
-	int i = [gameModel lifesRemaining];
+	int i = (int)[gameModel lifesRemaining];
 	if(i>0){
 		[gameModel setLifesRemaining:(i-1)];
 		[gameModel setTimeRemaining:60];
@@ -121,23 +115,50 @@
 	[myStatus setTimeRemaining:[gameModel timeRemaining]];
 	[myStatus setCurrentWord:[gameModel currentWord]];
 	[myStatus setLifesRemaining:[gameModel lifesRemaining]];
-	[myStatus setCurrentGameMode:1];
+	[myStatus setCurrentGameMode:[gameModel currentGameMode]];
 	
 	return myStatus;
 }
 
+-(id) initWithGameModel:(GameModel*)model{
+	gameModel = model;
+	
+	[gameModel setCurrentWord:[self getNextWord]];
+	
+	return self;
+}
+
 -(Boolean) checkSolution: (NSString *) text{
 	
-	NSLog(text);
-	NSLog([gameModel currentWord]);
+	NSLog(@"%@", text);
+	NSLog(@"%@", [gameModel currentWord]);
 	Boolean solved = [text isEqualToString:[gameModel currentWord]];
 	if(solved){
-		int i = [gameModel solvedWords];
+		int i = (int)[gameModel solvedWords];
 		[gameModel setSolvedWords:(i+1)];
 				//TODO: write to file ....
 		
 	}
 	return solved;
+}
+
+// loads the current highscores from file
+-(NSArray*) getHighscores:(NSInteger) withMode{
+	DataHandler* datahandler = [[DataHandler alloc] init];
+	NSArray * scores = [datahandler getHighscores:withMode];
+	[datahandler release];
+
+	return scores;
+}
+
+-(void) addNewHighscore:(NSString *) withName:(NSInteger) andScore{
+	DataHandler* datahandler = [[DataHandler alloc] init];
+	[datahandler addHighscore
+					:withName
+					:andScore
+					:gameModel.currentGameMode
+	];
+	[datahandler release];
 }
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "ScoreViewController.h"
+#import "DaD_test2AppDelegate.h"
+#import "Score.h"
 
 
 @implementation ScoreViewController
@@ -32,11 +34,57 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	NSLog(@"viewDidLoad-Score");
-	tabbar.selectedItem = training;
+	tableItems = [NSArray array];
+	table.dataSource = self;
 }
 
+-(void)reloadTable{
+	NSInteger gameMode = tabbar.selectedItem.tag;
+	
+	NSArray * scores = [[(DaD_test2AppDelegate *)[[UIApplication sharedApplication] delegate] gameController] getHighscores:gameMode];
+	NSMutableArray *newItems = [[NSMutableArray array]retain];
+	
+	for (Score *s in scores){
+		NSString *name = [[NSString stringWithString:s.player]retain];
+		NSInteger p = s.points;
+		NSString *score = @"fsgds";//[NSString stringWithFormat:@"%@ - %@",name, p];
+		[newItems addObject:score];
+	}
+	
+	tableItems = newItems;
+	[table reloadData];
+}
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    }
+    
+	// Configure the cell.
+	cell.textLabel.text = [tableItems objectAtIndex:indexPath.row];
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+	return tableItems.count;
+}
+
+// reload the current scores and select training
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+	
+	tabbar.selectedItem = training;
+	[self reloadTable];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	
+	
+    [super viewWillDisappear:animated];
+}
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
