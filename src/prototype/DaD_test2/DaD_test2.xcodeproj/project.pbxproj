@@ -33,12 +33,14 @@
 		479DE2D51312B53F00250CF2 /* HelpTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479DE2D31312B53F00250CF2 /* HelpTextViewController.xib */; };
 		479F499F131AB900004BD20F /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F499D131AB900004BD20F /* GameOverViewController.m */; };
 		479F49A0131AB900004BD20F /* GameOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479F499E131AB900004BD20F /* GameOverViewController.xib */; };
+		780D078F131D19DB00C219AF /* background2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 780D078E131D19DB00C219AF /* background2.jpeg */; };
 		786B4AF213143A37007D6792 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B4AF113143A37007D6792 /* DataHandler.m */; };
 		786B4AF413143CCD007D6792 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 786B4AF313143CCD007D6792 /* Words.txt */; };
 		786B4AF613143CE2007D6792 /* LastGameStatus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 786B4AF513143CE2007D6792 /* LastGameStatus.txt */; };
 		7874CEBE130FDB500070BCD3 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7874CEBD130FDB500070BCD3 /* GameController.m */; };
 		7874CEC3130FDF180070BCD3 /* GameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7874CEC2130FDF180070BCD3 /* GameModel.m */; };
 		7874CEF3130FE5350070BCD3 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 7874CEF2130FE5350070BCD3 /* Status.m */; };
+		78A04262131D309100D749D4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A04261131D309100D749D4 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,7 @@
 		479F499C131AB900004BD20F /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
 		479F499D131AB900004BD20F /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
 		479F499E131AB900004BD20F /* GameOverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameOverViewController.xib; sourceTree = "<group>"; };
+		780D078E131D19DB00C219AF /* background2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpeg; sourceTree = "<group>"; };
 		786B4AF013143A37007D6792 /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
 		786B4AF113143A37007D6792 /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
 		786B4AF313143CCD007D6792 /* Words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Words.txt; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 		7874CEC2130FDF180070BCD3 /* GameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameModel.m; sourceTree = "<group>"; };
 		7874CEF1130FE5350070BCD3 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
 		7874CEF2130FE5350070BCD3 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		78A04261131D309100D749D4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* DaD_test2-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DaD_test2-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +178,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				78A04261131D309100D749D4 /* Icon.png */,
+				780D078E131D19DB00C219AF /* background2.jpeg */,
 				479CBD4D131C2A2200E14945 /* about.html */,
 				479CBD4B131C2A0100E14945 /* 97-puzzle.png */,
 				479CBD48131C29ED00E14945 /* 78-stopwatch.png */,
@@ -265,6 +271,8 @@
 				479CBD49131C29ED00E14945 /* 78-stopwatch.png in Resources */,
 				479CBD4C131C2A0100E14945 /* 97-puzzle.png in Resources */,
 				479CBD4E131C2A2200E14945 /* about.html in Resources */,
+				780D078F131D19DB00C219AF /* background2.jpeg in Resources */,
+				78A04262131D309100D749D4 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

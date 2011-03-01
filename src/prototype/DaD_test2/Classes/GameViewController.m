@@ -34,6 +34,7 @@ const int labelSize = 40;
 																				  target:self 
 																				  action:@selector(showGameOver)] 
 																					autorelease];
+
     }
     return self;
 }
@@ -45,7 +46,6 @@ const int labelSize = 40;
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
-
 	
 	[[[[UIApplication sharedApplication] delegate] gameController] startNewGame];
 	
@@ -140,16 +140,17 @@ const int labelSize = 40;
 	//[gameTimer fire];
 	//[word autorelease];
 	//[stat autorelease];
+
 }
 
 
 -(void)setStatus{
 	//[NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]
 	//NSLog([NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]);
-	[[self timeRemaining] setText: [NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]];
-	[[self livesRemaining] setText: [NSString stringWithFormat:@"LIFES: %d",[stat lifesRemaining]]];
-	[[self solvedWords] setText: [NSString stringWithFormat:@"SOLVED: %d",[stat solvedWords]]];
-	[[self currentGameMode] setText: [NSString stringWithFormat:@"MODE: %d",[stat currentGameMode]]];
+	[[self timeRemaining] setText: [NSString stringWithFormat:@"%d",[stat timeRemaining]]];
+	[[self livesRemaining] setText: [NSString stringWithFormat:@"Leben: %d",[stat lifesRemaining]]];
+	[[self solvedWords] setText: [NSString stringWithFormat:@"gelöste Wörter: %d",[stat solvedWords]]];
+	[[self currentGameMode] setText: [NSString stringWithFormat:@"Spielmodus: %d",[stat currentGameMode]]];
 }
 
 -(void)showWord:(NSString*) word
@@ -170,11 +171,20 @@ const int labelSize = 40;
 	for (int i= 0; i< [word length] ; i++) {
 		
 		// create a label
-		UILabel *draglabel = [[UILabel alloc] initWithFrame:CGRectMake(i*50, 10, labelSize,labelSize)];
-		//draglabel.tag = i;
+		// Alle Buchstaben auf der View sichtbar!
+		int height = 10;
+		int width = i*50;
+		if (i>5){
+			height = height + 60;
+			width = width - 300;
+		}
+		
+		UILabel *draglabel = [[UILabel alloc] initWithFrame:CGRectMake(width, height, labelSize,labelSize)];
 		draglabel.text = [word substringWithRange:NSMakeRange(i, 1)];
-		draglabel.backgroundColor = [UIColor cyanColor];
+		UIColor* mycolor= [[UIColor alloc]initWithRed:0.7 green:0.8 blue:0.9 alpha:0.7];
+		draglabel.backgroundColor = mycolor;
 		draglabel.adjustsFontSizeToFitWidth;
+		draglabel.font = [UIFont boldSystemFontOfSize:24];
 		draglabel.textAlignment = UITextAlignmentCenter;
 		draglabel.layer.cornerRadius = 8;
 		draglabel.layer.borderColor = [[UIColor blackColor] CGColor];
