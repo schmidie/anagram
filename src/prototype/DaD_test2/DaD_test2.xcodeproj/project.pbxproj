@@ -21,6 +21,7 @@
 		4777FDBD130EB11900D3941F /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4777FDBB130EB11900D3941F /* SettingViewController.xib */; };
 		4777FDC1130EB12A00D3941F /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4777FDBF130EB12A00D3941F /* ScoreViewController.m */; };
 		4777FDC2130EB12A00D3941F /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4777FDC0130EB12A00D3941F /* ScoreViewController.xib */; };
+		479B71D6131D996900A89671 /* GlobalValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 479B71D5131D996900A89671 /* GlobalValues.m */; };
 		479B9AC51312DA1F00B32CC2 /* name.html in Resources */ = {isa = PBXBuildFile; fileRef = 479B9AC41312DA1F00B32CC2 /* name.html */; };
 		479B9ACD1312DAAE00B32CC2 /* play.html in Resources */ = {isa = PBXBuildFile; fileRef = 479B9ACC1312DAAE00B32CC2 /* play.html */; };
 		479B9ACF1312DAD200B32CC2 /* difficulty.html in Resources */ = {isa = PBXBuildFile; fileRef = 479B9ACE1312DAD200B32CC2 /* difficulty.html */; };
@@ -67,6 +68,8 @@
 		4777FDBE130EB12A00D3941F /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
 		4777FDBF130EB12A00D3941F /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
 		4777FDC0130EB12A00D3941F /* ScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
+		479B71D4131D996900A89671 /* GlobalValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalValues.h; sourceTree = "<group>"; };
+		479B71D5131D996900A89671 /* GlobalValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalValues.m; sourceTree = "<group>"; };
 		479B9AC41312DA1F00B32CC2 /* name.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = name.html; sourceTree = "<group>"; };
 		479B9ACC1312DAAE00B32CC2 /* play.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = play.html; sourceTree = "<group>"; };
 		479B9ACE1312DAD200B32CC2 /* difficulty.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = difficulty.html; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 				479F499C131AB900004BD20F /* GameOverViewController.h */,
 				479F499D131AB900004BD20F /* GameOverViewController.m */,
 				479F499E131AB900004BD20F /* GameOverViewController.xib */,
+				479B71D4131D996900A89671 /* GlobalValues.h */,
+				479B71D5131D996900A89671 /* GlobalValues.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				479F499F131AB900004BD20F /* GameOverViewController.m in Sources */,
 				47A23876131D7CA000BFB84E /* Score.m in Sources */,
 				47A2387A131D7CBA00BFB84E /* DraggableLabel.m in Sources */,
+				479B71D6131D996900A89671 /* GlobalValues.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

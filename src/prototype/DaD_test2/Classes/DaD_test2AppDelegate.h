@@ -18,6 +18,9 @@
 	GameController *gameController;
 	GameModel *gameModel;
 	NSAutoreleasePool *releasePool;
+	
+	//extern NSString * const modusTraining;
+	//extern NSString * const modusProfi;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

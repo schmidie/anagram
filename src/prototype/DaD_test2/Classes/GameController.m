@@ -9,7 +9,7 @@
 #import "GameController.h"
 #import "DataHandler.h"
 #import "GameModes.h"
-
+#import "GlobalValues.h"
 
 @implementation GameController
 
@@ -50,7 +50,7 @@
 	[gameModel setTimeRemaining:60];
 	[gameModel setLifesRemaining:3];
 	[gameModel setSolvedWords:0];
-	[gameModel setCurrentGameMode:TRAINING]; // do something better
+	[gameModel setCurrentGameMode:modusProfi]; // do something better
 	
 	//[gameModel setInGame:Yes];
 	
@@ -104,6 +104,11 @@
 		[gameModel setTimeRemaining:0];
 	}
 
+}
+
+-(void) changeModus:(NSString*)modus
+{
+	[gameModel setCurrentGameMode:modus];
 }
 
 

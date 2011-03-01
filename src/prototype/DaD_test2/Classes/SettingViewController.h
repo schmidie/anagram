@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Status.h"
+#import "GlobalValues.h"
 
 @interface SettingViewController : UIViewController {
 

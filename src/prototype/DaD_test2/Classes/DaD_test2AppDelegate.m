@@ -8,7 +8,7 @@
 
 #import "DaD_test2AppDelegate.h"
 #import "RootViewController.h"
-
+#import "GlobalValues.h"
 
 
 @implementation DaD_test2AppDelegate
@@ -17,6 +17,9 @@
 @synthesize navigationController;
 @synthesize gameController;
 @synthesize gameModel;
+
+//NSString * const modusTraining = @"Training";
+//NSString * const modusProfi = @"Profi";
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -35,6 +38,9 @@
 	[gameModel setTimeRemaining:60];
 	[gameModel setLifesRemaining:3];
 	[gameModel setSolvedWords:0];
+	[gameModel setCurrentGameMode:modusProfi];
+	
+	NSLog([gameModel currentGameMode]);
 	
 	gameController = [[GameController alloc]initWithGameModel:gameModel];
 	

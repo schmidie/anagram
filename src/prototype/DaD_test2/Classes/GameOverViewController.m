@@ -46,7 +46,7 @@
 	
 	Status *stat = [[(DaD_test2AppDelegate *)[[UIApplication sharedApplication] delegate] gameController] getStatus];
 	
-	[currentGameMode setText:[NSString stringWithFormat:@"MODE: %d",[stat currentGameMode]]];
+	[currentGameMode setText:[NSString stringWithFormat:@"MODE: %@",[stat currentGameMode]]];
 	[solvedWords setText:[NSString stringWithFormat:@"gelöste Wörter: %d",[stat solvedWords]]];
 	calculatedPoints = ([stat solvedWords]*100) + ([stat lifesRemaining]*10);
 	[points setText:[NSString stringWithFormat:@"Punkte: %d",calculatedPoints]];

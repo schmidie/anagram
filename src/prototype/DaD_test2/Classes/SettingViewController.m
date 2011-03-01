@@ -13,18 +13,25 @@
 
 @synthesize actualModus;
 @synthesize changeModus;
+
 //@synthesize modusInfo;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
+		[self refreshModus];
     }
     return self;
 }
-*/
+
+-(void)refreshModus
+{
+	Status *stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	[actualModus setText: [NSString stringWithFormat:@"Spielmodus: %@",[stat currentGameMode]]];
+}
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -43,7 +50,18 @@
 
 - (IBAction)changeModeClicked:(id)sender
 {
+	//Status *stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	
+	if(actualModus.text == modusProfi )
+	{
+		[[[[UIApplication sharedApplication] delegate] gameController] changeModus:modusTraining];
+	}
+	else 
+	{
+		[[[[UIApplication sharedApplication] delegate] gameController] changeModus:modusProfi];
+	}
 
+	[self refreshModus];
 }
 
 - (void)didReceiveMemoryWarning {

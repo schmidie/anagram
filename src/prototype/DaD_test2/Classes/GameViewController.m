@@ -150,7 +150,7 @@ const int labelSize = 40;
 	[[self timeRemaining] setText: [NSString stringWithFormat:@"%d",[stat timeRemaining]]];
 	[[self livesRemaining] setText: [NSString stringWithFormat:@"Leben: %d",[stat lifesRemaining]]];
 	[[self solvedWords] setText: [NSString stringWithFormat:@"gelöste Wörter: %d",[stat solvedWords]]];
-	[[self currentGameMode] setText: [NSString stringWithFormat:@"Spielmodus: %d",[stat currentGameMode]]];
+	[[self currentGameMode] setText: [NSString stringWithFormat:@"Spielmodus: %@",[stat currentGameMode]]];
 }
 
 -(void)showWord:(NSString*) word
@@ -259,7 +259,8 @@ const int labelSize = 40;
 	int distance = (int)pow((pow(labelSize,2)/2),(0.5));
 	
 	//move away
-	label.center = CGPointMake(label.center.x + (distance/2), label.center.y +(distance/2));
+	//label.center = CGPointMake(label.center.x + (distance/2), label.center.y +(distance/2));
+	label.center = CGPointMake(label.center.x + (5), label.center.y +(5));
 	
 	//if we have still collision move away untilt we do not!
 	while ([self isCollision:label.center fromLabel:label]) {
