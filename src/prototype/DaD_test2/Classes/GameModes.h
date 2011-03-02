@@ -6,12 +6,22 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-
 // The defined GameModes have to be entered in the Tag-Field of the corresponding TabBarItem in ScoreViewController.xib
 #ifndef TRAINING
-	#define TRAINING 1
+#define TRAINING 1
 #endif
 
 #ifndef TIMEATTACK
-	#define TIMEATTACK 2
+#define TIMEATTACK 2
 #endif
+
+#import <Foundation/Foundation.h>
+
+
+@interface GameModes : NSObject {
+	
+}
+
++(NSString*) getGameModeName:(NSInteger) withID;
+
+@end

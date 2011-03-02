@@ -21,7 +21,6 @@
 		4777FDBD130EB11900D3941F /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4777FDBB130EB11900D3941F /* SettingViewController.xib */; };
 		4777FDC1130EB12A00D3941F /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4777FDBF130EB12A00D3941F /* ScoreViewController.m */; };
 		4777FDC2130EB12A00D3941F /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4777FDC0130EB12A00D3941F /* ScoreViewController.xib */; };
-		479B71D6131D996900A89671 /* GlobalValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 479B71D5131D996900A89671 /* GlobalValues.m */; };
 		479B9AC51312DA1F00B32CC2 /* name.html in Resources */ = {isa = PBXBuildFile; fileRef = 479B9AC41312DA1F00B32CC2 /* name.html */; };
 		479B9ACD1312DAAE00B32CC2 /* play.html in Resources */ = {isa = PBXBuildFile; fileRef = 479B9ACC1312DAAE00B32CC2 /* play.html */; };
 		479B9ACF1312DAD200B32CC2 /* difficulty.html in Resources */ = {isa = PBXBuildFile; fileRef = 479B9ACE1312DAD200B32CC2 /* difficulty.html */; };
@@ -35,7 +34,7 @@
 		479F499F131AB900004BD20F /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F499D131AB900004BD20F /* GameOverViewController.m */; };
 		479F49A0131AB900004BD20F /* GameOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479F499E131AB900004BD20F /* GameOverViewController.xib */; };
 		47A23876131D7CA000BFB84E /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A23875131D7CA000BFB84E /* Score.m */; };
-		47A2387A131D7CBA00BFB84E /* DraggableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A23878131D7CBA00BFB84E /* DraggableLabel.m */; };
+		47A7D477131E4FB70002FCCC /* GameModes.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A7D476131E4FB70002FCCC /* GameModes.m */; };
 		780D078F131D19DB00C219AF /* background2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 780D078E131D19DB00C219AF /* background2.jpeg */; };
 		786B4AF213143A37007D6792 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B4AF113143A37007D6792 /* DataHandler.m */; };
 		786B4AF413143CCD007D6792 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 786B4AF313143CCD007D6792 /* Words.txt */; };
@@ -68,8 +67,6 @@
 		4777FDBE130EB12A00D3941F /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
 		4777FDBF130EB12A00D3941F /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
 		4777FDC0130EB12A00D3941F /* ScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
-		479B71D4131D996900A89671 /* GlobalValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalValues.h; sourceTree = "<group>"; };
-		479B71D5131D996900A89671 /* GlobalValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalValues.m; sourceTree = "<group>"; };
 		479B9AC41312DA1F00B32CC2 /* name.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = name.html; sourceTree = "<group>"; };
 		479B9ACC1312DAAE00B32CC2 /* play.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = play.html; sourceTree = "<group>"; };
 		479B9ACE1312DAD200B32CC2 /* difficulty.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = difficulty.html; sourceTree = "<group>"; };
@@ -87,9 +84,8 @@
 		479F499E131AB900004BD20F /* GameOverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameOverViewController.xib; sourceTree = "<group>"; };
 		47A23874131D7C8F00BFB84E /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		47A23875131D7CA000BFB84E /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
-		47A23877131D7CBA00BFB84E /* DraggableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableLabel.h; sourceTree = "<group>"; };
-		47A23878131D7CBA00BFB84E /* DraggableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableLabel.m; sourceTree = "<group>"; };
 		47A23879131D7CBA00BFB84E /* GameModes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameModes.h; sourceTree = "<group>"; };
+		47A7D476131E4FB70002FCCC /* GameModes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameModes.m; sourceTree = "<group>"; };
 		780D078E131D19DB00C219AF /* background2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpeg; sourceTree = "<group>"; };
 		786B4AF013143A37007D6792 /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
 		786B4AF113143A37007D6792 /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
@@ -122,8 +118,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				47A23877131D7CBA00BFB84E /* DraggableLabel.h */,
-				47A23878131D7CBA00BFB84E /* DraggableLabel.m */,
 				47A23879131D7CBA00BFB84E /* GameModes.h */,
 				47A23875131D7CA000BFB84E /* Score.m */,
 				47A23874131D7C8F00BFB84E /* Score.h */,
@@ -157,8 +151,7 @@
 				479F499C131AB900004BD20F /* GameOverViewController.h */,
 				479F499D131AB900004BD20F /* GameOverViewController.m */,
 				479F499E131AB900004BD20F /* GameOverViewController.xib */,
-				479B71D4131D996900A89671 /* GlobalValues.h */,
-				479B71D5131D996900A89671 /* GlobalValues.m */,
+				47A7D476131E4FB70002FCCC /* GameModes.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -314,8 +307,7 @@
 				786B4AF213143A37007D6792 /* DataHandler.m in Sources */,
 				479F499F131AB900004BD20F /* GameOverViewController.m in Sources */,
 				47A23876131D7CA000BFB84E /* Score.m in Sources */,
-				47A2387A131D7CBA00BFB84E /* DraggableLabel.m in Sources */,
-				479B71D6131D996900A89671 /* GlobalValues.m in Sources */,
+				47A7D477131E4FB70002FCCC /* GameModes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

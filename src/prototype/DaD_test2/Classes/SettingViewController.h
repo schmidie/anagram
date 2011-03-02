@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Status.h"
-#import "GlobalValues.h"
+#import "GameModes.h"
 
 @interface SettingViewController : UIViewController {
 
 	IBOutlet UILabel *actualModus;
 	IBOutlet UIButton *changeModus;
+	IBOutlet UIPickerView *picker;
 	//IBOutlet UITextView *modusInfo	
 }
 -(IBAction)changeModeClicked:(id)sender;

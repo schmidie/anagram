@@ -8,6 +8,7 @@
 
 #import "GameOverViewController.h"
 #import "DaD_test2AppDelegate.h"
+#import "GameModes.h"
 
 
 @implementation GameOverViewController
@@ -46,7 +47,7 @@
 	
 	Status *stat = [[(DaD_test2AppDelegate *)[[UIApplication sharedApplication] delegate] gameController] getStatus];
 	
-	[currentGameMode setText:[NSString stringWithFormat:@"MODE: %@",[stat currentGameMode]]];
+	[currentGameMode setText:[NSString stringWithFormat:@"Schwierigkeit: %@",[GameModes getGameModeName:[stat currentGameMode]]]];
 	[solvedWords setText:[NSString stringWithFormat:@"gelöste Wörter: %d",[stat solvedWords]]];
 	calculatedPoints = ([stat solvedWords]*100) + ([stat lifesRemaining]*10);
 	[points setText:[NSString stringWithFormat:@"Punkte: %d",calculatedPoints]];

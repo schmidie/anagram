@@ -11,19 +11,19 @@
 
 @interface Status : NSObject {
 	
-	int lifesRemaining;
-	int timeRemaining;
-	int solvedWords;
-	int currentGameMode;
+	NSInteger lifesRemaining;
+	NSInteger timeRemaining;
+	NSInteger solvedWords;
+	NSInteger currentGameMode;
 	
 	NSString *currentWord;
 	
 }
 
-@property(nonatomic)int lifesRemaining;
-@property(nonatomic)int timeRemaining;
-@property(nonatomic)int solvedWords;
-@property(nonatomic)int currentGameMode;
+@property(nonatomic)NSInteger lifesRemaining;
+@property(nonatomic)NSInteger timeRemaining;
+@property(nonatomic)NSInteger solvedWords;
+@property(nonatomic)NSInteger currentGameMode;
 
 @property(nonatomic,retain)NSString * currentWord;
 

@@ -8,7 +8,7 @@
 
 #import "DaD_test2AppDelegate.h"
 #import "RootViewController.h"
-#import "GlobalValues.h"
+#import "GameModes.h"
 
 
 @implementation DaD_test2AppDelegate
@@ -38,9 +38,8 @@
 	[gameModel setTimeRemaining:60];
 	[gameModel setLifesRemaining:3];
 	[gameModel setSolvedWords:0];
-	[gameModel setCurrentGameMode:modusProfi];
+	[gameModel setCurrentGameMode:TIMEATTACK];
 	
-	NSLog([gameModel currentGameMode]);
 	
 	gameController = [[GameController alloc]initWithGameModel:gameModel];
 	

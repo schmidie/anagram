@@ -7,6 +7,8 @@
 //
 
 #import "SettingViewController.h"
+#import "DaD_test2AppDelegate.h"
+#import "GameModes.h"
 
 
 @implementation SettingViewController
@@ -18,27 +20,31 @@
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
+
+
+-(void)refreshModus
+{
+	Status *stat = [[(DaD_test2AppDelegate *)[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	[actualModus setTag:[stat currentGameMode]];
+	[actualModus setText: [NSString stringWithFormat:@"Spielmodus: %@",[GameModes getGameModeName:[stat currentGameMode]]]];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
-		[self refreshModus];
+		
     }
     return self;
 }
 
--(void)refreshModus
-{
-	Status *stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
-	[actualModus setText: [NSString stringWithFormat:@"Spielmodus: %@",[stat currentGameMode]]];
-}
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[self refreshModus];
 }
-*/
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -51,14 +57,16 @@
 - (IBAction)changeModeClicked:(id)sender
 {
 	//Status *stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	[self refreshModus];
 	
-	if(actualModus.text == modusProfi )
+	if(actualModus.tag == TIMEATTACK )
 	{
-		[[[[UIApplication sharedApplication] delegate] gameController] changeModus:modusTraining];
+		
+		[[(DaD_test2AppDelegate *)[[UIApplication sharedApplication] delegate] gameController] changeModus:TRAINING];
 	}
 	else 
 	{
-		[[[[UIApplication sharedApplication] delegate] gameController] changeModus:modusProfi];
+		[[(DaD_test2AppDelegate *)[[UIApplication sharedApplication] delegate] gameController] changeModus:TIMEATTACK];
 	}
 
 	[self refreshModus];

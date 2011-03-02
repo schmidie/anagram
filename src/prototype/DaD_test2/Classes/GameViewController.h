@@ -31,7 +31,7 @@
 }
 
 @property(nonatomic,retain) IBOutlet UIView *statusView;
-@property(nonatomic,retain) NSMutableArray *labels;
+//@property(nonatomic,retain) NSMutableArray *labels;
 
 @property(nonatomic,retain)GameOverViewController * gameOver;
 

@@ -14,7 +14,7 @@
 	NSInteger lifesRemaining;
 	NSInteger timeRemaining;
 	NSInteger solvedWords;
-	NSString * currentGameMode;
+	NSInteger currentGameMode;
 	Boolean inGame; 
 
 }
@@ -23,7 +23,7 @@
 @property(nonatomic)NSInteger lifesRemaining;
 @property(nonatomic)NSInteger timeRemaining;
 @property(nonatomic)NSInteger solvedWords;
-@property(nonatomic,retain)NSString * currentGameMode;
+@property(nonatomic)NSInteger currentGameMode;
 @property(nonatomic)Boolean inGame; 
 
 @end

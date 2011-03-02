@@ -28,6 +28,8 @@
 -(void)tick:(NSTimer *)theTimer;
 -(NSArray*) getHighscores:(NSInteger) withMode;
 -(void) addNewHighscore:(NSString *) withName:(NSInteger) andScore;
-
+-(void) changeModus:(NSInteger)modus;
+-(NSMutableString*) getNextWord;
+-(void) removeLife;
 
 @end

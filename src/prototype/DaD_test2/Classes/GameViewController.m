@@ -8,7 +8,8 @@
 
 #import "GameViewController.h"
 #import "RootViewController.h"
-
+#import "DaD_test2AppDelegate.h"
+#import "GameModes.h"
 
 @implementation GameViewController
 
@@ -47,7 +48,7 @@ const int labelSize = 40;
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
 	
-	[[[[UIApplication sharedApplication] delegate] gameController] startNewGame];
+	[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] startNewGame];
 	
 	//[gameTimer invalidate];
 	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
@@ -76,21 +77,6 @@ const int labelSize = 40;
  */
 }
 
--(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(shake) name:@"shake" object:nil];
-	if(event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake){
-		//NSLog(@"motion Ended");
-		[[[[UIApplication sharedApplication] delegate] gameController] removeLife];
-		
-		if([stat lifesRemaining]>0){
-			NSString* next = [[[[UIApplication sharedApplication] delegate] gameController] getNextWord];
-			[self showWord:next];
-		}
-	}
-		
-}
-
 -(void)showGameOver{
 	
 	if(self.gameOver == nil){    
@@ -102,44 +88,11 @@ const int labelSize = 40;
 	//stop the timer !
 	if(gameTimer != nil){
 		[gameTimer invalidate];
-		[[[[[UIApplication sharedApplication] delegate] gameController] gameTimer] invalidate];
+		[[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] gameTimer] invalidate];
 	}
 	self.gameOver.title = @"Gameover";
 	
 	[self.navigationController pushViewController:self.gameOver animated:YES];
-
-}
-
-
--(void)tick:(NSTimer *)theTimer
-{
-	stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
-	[self setStatus];
-	
-	if([stat lifesRemaining]==0 && [stat timeRemaining]==0){
-		//gameOver! -> push View controller
-		[self showGameOver];
-		
-	}
-	
-}
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	
-
-	//get the current word from the controller - it is already shaked !
-	NSString *word = [[[[UIApplication sharedApplication] delegate] gameController] getNextWord];
-	//get status from controller
-	stat = [[[[UIApplication sharedApplication] delegate] gameController] getStatus];
-		
-	[self showWord:word];
-	[self setStatus];
-	
-	//[gameTimer fire];
-	//[word autorelease];
-	//[stat autorelease];
 
 }
 
@@ -150,7 +103,19 @@ const int labelSize = 40;
 	[[self timeRemaining] setText: [NSString stringWithFormat:@"%d",[stat timeRemaining]]];
 	[[self livesRemaining] setText: [NSString stringWithFormat:@"Leben: %d",[stat lifesRemaining]]];
 	[[self solvedWords] setText: [NSString stringWithFormat:@"gelöste Wörter: %d",[stat solvedWords]]];
-	[[self currentGameMode] setText: [NSString stringWithFormat:@"Spielmodus: %@",[stat currentGameMode]]];
+	[[self currentGameMode] setText: [NSString stringWithFormat:@"Spielmodus: %@",[GameModes getGameModeName:[stat currentGameMode]]]];
+}
+
+-(void)tick:(NSTimer *)theTimer
+{
+	stat = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	[self setStatus];
+	
+	if([stat lifesRemaining]==0 && [stat timeRemaining]==0){
+		//gameOver! -> push View controller
+		[self showGameOver];
+		
+	}
 }
 
 -(void)showWord:(NSString*) word
@@ -206,6 +171,116 @@ const int labelSize = 40;
 	}
 }
 
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+	
+	
+	//get the current word from the controller - it is already shaked !
+	NSString *word = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
+	//get status from controller
+	stat = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	
+	[self showWord:word];
+	[self setStatus];
+	
+	//[gameTimer fire];
+	//[word autorelease];
+	//[stat autorelease];
+	
+}
+
+-(Boolean)isCollision:(CGPoint)pos fromLabel:(UILabel *)_label
+{
+	//check for all labels if we have a collision
+	for (UILabel *label in labels) {
+		//NSLog(@"pos x:%f y:%f", pos.x,pos.y);
+		//NSLog(@"Label x:%f y:%f",label.center.x,label.center.y);
+		// not for self
+		if (![label isEqual:_label]) {
+			/* ***********************************
+			 *	check with pytagoras:
+			 *
+			 *	distance = sqrt((labelSize^2)/2)
+			 *	-> distance = ((labelSize^2/2)^(1/2))
+			 * 
+			 **************************************/
+			int distance = (int)pow((pow(labelSize,2)/2),(0.5));
+			//int tmp = (int)pow(labelSize,2)/2;
+			//int distance = (int) pow(tmp, (0.5) ); 
+			/*
+			 *	we need the diagonal of the rectangle from the two center-points!
+			 *	this diagonal should not be longer than 2 * distance
+			 *	
+			 *	rectangle sides :	a = rec2_x - rec1_x	(or opposite)
+			 *						b = rec1_y - rec2_y	(or opposite)
+			 *	-> pytagoras: (like first step)
+			 *	
+			 *	diagonal = ((a^2+b^2)^(1/2))
+			 */
+			double side_a;
+			double side_b;
+			
+			if(pos.x > label.center.x)
+				side_a = pos.x - label.center.x;
+			else 
+				side_a = label.center.x - pos.x;
+			
+			if(pos.y > label.center.y)
+				side_b = pos.y - label.center.y;
+			else 
+				side_b = label.center.y - pos.y;
+			
+			int diagonal = (int)pow(pow(side_a,2)+pow(side_b,2),(0.5));
+			// we have a collision
+			if(diagonal < 2*distance)
+				return YES;
+		}
+	}
+	return NO;
+}
+
+-(void)moveAway:(UIPanGestureRecognizer *)gesture{
+	
+	UILabel *label = (UILabel *)gesture.view;
+	
+	/* ***********************************
+	 *	pytagoras:
+	 *
+	 *	distance = sqrt((labelSize^2)/2)
+	 *	-> distance = ((labelSize^2/2)^(1/2))
+	 * 
+	 **************************************/
+	//int distance = (int)pow((pow(labelSize,2)/2),(0.5));
+	
+	//move away
+	//label.center = CGPointMake(label.center.x + (distance/2), label.center.y +(distance/2));
+	label.center = CGPointMake(label.center.x + (5), label.center.y +(5));
+	
+	//if we have still collision move away untilt we do not!
+	while ([self isCollision:label.center fromLabel:label]) {
+		label.center = CGPointMake(label.center.x + (5), label.center.y +(5));
+	}
+}
+
+NSComparisonResult labelSort(UILabel * l1, UILabel * l2, void *context){
+	
+	return[[NSNumber numberWithDouble:l1.center.x] compare:[NSNumber numberWithDouble:l2.center.x]];
+}
+
+-(NSString *)detectWord{
+	
+	NSArray * sorted =[labels sortedArrayUsingFunction:labelSort context:nil];
+	NSString *word = [[NSString alloc] init];
+	
+	for (UILabel *label in sorted) {
+		//NSLog(@"x:%f",label.center.x);
+		word = [word stringByAppendingString:label.text];
+	}
+	//[sorted release];
+	return word;
+}
+
 - (void)labelDragged:(UIPanGestureRecognizer *)gesture
 {
 	if([stat lifesRemaining] > 0 || [stat timeRemaining] > 0){
@@ -229,10 +304,10 @@ const int labelSize = 40;
 					//NSLog(@"Collision");
 					[self moveAway:gesture];
 				}
-				Boolean solved = [[[[UIApplication sharedApplication] delegate] gameController] checkSolution:[self detectWord]];
+				Boolean solved = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] checkSolution:[self detectWord]];
 				if(solved){
 					
-					NSString* next = [[[[UIApplication sharedApplication] delegate] gameController] getNextWord];
+					NSString* next = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
 					[self showWord:next];
 					//NSLog(@"solved !!");
 				}
@@ -245,95 +320,19 @@ const int labelSize = 40;
 	
 }
 
--(void)moveAway:(UIPanGestureRecognizer *)gesture{
-
-	UILabel *label = (UILabel *)gesture.view;
-	
-	/* ***********************************
-	 *	pytagoras:
-	 *
-	 *	distance = sqrt((labelSize^2)/2)
-	 *	-> distance = ((labelSize^2/2)^(1/2))
-	 * 
-	 **************************************/
-	int distance = (int)pow((pow(labelSize,2)/2),(0.5));
-	
-	//move away
-	//label.center = CGPointMake(label.center.x + (distance/2), label.center.y +(distance/2));
-	label.center = CGPointMake(label.center.x + (5), label.center.y +(5));
-	
-	//if we have still collision move away untilt we do not!
-	while ([self isCollision:label.center fromLabel:label]) {
-		label.center = CGPointMake(label.center.x + (5), label.center.y +(5));
-	}
-}
-
--(Boolean)isCollision:(CGPoint)pos fromLabel:(UILabel *)_label
-{
-	//check for all labels if we have a collision
-	for (UILabel *label in labels) {
-		//NSLog(@"pos x:%f y:%f", pos.x,pos.y);
-		//NSLog(@"Label x:%f y:%f",label.center.x,label.center.y);
-		// not for self
-		if (![label isEqual:_label]) {
-			/* ***********************************
-			*	check with pytagoras:
-			*
-			*	distance = sqrt((labelSize^2)/2)
-			*	-> distance = ((labelSize^2/2)^(1/2))
-			* 
-			**************************************/
-			int distance = (int)pow((pow(labelSize,2)/2),(0.5));
-			//int tmp = (int)pow(labelSize,2)/2;
-			//int distance = (int) pow(tmp, (0.5) ); 
-			/*
-			*	we need the diagonal of the rectangle from the two center-points!
-			*	this diagonal should not be longer than 2 * distance
-			*	
-			*	rectangle sides :	a = rec2_x - rec1_x	(or opposite)
-			*						b = rec1_y - rec2_y	(or opposite)
-			*	-> pytagoras: (like first step)
-			*	
-			*	diagonal = ((a^2+b^2)^(1/2))
-			*/
-			double side_a;
-			double side_b;
-			
-			if(pos.x > label.center.x)
-				side_a = pos.x - label.center.x;
-			else 
-				side_a = label.center.x - pos.x;
-			
-			if(pos.y > label.center.y)
-				side_b = pos.y - label.center.y;
-			else 
-				side_b = label.center.y - pos.y;
-				
-			int diagonal = (int)pow(pow(side_a,2)+pow(side_b,2),(0.5));
-			// we have a collision
-			if(diagonal < 2*distance)
-				return YES;
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(shake) name:@"shake" object:nil];
+	if(event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake){
+		//NSLog(@"motion Ended");
+		[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] removeLife];
+		
+		if([stat lifesRemaining]>0){
+			NSString* next = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
+			[self showWord:next];
 		}
 	}
-	return NO;
-}
-
-NSComparisonResult labelSort(UILabel * l1, UILabel * l2, void *context){
 	
-	return[[NSNumber numberWithDouble:l1.center.x] compare:[NSNumber numberWithDouble:l2.center.x]];
-}
-
--(NSString *)detectWord{
-	
-	NSArray * sorted =[labels sortedArrayUsingFunction:labelSort context:nil];
-	NSString *word = [[NSString alloc] init];
-	
-	for (UILabel *label in sorted) {
-		//NSLog(@"x:%f",label.center.x);
-		word = [word stringByAppendingString:label.text];
-	}
-	//[sorted release];
-	return word;
 }
 
 
