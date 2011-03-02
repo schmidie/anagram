@@ -36,6 +36,7 @@
     [super viewDidLoad];
 	tableItems = [NSArray array];
 	table.dataSource = self;
+	tabbar.delegate = self;
 }
 
 -(void)reloadTable{
@@ -47,12 +48,16 @@
 	for (Score *s in scores){
 		NSString *name = [[NSString stringWithString:s.player]retain];
 		NSInteger p = s.points;
-		NSString *score = @"fsgds";//[NSString stringWithFormat:@"%@ - %@",name, p];
+		NSString *score = [NSString stringWithFormat:@"%@     %d",name, p];
 		[newItems addObject:score];
 	}
 	
 	tableItems = newItems;
 	[table reloadData];
+}
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+	[self reloadTable];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

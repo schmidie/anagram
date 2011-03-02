@@ -88,7 +88,8 @@
 		if(![s isEqual:[lines objectAtIndex:(i-1)]])
 			[newStr appendString:@"\n"];
 	}
-	BOOL statu = [newStr writeToFile:filePath atomically:YES];
+
+	/*BOOL statu = */[newStr writeToFile:filePath atomically:YES];
 	
 	return newWord;
 }
@@ -139,8 +140,7 @@
 	[scores addObject:newScore];
 
 	
-	BOOL status = [NSKeyedArchiver archiveRootObject:scores toFile:filePath];
-	NSLog(@"f");
+	/*BOOL status = */[NSKeyedArchiver archiveRootObject:scores toFile:filePath];
 }
 @end
 

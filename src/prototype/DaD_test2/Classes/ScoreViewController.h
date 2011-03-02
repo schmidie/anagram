@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ScoreViewController : UIViewController<UITableViewDataSource> {
+@interface ScoreViewController : UIViewController<UITableViewDataSource, UITabBarDelegate> {
 	
 	IBOutlet UITabBarItem *training;
 	IBOutlet UITabBarItem *timeattack;
@@ -26,5 +26,5 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item;
 @end
