@@ -43,7 +43,8 @@
 	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
 											   selector:@selector(tick:) 
 											   userInfo:nil repeats:YES];
-	[gameTimer fire];
+	if([gameModel currentGameMode] == TIMEATTACK)
+		[gameTimer fire];
 	
 	
 	[gameModel setTimeRemaining:60];
@@ -87,6 +88,7 @@
 	}
 	//NSLog(word);
 	//NSLog(randomString);
+
 	[gameModel setCurrentWord:originalWord];
 	[gameModel setTimeRemaining:60];
 

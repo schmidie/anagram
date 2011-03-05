@@ -50,18 +50,29 @@ const int labelSize = 40;
 	
 	[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] startNewGame];
 	
+	stat = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	[self setStatus];
+	
 	//[gameTimer invalidate];
 	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
 											   selector:@selector(tick:) 
 											   userInfo:nil 
 												repeats:YES];
-	[gameTimer fire];
+	if([stat currentGameMode] == TIMEATTACK){
+		[gameTimer fire];
+		[self.timeRemaining setHidden:NO];
+		[self.livesRemaining setHidden:NO];
+	}
+	else {
+		[self.timeRemaining setHidden:YES];
+		[self.livesRemaining setHidden:YES];
+	}
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [self resignFirstResponder];
     [super viewWillDisappear:animated];
-	
 	
 }
 
@@ -132,8 +143,8 @@ const int labelSize = 40;
 	[labels release];
 	labels = [[NSMutableArray alloc] initWithCapacity:[word length]];
 	//originalPos = [[NSMutableArray alloc] initWithCapacity:[word length]];
-	
-	for (int i= 0; i< [word length] ; i++) {
+	//NSLog(word);
+	for (int i= 0; i < [word length] ; i++) {
 		
 		// create a label
 		// Alle Buchstaben auf der View sichtbar!
@@ -205,7 +216,8 @@ const int labelSize = 40;
 			 *	-> distance = ((labelSize^2/2)^(1/2))
 			 * 
 			 **************************************/
-			int distance = (int)pow((pow(labelSize,2)/2),(0.5));
+			//int distance = (int)pow((pow(labelSize,2)/2),(0.5));
+			int distance = labelSize+5;
 			//int tmp = (int)pow(labelSize,2)/2;
 			//int distance = (int) pow(tmp, (0.5) ); 
 			/*
@@ -233,7 +245,7 @@ const int labelSize = 40;
 			
 			int diagonal = (int)pow(pow(side_a,2)+pow(side_b,2),(0.5));
 			// we have a collision
-			if(diagonal < 2*distance)
+			if(diagonal < distance)
 				return YES;
 		}
 	}
