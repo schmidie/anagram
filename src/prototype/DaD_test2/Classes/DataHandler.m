@@ -40,23 +40,17 @@
 	NSMutableArray *lines = [[[words componentsSeparatedByString:@"\n"] mutableCopy] autorelease]; // each line, adjust character for line endings
 	
 	//nur unbenutzte Woerter benutzen
-	NSMutableArray *unusedWords = [[NSMutableArray alloc]init];
+	NSMutableArray *unusedWords = [[[NSMutableArray alloc]init]autorelease];
 	for (NSString *word in lines) {
-		if (![word hasPrefix:@"#"]) {
+		if (![word hasPrefix:@"#"] && [word compare:@""] != NSOrderedSame) {
 			[unusedWords addObject:word];
 		}
 	}
 	
 	//wenn keine woerter mehr uebrug sind: neue liste
 	if ([unusedWords count] == 0) {
-		int c = 0;
-		NSMutableArray *temp = [[NSMutableArray alloc]init];
-		for (NSString *word in lines) {	
-			[temp insertObject:[word substringFromIndex:1] atIndex:c];
-			c++;
-		}
-		lines = temp;
-		unusedWords = temp;
+		[[NSFileManager defaultManager] removeItemAtPath:filePath error:NULL];
+		return [self getWordFromFile];
 	}
 	
 	//Get a Random word:

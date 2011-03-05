@@ -27,10 +27,11 @@
 		[gameModel setLifesRemaining:(i-1)];
 		// TODO define global variable for time ...
 		[gameModel setTimeRemaining:60];
+		//[self getNextWord];
 	}
 	else if([gameModel timeRemaining]==0 && [gameModel lifesRemaining] == 0){
 		//no time and no lifes ->gameover !
-		NSLog(@"GameOveruuuuuuu!!");
+		NSLog(@"GameOver");
 	}
 
 }
@@ -43,17 +44,15 @@
 	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
 											   selector:@selector(tick:) 
 											   userInfo:nil repeats:YES];
-	if([gameModel currentGameMode] == TIMEATTACK)
-		[gameTimer fire];
+
 	
-	
+	[self getNextWord];
 	[gameModel setTimeRemaining:60];
 	[gameModel setLifesRemaining:3];
 	[gameModel setSolvedWords:0];
-	//[gameModel setCurrentGameMode:TIMEATTACK]; // do something better
 	
-	//[gameModel setInGame:Yes];
-	
+	if([gameModel currentGameMode] == TIMEATTACK)
+		[gameTimer fire];
 }
 
 -(NSMutableString*) getNextWord {
@@ -90,7 +89,7 @@
 	//NSLog(randomString);
 
 	[gameModel setCurrentWord:originalWord];
-	[gameModel setTimeRemaining:60];
+	//[gameModel setTimeRemaining:60];
 
 	return [NSString stringWithString:randomString];
 }
@@ -129,7 +128,7 @@
 -(id) initWithGameModel:(GameModel*)model{
 	gameModel = model;
 	
-	[gameModel setCurrentWord:[self getNextWord]];
+//	[gameModel setCurrentWord:[self getNextWord]];
 	
 	return self;
 }
@@ -142,8 +141,7 @@
 	if(solved){
 		int i = (int)[gameModel solvedWords];
 		[gameModel setSolvedWords:(i+1)];
-				//TODO: write to file ....
-		
+		[gameModel setTimeRemaining:60];
 	}
 	return solved;
 }

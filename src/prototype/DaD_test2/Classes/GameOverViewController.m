@@ -23,10 +23,16 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		self.navigationItem.leftBarButtonItem.title = @"Nochmal";
+		self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"nochmal" 
+																				 style:UIBarButtonItemStylePlain
+																				 target:self 
+																				 action:@selector(restartGame)] 
+																				 autorelease];
+		//.title = @"Nochmal";
+		//self.navigationItem.leftBarButtonItem.action= @selector(restartGame);
 		
 		self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Menu" 
-																			style:UIBarButtonItemStylePlain 
+																			style:UIBarButtonItemStyleDone 
 																			target:self 
 																			action:@selector(showMenu)] 
 																			autorelease];
@@ -42,8 +48,8 @@
 }
 
 // reload the current scores
--(void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 	
 	Status *stat = [[(DaD_test2AppDelegate *)[[UIApplication sharedApplication] delegate] gameController] getStatus];
 	
@@ -69,7 +75,16 @@
 												calculatedPoints
 	];
 	[self.navigationController popToRootViewControllerAnimated:YES];
-	
+}
+
+-(void)restartGame{
+    [[(DaD_test2AppDelegate *)[[UIApplication sharedApplication] delegate] gameController] 
+	 addNewHighscore:
+	 player.text:
+	 calculatedPoints
+	 ];
+	[[(DaD_test2AppDelegate *)[[UIApplication sharedApplication] delegate] gameController] startNewGame];
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

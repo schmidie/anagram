@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "DaD_test2AppDelegate.h"
 
 
 @implementation RootViewController
@@ -160,6 +161,7 @@ NSArray *menuItems;
 				self.game = viewController;
 				[viewController release];        
 			}
+			[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] startNewGame];
 			[self.navigationController pushViewController:self.game animated:YES];
 			self.game.title = @"iDictAttack"; 
 			

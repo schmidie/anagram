@@ -40,4 +40,6 @@
 @property(nonatomic,retain) IBOutlet UILabel *solvedWords;
 @property(nonatomic,retain) IBOutlet UILabel *currentGameMode;
 
+-(void) showWord:(NSString *)word;
+
 @end

@@ -53,14 +53,14 @@ const int labelSize = 40;
 	[[self currentGameMode] setText: [NSString stringWithFormat:@"Spielmodus: %@",[GameModes getGameModeName:[stat currentGameMode]]]];
 }
 
--(void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self becomeFirstResponder];
 	
-	[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] startNewGame];
 	
 	stat = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus];
-	[self setStatus];
+	NSString* next = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
+	[self showWord:next];
 	
 	//[gameTimer invalidate];
 	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
@@ -110,7 +110,7 @@ const int labelSize = 40;
 		[gameTimer invalidate];
 		[[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] gameTimer] invalidate];
 	}
-	self.gameOver.title = @"Gameover";
+	self.gameOver.title = @"Spielende";
 	
 	[self.navigationController pushViewController:self.gameOver animated:YES];
 
@@ -121,6 +121,11 @@ const int labelSize = 40;
 {
 	stat = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus];
 	[self setStatus];
+	
+	if([stat timeRemaining]==0){
+		NSString* next = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
+		[self showWord:next];
+	}
 	
 	if([stat lifesRemaining]==0 && [stat timeRemaining]==0){
 		//gameOver! -> push View controller
@@ -188,12 +193,11 @@ const int labelSize = 40;
 	
 	
 	//get the current word from the controller - it is already shaked !
-	NSString *word = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
-	//get status from controller
-	stat = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus];
 	
-	[self showWord:word];
-	[self setStatus];
+	//get status from controller
+	//stat = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus];
+	
+
 	
 	//[gameTimer fire];
 	//[word autorelease];
