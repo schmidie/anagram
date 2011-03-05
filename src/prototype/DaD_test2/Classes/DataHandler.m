@@ -37,7 +37,7 @@
 	NSString* words = [[NSString alloc] initWithData:fileData encoding:NSASCIIStringEncoding];
 	
 	//Woerter in aarz speichern
-	NSMutableArray *lines = [words componentsSeparatedByString:@"\n"]; // each line, adjust character for line endings
+	NSMutableArray *lines = [[[words componentsSeparatedByString:@"\n"] mutableCopy] autorelease]; // each line, adjust character for line endings
 	
 	//nur unbenutzte Woerter benutzen
 	NSMutableArray *unusedWords = [[NSMutableArray alloc]init];
@@ -89,7 +89,7 @@
 			[newStr appendString:@"\n"];
 	}
 
-	/*BOOL statu = */[newStr writeToFile:filePath atomically:YES];
+	/*BOOL statu = */[newStr writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
 	
 	return newWord;
 }

@@ -44,6 +44,15 @@ const int labelSize = 40;
     return YES;
 }
 
+-(void)setStatus{
+	//[NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]
+	//NSLog([NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]);
+	[[self timeRemaining] setText: [NSString stringWithFormat:@"%d",[stat timeRemaining]]];
+	[[self livesRemaining] setText: [NSString stringWithFormat:@"Leben: %d",[stat lifesRemaining]]];
+	[[self solvedWords] setText: [NSString stringWithFormat:@"gelöste Wörter: %d",[stat solvedWords]]];
+	[[self currentGameMode] setText: [NSString stringWithFormat:@"Spielmodus: %@",[GameModes getGameModeName:[stat currentGameMode]]]];
+}
+
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
@@ -107,15 +116,6 @@ const int labelSize = 40;
 
 }
 
-
--(void)setStatus{
-	//[NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]
-	//NSLog([NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]);
-	[[self timeRemaining] setText: [NSString stringWithFormat:@"%d",[stat timeRemaining]]];
-	[[self livesRemaining] setText: [NSString stringWithFormat:@"Leben: %d",[stat lifesRemaining]]];
-	[[self solvedWords] setText: [NSString stringWithFormat:@"gelöste Wörter: %d",[stat solvedWords]]];
-	[[self currentGameMode] setText: [NSString stringWithFormat:@"Spielmodus: %@",[GameModes getGameModeName:[stat currentGameMode]]]];
-}
 
 -(void)tick:(NSTimer *)theTimer
 {
