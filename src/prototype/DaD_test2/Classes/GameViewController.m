@@ -26,6 +26,7 @@ const int labelSize = 40;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -40,9 +41,42 @@ const int labelSize = 40;
     return self;
 }
 
+
+-(void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+	[self becomeFirstResponder];
+}
+
 -(BOOL)canBecomeFirstResponder {
     return YES;
 }
+
+
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+	
+	/*NSLog(@"motion Began1");
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(shake) name:@"shake" object:nil];
+	
+	if(event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake)
+		NSLog(@"motion Began");
+	*/
+}
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(shake) name:@"shake" object:nil];
+	if(event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake){
+		NSLog(@"motion Ended");
+		[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] removeLife];
+		
+		if([stat lifesRemaining]>0){
+			NSString* next = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
+			[self showWord:next];
+		}
+	}
+	
+}
+
 
 -(void)setStatus{
 	//[NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]
@@ -86,16 +120,7 @@ const int labelSize = 40;
 }
 
 
--(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-/*	
-	NSLog(@"motion Began1");
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(shake) name:@"shake" object:nil];
-	
-	if(event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake)
-		NSLog(@"motion Began");
- */
-}
+
 
 -(void)showGameOver{
 	
@@ -336,22 +361,6 @@ NSComparisonResult labelSort(UILabel * l1, UILabel * l2, void *context){
 	
 }
 
--(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(shake) name:@"shake" object:nil];
-	if(event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake){
-		//NSLog(@"motion Ended");
-		[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] removeLife];
-		
-		if([stat lifesRemaining]>0){
-			NSString* next = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
-			[self showWord:next];
-		}
-	}
-	
-}
-
-
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -359,7 +368,6 @@ NSComparisonResult labelSort(UILabel * l1, UILabel * l2, void *context){
     //return (interfaceOrientation == UIInterfaceOrientationPortrait);
 	return YES;
 }
-
 
 
 
