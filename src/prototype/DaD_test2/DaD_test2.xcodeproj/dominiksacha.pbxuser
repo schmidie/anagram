@@ -7,6 +7,13 @@
 			sepNavVisRange = "{0, 720}";
 		};
 	};
+	1D3623250D0F684500981E51 /* DaD_test2AppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {961, 1599}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1139}";
+		};
+	};
 	1D6058900D05DD3D006BFB54 /* DaD_test2 */ = {
 		activeExec = 0;
 		executables = (
@@ -22,10 +29,10 @@
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{3902, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3953, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4003, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 6294}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1048, 2964}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{5737, 500}";
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{3935, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3986, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4036, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 6431}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1048, 2990}}";
+			sepNavSelRange = "{340, 42}";
+			sepNavVisRange = "{205, 900}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -62,12 +69,10 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 321114560;
-			PBXWorkspaceStateSaveDate = 321114560;
+			PBXPerProjectTemplateStateSaveDate = 321116983;
+			PBXWorkspaceStateSaveDate = 321116983;
 		};
 		perUserProjectItems = {
-			780B3BE61323CFA800239973 = 780B3BE61323CFA800239973 /* PBXTextBookmark */;
-			780B3BE81323CFA800239973 = 780B3BE81323CFA800239973 /* PBXTextBookmark */;
 			780D07F0131D2A8C00C219AF = 780D07F0131D2A8C00C219AF /* PBXTextBookmark */;
 			780D07F1131D2A8C00C219AF = 780D07F1131D2A8C00C219AF /* PBXTextBookmark */;
 			780D07F2131D2A8C00C219AF = 780D07F2131D2A8C00C219AF /* PBXTextBookmark */;
@@ -81,8 +86,12 @@
 			780D07FF131D2A8C00C219AF = 780D07FF131D2A8C00C219AF /* PBXTextBookmark */;
 			780D0800131D2A8C00C219AF = 780D0800131D2A8C00C219AF /* PBXTextBookmark */;
 			780D0801131D2A8C00C219AF = 780D0801131D2A8C00C219AF /* PBXTextBookmark */;
-			780D0802131D2A8C00C219AF = 780D0802131D2A8C00C219AF /* PBXTextBookmark */;
 			780D0803131D2A8C00C219AF = 780D0803131D2A8C00C219AF /* PBXTextBookmark */;
+			782386301323DB300017A251 = 782386301323DB300017A251 /* PBXTextBookmark */;
+			782386311323DB300017A251 = 782386311323DB300017A251 /* PBXTextBookmark */;
+			7839DFA71323D5A000ADEDE5 = 7839DFA71323D5A000ADEDE5 /* PBXTextBookmark */;
+			7839DFA81323D5A000ADEDE5 = 7839DFA81323D5A000ADEDE5 /* PBXTextBookmark */;
+			7839DFA91323D5A000ADEDE5 = 7839DFA91323D5A000ADEDE5 /* PBXTextBookmark */;
 			786E14B5131D355A00A73CF0 = 786E14B5131D355A00A73CF0 /* PlistBookmark */;
 			786E14B6131D355A00A73CF0 = 786E14B6131D355A00A73CF0 /* PBXTextBookmark */;
 			786E14B7131D355A00A73CF0 = 786E14B7131D355A00A73CF0 /* PBXBookmark */;
@@ -90,9 +99,8 @@
 			786E14B9131D355A00A73CF0 = 786E14B9131D355A00A73CF0 /* PBXTextBookmark */;
 			786E14BA131D355A00A73CF0 = 786E14BA131D355A00A73CF0 /* PBXBookmark */;
 			786E14BB131D355A00A73CF0 = 786E14BB131D355A00A73CF0 /* PBXTextBookmark */;
-			7880E5321323D19800028646 = 7880E5321323D19800028646 /* PBXTextBookmark */;
-			7880E5371323D19800028646 = 7880E5371323D19800028646 /* PBXTextBookmark */;
-			7880E5391323D19800028646 = 7880E5391323D19800028646 /* PBXTextBookmark */;
+			78CB46FC1323D8A10040DA8E = 78CB46FC1323D8A10040DA8E /* PBXTextBookmark */;
+			78CB46FF1323D8A10040DA8E = 78CB46FF1323D8A10040DA8E /* PBXTextBookmark */;
 		};
 		sourceControlManager = 7833635C131B056D00ED8354 /* Source Control */;
 		userBuildSettings = {
@@ -100,16 +108,16 @@
 	};
 	474945CF130C27B000DF683A /* GameViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {961, 572}}";
+			sepNavIntBoundsRect = "{{0, 0}, {961, 598}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{139, 626}";
+			sepNavVisRange = "{42, 1010}";
 		};
 	};
 	474945D0130C27B000DF683A /* GameViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1076, 5135}}";
-			sepNavSelRange = "{10932, 0}";
-			sepNavVisRange = "{9671, 1264}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 5200}}";
+			sepNavSelRange = "{10735, 304}";
+			sepNavVisRange = "{10711, 828}";
 			sepNavWindowFrame = "{{15, 0}, {750, 778}}";
 		};
 	};
@@ -169,32 +177,20 @@
 			sepNavVisRange = "{0, 534}";
 		};
 	};
+	479DE2CD1312B4BE00250CF2 /* HelpViewController.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4263, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4314, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4364, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 5859}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {961, 2977}}";
+			sepNavSelRange = "{1753, 0}";
+			sepNavVisRange = "{892, 1213}";
+		};
+	};
 	479DE2D21312B53F00250CF2 /* HelpTextViewController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1139, 819}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 787}";
 		};
-	};
-	780B3BE61323CFA800239973 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 474945CF130C27B000DF683A /* GameViewController.h */;
-		name = "GameViewController.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 626;
-		vrLoc = 139;
-	};
-	780B3BE81323CFA800239973 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 474945D0130C27B000DF683A /* GameViewController.m */;
-		name = "GameViewController.m: 168";
-		rLen = 0;
-		rLoc = 4749;
-		rType = 0;
-		vrLen = 1074;
-		vrLoc = 4646;
 	};
 	780D07F0131D2A8C00C219AF /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -320,16 +316,6 @@
 		vrLen = 720;
 		vrLoc = 0;
 	};
-	780D0802131D2A8C00C219AF /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		name = "RootViewController.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 500;
-		vrLoc = 5794;
-	};
 	780D0803131D2A8C00C219AF /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 4777FDBA130EB11900D3941F /* SettingViewController.m */;
@@ -339,6 +325,26 @@
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 845;
+	};
+	782386301323DB300017A251 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 474945D0130C27B000DF683A /* GameViewController.m */;
+		name = "GameViewController.m: 63";
+		rLen = 0;
+		rLoc = 1679;
+		rType = 0;
+		vrLen = 1534;
+		vrLoc = 1185;
+	};
+	782386311323DB300017A251 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 786B4AF313143CCD007D6792 /* Words.txt */;
+		name = "Words.txt: 117";
+		rLen = 0;
+		rLoc = 1071;
+		rType = 0;
+		vrLen = 462;
+		vrLoc = 666;
 	};
 	78336344131B056100ED8354 /* DaD_test2 */ = {
 		isa = PBXExecutable;
@@ -382,11 +388,49 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
+	7839DFA71323D5A000ADEDE5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* DaD_test2AppDelegate.m */;
+		name = "DaD_test2AppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1139;
+		vrLoc = 0;
+	};
+	7839DFA81323D5A000ADEDE5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 22";
+		rLen = 42;
+		rLoc = 340;
+		rType = 0;
+		vrLen = 900;
+		vrLoc = 205;
+	};
+	7839DFA91323D5A000ADEDE5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 474945CF130C27B000DF683A /* GameViewController.h */;
+		name = "GameViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1007;
+		vrLoc = 45;
+	};
 	786B4AF013143A37007D6792 /* DataHandler.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {963, 435}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 400}";
+		};
+	};
+	786B4AF313143CCD007D6792 /* Words.txt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {961, 1599}}";
+			sepNavSelRange = "{1071, 0}";
+			sepNavVisRange = "{731, 397}";
+			sepNavWindowFrame = "{{15, 0}, {750, 778}}";
 		};
 	};
 	786E14B5131D355A00A73CF0 /* PlistBookmark */ = {
@@ -470,51 +514,24 @@
 			sepNavVisRange = "{0, 259}";
 		};
 	};
-	7880E5321323D19800028646 /* PBXTextBookmark */ = {
+	78CB46FC1323D8A10040DA8E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 474945D0130C27B000DF683A /* GameViewController.m */;
-		name = "GameViewController.m: 366";
+		name = "GameViewController.m: 63";
 		rLen = 0;
-		rLoc = 10932;
+		rLoc = 1679;
 		rType = 0;
-		vrLen = 1264;
-		vrLoc = 9671;
+		vrLen = 1534;
+		vrLoc = 1185;
 	};
-	7880E5371323D19800028646 /* PBXTextBookmark */ = {
+	78CB46FF1323D8A10040DA8E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 7880E5381323D19800028646 /* GameViewController.m */;
+		fRef = 786B4AF313143CCD007D6792 /* Words.txt */;
+		name = "Words.txt: 124";
 		rLen = 0;
-		rLoc = 4780;
+		rLoc = 1128;
 		rType = 0;
-	};
-	7880E5381323D19800028646 /* GameViewController.m */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.objc;
-		name = GameViewController.m;
-		path = "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/alt_repo/src/prototype/DaD_test2/Classes/GameViewController.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 2301}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1332}";
-			sepNavWindowFrame = "{{15, 0}, {750, 778}}";
-		};
-	};
-	7880E5391323D19800028646 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 7880E53A1323D19800028646 /* GameViewController.m */;
-		name = "GameViewController.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1329;
-		vrLoc = 0;
-	};
-	7880E53A1323D19800028646 /* GameViewController.m */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.objc;
-		name = GameViewController.m;
-		path = "/Users/dominiksacha/Documents/Studium/Master/Anpassungssemester/Objective C/alt_repo/src/prototype/DaD_test2/Classes/GameViewController.m";
-		sourceTree = "<absolute>";
+		vrLen = 454;
+		vrLoc = 674;
 	};
 }
