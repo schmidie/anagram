@@ -19,6 +19,11 @@
 	return self;
 }
 
+/* 
+//  legt eine Words.txt im App-Documents Ordner an und markiert benutzte woerter
+//  holt sich ein neues word aus der Words.txt
+//  dabei werden zunaechst die unbenutzten woerter beruecksichtigt
+*/
 -(NSString*) getWordFromFile {
 	
 	//Pfade setzen

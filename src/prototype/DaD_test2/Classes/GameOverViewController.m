@@ -41,6 +41,19 @@
 }
 
 
+//tastatur verschwindet wenn man wo anders rein tippt
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+	
+    if ([player isFirstResponder] && [touch view] != player)
+    {
+        //The textView is currently being edited, and the user touched outside the text view
+        [player resignFirstResponder];
+    }
+}
+
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
