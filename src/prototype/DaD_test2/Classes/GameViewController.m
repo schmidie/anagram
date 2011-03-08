@@ -246,7 +246,7 @@ const int labelSize = 40;
 			 * 
 			 **************************************/
 			//int distance = (int)pow((pow(labelSize,2)/2),(0.5));
-			int distance = labelSize+5;
+			int distance = labelSize-12;
 			//int tmp = (int)pow(labelSize,2)/2;
 			//int distance = (int) pow(tmp, (0.5) ); 
 			/*
