@@ -25,22 +25,20 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-	//create NavigationController
-	//navigationController = [[UINavigationController alloc] init];
 	
     // Override point for customization after application launch.
 	releasePool = [[NSAutoreleasePool alloc]init];
 	
+	// init our gameModel
 	gameModel = [[GameModel alloc]init];
 	
-	// TODO: write init method...
+	// the first initialization of the gameModel
 	[gameModel setTimeRemaining:60];
 	[gameModel setLifesRemaining:3];
 	[gameModel setSolvedWords:0];
 	[gameModel setCurrentGameMode:TIMEATTACK];
 	
-	
+	// init our gameController with the gameModel
 	gameController = [[GameController alloc]initWithGameModel:gameModel];
 	
 	//push first ViewController

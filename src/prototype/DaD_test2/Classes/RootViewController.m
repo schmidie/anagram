@@ -28,6 +28,7 @@ NSArray *menuItems;
 	self.title= @"Menu";
 	[self becomeFirstResponder];
 
+	// the menu items to show
 	menuItems = [[NSArray alloc] initWithObjects:@"Spielen",@"Bestenliste",@"Optionen",@"Hilfe",nil];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -94,7 +95,7 @@ NSArray *menuItems;
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	// Configure the cell.
+	// Configure the cell with the menu items
 	cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
     return cell;
 }
@@ -153,6 +154,7 @@ NSArray *menuItems;
 	 [detailViewController release];
 	 */
 	
+	// load the selected view
 	switch (indexPath.row) {
 		case 0:
 			if(self.game == nil){    
@@ -222,6 +224,10 @@ NSArray *menuItems;
 
 - (void)dealloc {
     [super dealloc];
+	[game release];
+	[setting release];
+	[score release];
+	[help release];
 }
 
 

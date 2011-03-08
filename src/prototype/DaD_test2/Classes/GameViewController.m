@@ -234,6 +234,7 @@ const int labelSize = 40;
 		[self.view addSubview:draglabel];	
 		[labels addObject:draglabel];
 		[draglabel release];
+		[mycolor release];
 	}
 }
 
@@ -343,7 +344,7 @@ NSComparisonResult labelSort(UILabel * l1, UILabel * l2, void *context){
 	
 	// get the labels in the order of theit position
 	NSArray * sorted =[labels sortedArrayUsingFunction:labelSort context:nil];
-	NSString *word = [[NSString alloc] init];
+	NSString *word = [[[NSString alloc] init] autorelease];
 	
 	for (UILabel *label in sorted) {
 		// get the letters of the labels and create the recognized word
