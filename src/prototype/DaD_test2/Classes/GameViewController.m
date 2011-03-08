@@ -70,6 +70,16 @@ const int labelSize = 40;
 		[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] removeLife];
 		
 		if([stat lifesRemaining]>0){
+			NSString* curword = [[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus]currentWord];
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Lösung lautet" 
+															message:curword
+														   delegate:nil 
+												  cancelButtonTitle:@"OK" 
+												  otherButtonTitles: nil];
+			[alert show];
+			[alert release];
+			
+			
 			NSString* next = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
 			[self showWord:next];
 		}
@@ -148,6 +158,15 @@ const int labelSize = 40;
 	[self setStatus];
 	
 	if([stat timeRemaining]==0){
+		
+		NSString* curword = [[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus]currentWord];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Lösung lautet" 
+														message:curword
+													   delegate:nil 
+											  cancelButtonTitle:@"OK" 
+											  otherButtonTitles: nil];
+		[alert show];
+		[alert release];
 		NSString* next = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
 		[self showWord:next];
 	}
