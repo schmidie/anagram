@@ -20,8 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+	//set the title
 	self.title= @"Help";
 	
+	//set the entries of the help
 	menuItems = [[NSArray alloc] initWithObjects:
 		@"Was ist iDictAttack?" ,
 		@"Spielablauf" ,
@@ -29,6 +31,7 @@
 		@"Über" ,		
 		nil];
 	
+	//set the fileNames of the help content
 	helpFileName = [[NSArray alloc] initWithObjects:
 					@"name",
 					@"play",
@@ -96,7 +99,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    // Configure the cell...
+    // Configure the cell with the help entries
     cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
     return cell;
 }
@@ -155,18 +158,19 @@
     [detailViewController release];
     */
 	
+	// if out view controller is not initilaized, initialize it!
 	if(self.helpText == nil){    
 		HelpTextViewController *viewController = 
 		[[HelpTextViewController alloc] initWithNibName:@"HelpTextViewController" bundle:[NSBundle mainBundle]];
 		self.helpText = viewController;
 		[viewController release];        
 	}
-
+	// push the view Controller
 	[self.navigationController pushViewController:self.helpText animated:YES];
+	
+	// load the selected help
 	self.helpText.title = [menuItems objectAtIndex:[indexPath row]]; 
-
 	NSString *helpName = [[NSString alloc] initWithString: [helpFileName objectAtIndex:[indexPath row]]];
-
 	NSString *filePath = [[NSBundle mainBundle] pathForResource:helpName ofType:@"html"];
 
 	NSData *helpData = [NSData dataWithContentsOfFile:filePath];
@@ -196,6 +200,11 @@
 
 - (void)dealloc {
     [super dealloc];
+	
+	// release all the stuff
+	[helpText release];
+	[menuItems release];
+	[helpFileName release];
 }
 
 

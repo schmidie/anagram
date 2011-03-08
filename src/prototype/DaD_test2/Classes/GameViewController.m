@@ -30,7 +30,9 @@ const int labelSize = 40;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+		// hide the standard back button
 		self.navigationItem.hidesBackButton = YES;
+		// add a button to exit
 		self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Aufgeben" 
 																				  style:UIBarButtonItemStylePlain 
 																				  target:self 
@@ -54,22 +56,20 @@ const int labelSize = 40;
 
 -(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
 	
-	/*NSLog(@"motion Began1");
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(shake) name:@"shake" object:nil];
-	
-	if(event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake)
-		NSLog(@"motion Began");
-	*/
 }
+
+
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(shake) name:@"shake" object:nil];
+	// if we shake
 	if(event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake){
-		NSLog(@"motion Ended");
+		//NSLog(@"motion Ended");
+		// remove one life
 		[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] removeLife];
 		
 		if([stat lifesRemaining]>0){
+			// if we have still some life show the solution in a modal view
 			NSString* curword = [[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus]currentWord];
 			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Lösung lautet" 
 															message:curword
@@ -79,7 +79,7 @@ const int labelSize = 40;
 			[alert show];
 			[alert release];
 			
-			
+			// show the next word
 			NSString* next = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
 			[self showWord:next];
 		}
@@ -89,8 +89,7 @@ const int labelSize = 40;
 
 
 -(void)setStatus{
-	//[NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]
-	//NSLog([NSString stringWithFormat:@"TIME: %d",[stat timeRemaining]]);
+	// load the current game status to the labels
 	[[self timeRemaining] setText: [NSString stringWithFormat:@"%d",[stat timeRemaining]]];
 	[[self livesRemaining] setText: [NSString stringWithFormat:@"Leben: %d",[stat lifesRemaining]]];
 	[[self solvedWords] setText: [NSString stringWithFormat:@"gelöste Wörter: %d",[stat solvedWords]]];
@@ -101,21 +100,23 @@ const int labelSize = 40;
     [super viewWillAppear:animated];
     [self becomeFirstResponder];
 	
-	
+	// load the game status and show the next word
 	stat = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus];
 	NSString* next = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
 	[self showWord:next];
 	
-	//[gameTimer invalidate];
+	//create a timer
 	gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self 
 											   selector:@selector(tick:) 
 											   userInfo:nil 
 												repeats:YES];
+	// if we have the game mode TIMEATACK we start the timer and show the labels
 	if([stat currentGameMode] == TIMEATTACK){
 		[gameTimer fire];
 		[self.timeRemaining setHidden:NO];
 		[self.livesRemaining setHidden:NO];
 	}
+	// if we are in training do not start the timer
 	else {
 		[self.timeRemaining setHidden:YES];
 		[self.livesRemaining setHidden:YES];
@@ -134,6 +135,7 @@ const int labelSize = 40;
 
 -(void)showGameOver{
 	
+	// initialize GameOver ViewController
 	if(self.gameOver == nil){    
 		GameOverViewController *viewController = 
 		[[GameOverViewController alloc] initWithNibName:@"GameOverViewController" bundle:[NSBundle mainBundle]];
@@ -147,16 +149,19 @@ const int labelSize = 40;
 	}
 	self.gameOver.title = @"Spielende";
 	
+	// Push the gameOver View
 	[self.navigationController pushViewController:self.gameOver animated:YES];
 
 }
 
-
+//the gameTimer
 -(void)tick:(NSTimer *)theTimer
 {
+	// get the current status
 	stat = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus];
 	[self setStatus];
 	
+	// if we have no more time show the solution in a modal view
 	if([stat timeRemaining]==0){
 		
 		NSString* curword = [[[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus]currentWord];
@@ -167,10 +172,11 @@ const int labelSize = 40;
 											  otherButtonTitles: nil];
 		[alert show];
 		[alert release];
+		// show the next word
 		NSString* next = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
 		[self showWord:next];
 	}
-	
+	// if we have no more time and no more lifes stop game and show gameover
 	if([stat lifesRemaining]==0 && [stat timeRemaining]==0){
 		//gameOver! -> push View controller
 		[self showGameOver];
@@ -185,14 +191,13 @@ const int labelSize = 40;
 		if([v isKindOfClass: [UILabel class]])
 		{
 			[v removeFromSuperview];
-			//[v release];
 		}
 	}
 	//create new label array
 	[labels release];
 	labels = [[NSMutableArray alloc] initWithCapacity:[word length]];
-	//originalPos = [[NSMutableArray alloc] initWithCapacity:[word length]];
-	//NSLog(word);
+	
+	// fill each label with one letter
 	for (int i= 0; i < [word length] ; i++) {
 		
 		// create a label
@@ -204,6 +209,7 @@ const int labelSize = 40;
 			width = width - 300;
 		}
 		
+		// format the labels
 		UILabel *draglabel = [[UILabel alloc] initWithFrame:CGRectMake(width, height, labelSize,labelSize)];
 		draglabel.text = [word substringWithRange:NSMakeRange(i, 1)];
 		UIColor* mycolor= [[UIColor alloc]initWithRed:0.7 green:0.8 blue:0.9 alpha:0.7];
@@ -217,16 +223,16 @@ const int labelSize = 40;
 		
 		// enable touch delivery
 		draglabel.userInteractionEnabled = YES;
-		
+		// the gesture recognizer
 		UIPanGestureRecognizer *gesture = [[[UIPanGestureRecognizer alloc] 
 											initWithTarget:self 
 											action:@selector(labelDragged:)] autorelease];
+		// add the gesture Recognizer
 		[draglabel addGestureRecognizer:gesture];
 		
 		// add it
 		[self.view addSubview:draglabel];	
 		[labels addObject:draglabel];
-		//[originalPos addObject:rec];
 		[draglabel release];
 	}
 }
@@ -235,26 +241,21 @@ const int labelSize = 40;
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	
 	//get the current word from the controller - it is already shaked !
-	
 	//get status from controller
 	//stat = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getStatus];
-	
-
-	
 	//[gameTimer fire];
 	//[word autorelease];
 	//[stat autorelease];
 	
 }
 
+// check if we have a collision with the labels
 -(Boolean)isCollision:(CGPoint)pos fromLabel:(UILabel *)_label
 {
 	//check for all labels if we have a collision
 	for (UILabel *label in labels) {
-		//NSLog(@"pos x:%f y:%f", pos.x,pos.y);
-		//NSLog(@"Label x:%f y:%f",label.center.x,label.center.y);
+
 		// not for self
 		if (![label isEqual:_label]) {
 			/* ***********************************
@@ -265,7 +266,10 @@ const int labelSize = 40;
 			 * 
 			 **************************************/
 			//int distance = (int)pow((pow(labelSize,2)/2),(0.5));
+			
+			// cheap hack for making it more beautifull :)
 			int distance = labelSize-12;
+			
 			//int tmp = (int)pow(labelSize,2)/2;
 			//int distance = (int) pow(tmp, (0.5) ); 
 			/*
@@ -292,6 +296,7 @@ const int labelSize = 40;
 				side_b = label.center.y - pos.y;
 			
 			int diagonal = (int)pow(pow(side_a,2)+pow(side_b,2),(0.5));
+			
 			// we have a collision
 			if(diagonal < distance)
 				return YES;
@@ -300,6 +305,7 @@ const int labelSize = 40;
 	return NO;
 }
 
+// move the label away until we do not have any collision
 -(void)moveAway:(UIPanGestureRecognizer *)gesture{
 	
 	UILabel *label = (UILabel *)gesture.view;
@@ -315,6 +321,8 @@ const int labelSize = 40;
 	
 	//move away
 	//label.center = CGPointMake(label.center.x + (distance/2), label.center.y +(distance/2));
+	
+	// cheap hack
 	label.center = CGPointMake(label.center.x + (5), label.center.y +(5));
 	
 	//if we have still collision move away untilt we do not!
@@ -323,50 +331,58 @@ const int labelSize = 40;
 	}
 }
 
+
 NSComparisonResult labelSort(UILabel * l1, UILabel * l2, void *context){
 	
+	// sort the labels with their position
 	return[[NSNumber numberWithDouble:l1.center.x] compare:[NSNumber numberWithDouble:l2.center.x]];
 }
 
+
 -(NSString *)detectWord{
 	
+	// get the labels in the order of theit position
 	NSArray * sorted =[labels sortedArrayUsingFunction:labelSort context:nil];
 	NSString *word = [[NSString alloc] init];
 	
 	for (UILabel *label in sorted) {
-		//NSLog(@"x:%f",label.center.x);
+		// get the letters of the labels and create the recognized word
 		word = [word stringByAppendingString:label.text];
 	}
-	//[sorted release];
+	//return the recognized word
 	return word;
 }
 
 - (void)labelDragged:(UIPanGestureRecognizer *)gesture
 {
+	// only drag the label if we have lifes and time
 	if([stat lifesRemaining] > 0 || [stat timeRemaining] > 0){
 		UILabel *label = (UILabel *)gesture.view;
 		CGPoint translation = [gesture translationInView:label];
-		CGPoint newPos = CGPointMake(label.center.x + translation.x, label.center.y + translation.y);
-		//if(![self isCollision:newPos]){
-		// move label
-		//label.center = newPos;
-		//}
-		// reset translation
-		//[gesture setTranslation:CGPointZero inView:label];
 		
+		// set the new possition of the label
+		CGPoint newPos = CGPointMake(label.center.x + translation.x, label.center.y + translation.y);
+
+		// check the gesture states
 		switch ([gesture state]) {
+				//always when we drag
 			case UIGestureRecognizerStateChanged:			
+				// set the new position
 				label.center = newPos;
 				[gesture setTranslation:CGPointZero inView:label];
 				break;
+				
+				// we do collision recognizion in the state ended to protect energy :)
 			case UIGestureRecognizerStateEnded:
+				// check if we have collision
 				if([self isCollision:newPos fromLabel:label]){
-					//NSLog(@"Collision");
+					// if we have collision move away until we do not
 					[self moveAway:gesture];
 				}
+				// check if we have the solution
 				Boolean solved = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] checkSolution:[self detectWord]];
 				if(solved){
-					
+					// if we solved show next word
 					NSString* next = [[(DaD_test2AppDelegate*)[[UIApplication sharedApplication] delegate] gameController] getNextWord];
 					[self showWord:next];
 					//NSLog(@"solved !!");
