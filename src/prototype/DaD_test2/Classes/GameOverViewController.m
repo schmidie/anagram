@@ -50,7 +50,8 @@
     {
         //The textView is currently being edited, and the user touched outside the text view
         [player resignFirstResponder];
-    }
+    }	
+	
 }
 
 
